@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}l p{1.32in} p{0.66in} p{0.7in} p{1.9in} p{0.9in}@{}}
+\toprule
+Gate & Estimand & Comparator & Audit pop. & Decision rule (locked pre-run) & Failure action \\
+\midrule
+G-C1 & SR@20\% slope over $t$; memory-level CCC$(\coutil,\phiaggrit)$ & baseline banks & pilot audit pool & slope-CI excludes $0$ upward \emph{and} CCC upper-CI below the pilot bound (source: $\mathrm{CCC}>0.5$ falsifies) & narrow C1 to heterogeneous streams \\
+G-C2 & event- and memory-level CCC; ACA$-$baseline CCC gain; ECE; cost & correlational baseline & sealed final-audit split & \emph{all} hold: event $\rho\ge0.6$ (lower-CI); memory-level CCC lower-CI $>0$; (ACA$-$baseline) CCC lower-CI $>0$; ECE below its lock; cost $\le$ ceiling & C2 unsupported \\
+G-C3a & Full-vs-A4 SR@20\% slope difference & A4 (no governance) & mechanism audit & slope-difference CI excludes $0$, Full flatter (Holm) & drop flattening claim \\
+G-C3b & CTI with vs.\ without scope gating & A3 (no scope) & A/B mixed-stream & CTI-reduction CI excludes $0$ (Holm) & drop interference claim \\
+G-C3c & AVG lift from $\phihat$-reward substitution & original reward & reward-swap runs & lift lower-CI $>0$ (Holm) & report null portability \\
+G-C4 & AVG gain over max baseline \emph{and} token overhead & max-baseline contrast & main runs, macro-AVG & MERIT $>$ max-baseline (Holm, lower-CI $>0$) \emph{and} overhead $\le$ ceiling & report parity \\
+G-H3 & zero-shot transfer CCC (secondary) & in-domain \aca{} & transfer runs & transfer-CCC lower-CI above its lock (FDR) & report no transfer \\
+G-H4 & Pareto knee on budget--AVG curve (secondary) & budget sweep & efficiency runs & knee exists per the marginal-gain rule & drop Pareto claim \\
+G-H5 & directional gain vs.\ bank size / heterogeneity / redundancy (secondary) & within-axis & boundary runs & predicted sign holds (CI, FDR); redundancy is Evidence Gap & scope H5 to passing axes \\
+\bottomrule
+\end{tabular}
+\caption{Atomic falsification gates. C1--C4 are confirmatory (Holm FWER); H3--H5 are secondary/exploratory (FDR). G-C2 and G-C4 are conjunctive. This table is design metadata; it contains no measured results, and every threshold/CI rule marked as a lock is set before any run.}
+\label{tab:hypotheses-map}
+\end{table*}

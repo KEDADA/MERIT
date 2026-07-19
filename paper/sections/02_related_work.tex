@@ -1,0 +1,56 @@
+\section{Related Work}
+
+We organize prior work by the credit signal it uses, not paper by paper, and
+position \method{} against each family. All bibliographic metadata is pending
+verification, and we avoid unqualified priority claims.
+
+\paragraph{Self-evolving memory and experience distillation.}
+A first family equips agents with a persistent memory that is written and reused
+across tasks: general memory stores~\tbd{CITATION_MEM0}, agentic memory with
+linked notes~\tbd{CITATION_A_MEM}, workflow memory~\tbd{CITATION_AWM},
+reasoning-trajectory banks~\tbd{CITATION_REASONINGBANK}, skill or exemplar
+memory~\tbd{CITATION_SKEMEX}, and evolving stores~\tbd{CITATION_MEMEVOLVE}. On the
+characterization we adopt from their descriptions (pending verification), the
+credit these systems attach to a memory is heuristic or co-occurrence based: a
+retrieved memory inherits the outcome of the task it accompanied. \method{}
+differs by auditing the causal validity of that credit with interventional
+evidence, rather than proposing another heuristic for accumulating it.
+
+\paragraph{Learned memory management.}
+A second family learns the memory-management policy with reinforcement or
+Monte-Carlo signals: reward-driven managers~\tbd{CITATION_MEMORY_R1},
+policy-optimized memory agents~\tbd{CITATION_MEM_ALPHA}, value-learned
+stores~\tbd{CITATION_MEMRL}, and skill-management policies~\tbd{CITATION_MEMSKILL}.
+What is learned here is \emph{which action to take}, while the reward that drives
+learning is typically an outcome-level signal. We position \method{} as
+\emph{complementary} to such outcome-reward learning rather than as a replacement,
+and we do not claim that reward-driven managers are merely correlational before each
+method's exploration and reward construction have been checked. Complementary work
+improves write-time quality through multi-agent
+consensus~\tbd{CITATION_EDV}, which is orthogonal to and composable with fixing the
+immediate credit signal we target. \method{} targets the signal rather than the
+policy: it replaces the reward itself with a counterfactual score, and we later test
+whether substituting that score into such a manager lifts its performance.
+
+\paragraph{Data valuation and context attribution.}
+A third family measures the influence of data or context on model behavior: Data
+Shapley~\tbd{CITATION_DATA_SHAPLEY}, influence
+functions~\tbd{CITATION_INFLUENCE_FUNCTIONS}, and TracIn~\tbd{CITATION_TRACIN}
+value static training points offline, while
+context attribution~\tbd{CITATION_CONTEXTCITE} explains a single generation. These
+methods share \method{}'s counterfactual framing but operate in a static,
+offline, or single-shot regime. The setting we address is online, non-stationary,
+and closed-loop: the attribution signal changes the retrieval distribution, which
+in turn changes future labels. This is what motivates amortization and periodic
+recalibration in \aca{}.
+
+\paragraph{Interference and orthogonal directions.}
+Cross-task interference in mixed-stream deployment has been
+observed~\tbd{CITATION_EVO_MEMORY}~\tbd{CITATION_EEVEE}, and test-time reasoning
+methods~\tbd{CITATION_REFLEXION}~\tbd{CITATION_MATTS} improve behavior along an axis
+orthogonal to memory credit; we treat the latter as compatible baselines. The
+capability comparison in Table~\ref{tab:method-positioning} summarizes where
+\method{} is intended to sit relative to these families; every competitor cell
+remains unresolved until its cited source is checked item by item, and an
+unresolved cell must not be read as a lack of capability. The table appears with
+the experiments (Table~\ref{tab:method-positioning}).

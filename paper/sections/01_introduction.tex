@@ -1,0 +1,106 @@
+\section{Introduction}
+
+Language-model agents are moving from stateless responders to experience-driven
+systems that improve over time by distilling their own interaction trajectories
+into a persistent memory bank and reusing it through a retrieve--execute--write
+loop~\tbd{CITATION_REASONINGBANK}. The implicit premise of this paradigm is that
+the system knows \emph{which memory deserves credit}: writing, merging, evicting,
+and retrieving all depend on a per-memory utility signal. Yet the signals in
+widely used systems are, on the characterization we adopt from prior descriptions
+and subject to bibliographic verification, \emph{correlational}. When a task
+succeeds and a memory was retrieved, that memory's utility is incremented. This
+conflates three distinct events: a memory can be \emph{retrieved} without being
+\emph{used}, and used without providing genuine \emph{causal} help.
+
+\paragraph{Retrieval is not contribution.}
+A memory's \emph{immediate conditional retrieval contribution} is defined only
+counterfactually---by how much the immediate task outcome degrades when the memory
+is removed from the retrieved set, conditioned on the current query, retrieved set,
+and deployment history. Correlational credit does not measure this quantity. We
+hypothesize that it behaves like the reinforcement
+schedule in Skinner's superstition experiment~\tbd{CITATION_SKINNER_SUPERSTITION}:
+memories that merely co-occur with success are persistently strengthened, so that
+\emph{superstitious memories}---entries with zero or negative causal
+contribution that nonetheless rise into the top-utility set and occupy retrieval
+slots---are not corrected. Because retrieval probability tends to track query
+solvability and high utility feeds back into higher retrieval rank, we hypothesize a
+self-reinforcing loop in which the fraction of superstitious memories \emph{grows}
+with deployment length. A second, related failure is cross-task interference: a
+memory that is genuinely useful for one task family is indiscriminately retrieved
+into another and harms the new task.
+
+\paragraph{Why prior signals are insufficient.}
+Existing approaches in our comparison commonly use observational, co-occurrence
+credit: success-trajectory distillation~\tbd{CITATION_REASONINGBANK}, environment-feedback
+utility~\tbd{CITATION_SKEMEX}, and Monte-Carlo or reinforcement updates over
+outcomes~\tbd{CITATION_MEMRL}. What is learned is the management \emph{policy};
+the underlying signal remains correlational. We distinguish passive co-occurrence
+counting from outcome-reward reinforcement learning under exploration, which is
+correlational only in a weaker sense; the diagnostic below is scoped to the systems
+and streams we evaluate, not to all learned managers. Counterfactual data-valuation
+methods such as Data Shapley~\tbd{CITATION_DATA_SHAPLEY}, influence
+functions~\tbd{CITATION_INFLUENCE_FUNCTIONS}, and TracIn~\tbd{CITATION_TRACIN}
+target static, offline training data, while context-attribution
+methods~\tbd{CITATION_CONTEXTCITE} explain a single generation. None, to the best
+of our current and still-to-be-verified survey, deliver counterfactual credit in
+an online, non-stationary, closed loop where attribution itself changes the data
+distribution.
+
+\paragraph{Approach.}
+We propose \method{}, which replaces correlational bookkeeping with counterfactual
+credit while keeping it affordable. \method{} adds three tightly coupled
+components to the standard loop, in a strictly linear dependency
+\rit{}~$\rightarrow$~\aca{}~$\rightarrow$~consumers: (i) \emph{Randomized
+Interventional Trials} (\rit{}), a small-budget paired leave-one-out protocol that
+produces interventional outcome-difference labels; (ii) \emph{Amortized Counterfactual Attribution} (\aca{}),
+a per-event attributor whose scoring cost is constant in bank size (at fixed $d$
+and top-$k$), trained on those labels and periodically
+recalibrated to track closed-loop drift; and (iii) two deliberately simple
+consumers of the resulting score---threshold-based credit governance and
+scope-gated retrieval. Figure~\ref{fig:problem-solution} contrasts correlational
+credit with this pipeline. Our central position is that reliable \emph{immediate
+counterfactual credit}---not better heuristics---is a missing primitive for the
+credit-assignment step of self-evolution, in the immediate-contribution setting we
+evaluate; governance and scope gating are then empirically tested consumers of that
+signal, not validated causal estimators of long-horizon retention value.
+
+\paragraph{Contributions.}
+\begin{itemize}
+  \item \textbf{(C1) Superstitious memories.} We formalize and plan to quantify a
+  diagnostic phenomenon in the memory systems and streams we evaluate: under
+  correlational credit, zero/negative-contribution
+  memories accumulate in the top-utility set and their fraction is hypothesized to
+  rise with deployment time, and
+  we introduce an interventional audit (\rit{}) with two statistics---the
+  credit--contribution correlation (CCC) and the superstition rate (SR@$k$)---to
+  measure it.
+  \item \textbf{(C2) Amortized counterfactual attribution.} We introduce \aca{},
+  which amortizes interventional labels into a per-event contribution
+  score that is constant in bank size (at fixed feature dimension $d$ and top-$k$),
+  with periodic recalibration, and we plan to test whether it recovers
+  causal credit substantially better than the correlational baseline at low cost.
+  \item \textbf{(C3) Directly consumable causal credit.} We contribute a design in
+  which a single causal-credit signal is directly consumable: threshold governance
+  and scope-gated retrieval are two consumers of the same score. We plan to test
+  whether they respectively flatten superstition accumulation and reduce
+  cross-task interference. Substituting the score for a manager's outcome reward is
+  reported only as a secondary signal-portability check, not as a separate
+  contribution.
+  \item \textbf{(C4) Systematic evaluation.} We plan a systematic evaluation
+  across four benchmark categories, three backbones, and three seeds, testing
+  whether \method{} improves average success over the strongest baseline at low
+  token overhead.
+\end{itemize}
+
+\paragraph{Planned evidence.}
+Every empirical statement in this paper is a planned test, not a measured result;
+unresolved quantities are written as registered ledger placeholders. A diagnostic
+pilot (Section~4) tests whether superstition accumulates; the mechanism analysis
+(Section~6) tests whether \aca{} recovers the audited signal in closed loop under
+the same axes as the pilot; and the main study tests whether the recovered signal
+translates into a planned average gain of \tbd{MAIN_AVG_GAIN_OVER_BEST_BASELINE}
+over the strongest baseline. Each claim carries an explicit falsification gate,
+and results that fail a gate will narrow the corresponding claim rather than be
+suppressed.
+
+\input{figures/placeholders/fig1_problem_solution}

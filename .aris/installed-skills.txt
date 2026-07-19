@@ -1,0 +1,21 @@
+version	1
+repo_root	E:\Project\ARIS
+project_root	E:\Project\MERIT-AAAI
+platform	claude
+generated	2026-07-19T04:16:07Z
+kind	name	source_rel	target_rel	mode
+skill	auto-paper-improvement-loop	skills/auto-paper-improvement-loop	.claude/skills/auto-paper-improvement-loop	junction
+skill	citation-audit	skills/citation-audit	.claude/skills/citation-audit	junction
+skill	experiment-plan	skills/experiment-plan	.claude/skills/experiment-plan	junction
+skill	figure-spec	skills/figure-spec	.claude/skills/figure-spec	junction
+skill	integrity-forensics	skills/integrity-forensics	.claude/skills/integrity-forensics	junction
+skill	kill-argument	skills/kill-argument	.claude/skills/kill-argument	junction
+skill	paper-claim-audit	skills/paper-claim-audit	.claude/skills/paper-claim-audit	junction
+skill	paper-compile	skills/paper-compile	.claude/skills/paper-compile	junction
+skill	paper-figure	skills/paper-figure	.claude/skills/paper-figure	junction
+skill	paper-plan	skills/paper-plan	.claude/skills/paper-plan	junction
+skill	paper-write	skills/paper-write	.claude/skills/paper-write	junction
+skill	paper-writing	skills/paper-writing	.claude/skills/paper-writing	junction
+skill	proof-checker	skills/proof-checker	.claude/skills/proof-checker	junction
+skill	render-html	skills/render-html	.claude/skills/render-html	junction
+support	shared-references	skills/shared-references	.claude/skills/shared-references	junction

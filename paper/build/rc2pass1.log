@@ -1,0 +1,696 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+ (aaai2027.sty
+Conference Style for AAAI for LaTeX 2e
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.s
+ty
+`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
+nd its extensions (msharpe)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.st
+y
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
+nd-pdftex.def))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse
+\xparse.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\colo
+r.cfg)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdft
+ex.def)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolo
+r.ltx))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval
+.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutil
+s.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.
+tex))))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring
+.tex))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.t
+ex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/figureversions\fi
+gureversions.sty)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\grap
+hics.cfg)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.
+sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.s
+ty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.
+sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thm.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty))
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thmic.sty) (math_commands.tex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
+) (E:\Project\MERIT-AAAI\paper\build\main.aux)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
+pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
+opdf-base.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf
+-sys.cfg)) (sections/00_abstract.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+) (sections/01_introduction.tex
+Underfull \hbox (badness 1024) in paragraph at lines 16--31
+ \T1/ntxtlf/b/n/10 Re-trieval is not con-tri-bu-tion. \T1/ntxtlf/m/n/10 A mem-o
+ry's \T1/ntxtlf/m/it/10 im-me-di-
+
+Underfull \hbox (badness 1546) in paragraph at lines 16--31
+\T1/ntxtlf/m/it/10 ate con-di-tional re-trieval con-tri-bu-tion \T1/ntxtlf/m/n/
+10 is de-fined only
+
+LaTeX Warning: Reference `fig:problem-solution' on page 1 undefined on input li
+ne 60.
+
+
+Underfull \vbox (badness 1502) has occurred while \output is active [1{C:/Users
+/Wang Keting/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Wang Ke
+ting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Use
+rs/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
+c.enc}]
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.f
+d) (figures/placeholders/fig1_problem_solution.tex))
+(sections/02_related_work.tex
+Underfull \hbox (badness 2762) in paragraph at lines 20--34
+\T1/ntxtlf/m/n/10 Monte-Carlo sig-nals: reward-driven man-agers \T1/ntxtlf/m/it
+/10 [TBD]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 1325) in paragraph at lines 20--34
+\T1/ntxtlf/m/n/10 policy-optimized mem-ory agents \T1/ntxtlf/m/it/10 [TBD]\T1/n
+txtlf/m/n/10 , value-learned
+
+LaTeX Warning: Reference `tab:method-positioning' on page 2 undefined on input 
+line 52.
+
+
+LaTeX Warning: Reference `tab:method-positioning' on page 2 undefined on input 
+line 56.
+
+) (sections/03_problem_formulation.tex
+Underfull \hbox (badness 1540) in paragraph at lines 48--1
+\T1/ntxtlf/m/n/10 ter-fer-ence in mixed-stream de-ploy-ment has been ob-
+
+Underfull \hbox (badness 1735) in paragraph at lines 48--1
+\T1/ntxtlf/m/n/10 served \T1/ntxtlf/m/it/10 [TBD] [TBD]\T1/ntxtlf/m/n/10 , and 
+test-time rea-son-ing meth-
+[2{C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
+q-ts1.enc}]
+
+LaTeX Warning: Reference `alg:merit' on page 3 undefined on input line 13.
+
+
+LaTeX Warning: Reference `def:phi' on page 3 undefined on input line 45.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+[]\T1/ntxtlf/m/it/10 The base-line
+[3]
+
+LaTeX Warning: Reference `obs:decomp' on page 4 undefined on input line 101.
+
+
+LaTeX Warning: Reference `conj:equilibrium' on page 4 undefined on input line 1
+02.
+
+) (sections/04_pilot_diagnostic.tex
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 4 undefined on input
+ line 75.
+
+[4] (figures/placeholders/fig2_diagnostic_baseline.tex
+
+LaTeX Warning: Reference `fig:mechanism-recovery' on page 5 undefined on input 
+line 12.
+
+)
+
+LaTeX Warning: Reference `fig:method-architecture' on page 5 undefined on input
+ line 106.
+
+) (sections/05_method.tex
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 5 undefined on input
+ line 4.
+
+
+LaTeX Warning: Reference `fig:method-architecture' on page 5 undefined on input
+ line 8.
+
+(figures/placeholders/fig3_method_architecture.tex)
+Underfull \hbox (badness 8151) in paragraph at lines 14--27
+\T1/ntxtlf/m/sc/10 Rit \T1/ntxtlf/m/n/10 con-tin-u-ously pro-duces in-ter-ven-t
+ional outcome-
+[5]
+
+LaTeX Warning: Reference `alg:merit' on page 6 undefined on input line 105.
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 132--133
+[] []\T1/ntxtlf/m/n/10 governance$\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 M\OT1/cmr/m
+/n/10 )$\T1/ntxtlf/m/n/10 : evict / merge / quar-an-tine by
+) (sections/06_experiments_analysis.tex
+
+LaTeX Warning: Reference `tab:hypotheses-map' on page 6 undefined on input line
+ 7.
+
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active
+
+LaTeX Warning: Reference `tab:hypotheses-map' on page 7 undefined on input line
+ 55.
+
+
+LaTeX Warning: Reference `tab:main-results' on page 7 undefined on input line 5
+8.
+
+(tables/table1_main_results.tex)
+
+LaTeX Warning: Reference `fig:streaming-efficiency' on page 7 undefined on inpu
+t line 74.
+
+(figures/placeholders/fig4_streaming_efficiency.tex)
+
+LaTeX Warning: Reference `tab:reward-swap' on page 7 undefined on input line 88
+.
+
+
+Underfull \vbox (badness 3724) has occurred while \output is active [7]
+(tables/table2_reward_swap.tex)
+
+LaTeX Warning: Reference `tab:ablation' on page 8 undefined on input line 97.
+
+(tables/table3_ablation.tex) (tables/table4_hypotheses_map.tex
+Underfull \hbox (badness 1281) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 SR@20% slope over $\OML/cmm/m/it/9 t$\T1/ntxtlf/m/n/9 ;
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 pilot au-dit
+
+Underfull \hbox (badness 2680) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 slope-CI ex-cludes $\OT1/cmr/m/n/9 0$ \T1/ntxtlf/m/n/9 up-wa
+rd \T1/ntxtlf/m/it/9 and
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[]\T1/ntxtlf/m/n/9 narrow C1 to
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+\T1/ntxtlf/m/n/9 het-ero-ge-neous
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+\T1/ntxtlf/m/n/9 CCC; ACA$\OMS/cmsy/m/n/9 ^^@$\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]\T1/ntxtlf/m/n/9 correlational
+
+Underfull \hbox (badness 5504) in paragraph at lines 11--11
+[]\T1/ntxtlf/m/n/9 sealed final-
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\T1/ntxtlf/m/n/9 Full-vs-A4 SR@20%
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\T1/ntxtlf/m/n/9 mechanism
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\T1/ntxtlf/m/n/9 drop flat-ten-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]\T1/ntxtlf/m/n/9 A3 (no
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]\T1/ntxtlf/m/n/9 A/B mixed-
+
+Underfull \hbox (badness 6608) in paragraph at lines 14--14
+[]\T1/ntxtlf/m/n/9 original re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\T1/ntxtlf/m/n/9 reward-swap
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]\T1/ntxtlf/m/n/9 max-
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]\T1/ntxtlf/m/n/9 main runs,
+
+Underfull \hbox (badness 3907) in paragraph at lines 16--16
+[]\T1/ntxtlf/m/n/9 zero-shot trans-fer CCC
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]\T1/ntxtlf/m/n/9 in-domain
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/ntxtlf/m/n/9 budget
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/ntxtlf/m/n/9 efficiency
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]\T1/ntxtlf/m/n/9 boundary
+)
+
+LaTeX Warning: Reference `fig:mechanism-recovery' on page 8 undefined on input 
+line 111.
+
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 8 undefined on input
+ line 112.
+
+(figures/placeholders/fig5_mechanism_recovery.tex
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 8 undefined on input
+ line 13.
+
+) [8]
+
+LaTeX Warning: Reference `fig:streaming-efficiency' on page 9 undefined on inpu
+t line 142.
+
+
+LaTeX Warning: Reference `tab:efficiency' on page 9 undefined on input line 149
+.
+
+(tables/table5_method_positioning.tex) (tables/table6_efficiency.tex)
+
+LaTeX Warning: Reference `fig:case-study' on page 9 undefined on input line 156
+.
+
+(figures/placeholders/fig6_case_study.tex))
+(sections/07_limitations_conclusion.tex [9] [10])
+Underfull \vbox (badness 10000) has occurred while \output is active [11]
+(E:\Project\MERIT-AAAI\paper\build\main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Users/Wang Keting/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Wa
+ng Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cmextra/cmex9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wang Keting/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Wang Keting/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Wang
+ Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wang Keting/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Wang Keting/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/
+Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/Wang Keting/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/Wang Keting/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Wang Keting/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on E:\Project\MERIT-AAAI\paper\build\main.pdf (11 pages, 330659 
+bytes).
+Transcript written on E:\Project\MERIT-AAAI\paper\build\main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'E:/Project/MERIT-AAAI/paper/build/main.pdf'
+Latexmk: Log file says output to 'E:/Project/MERIT-AAAI/paper/build/main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+ (aaai2027.sty
+Conference Style for AAAI for LaTeX 2e
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.s
+ty
+`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
+nd its extensions (msharpe)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.st
+y
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
+nd-pdftex.def))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse
+\xparse.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\colo
+r.cfg)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdft
+ex.def)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolo
+r.ltx))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval
+.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutil
+s.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.
+tex))))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring
+.tex))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.t
+ex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/figureversions\fi
+gureversions.sty)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\grap
+hics.cfg)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.
+sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.s
+ty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.
+sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thm.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty))
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thmic.sty) (math_commands.tex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
+) (E:\Project\MERIT-AAAI\paper\build\main.aux)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
+pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
+opdf-base.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf
+-sys.cfg)) (sections/00_abstract.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+) (sections/01_introduction.tex
+Underfull \hbox (badness 1024) in paragraph at lines 16--31
+ \T1/ntxtlf/b/n/10 Re-trieval is not con-tri-bu-tion. \T1/ntxtlf/m/n/10 A mem-o
+ry's \T1/ntxtlf/m/it/10 im-me-di-
+
+Underfull \hbox (badness 1546) in paragraph at lines 16--31
+\T1/ntxtlf/m/it/10 ate con-di-tional re-trieval con-tri-bu-tion \T1/ntxtlf/m/n/
+10 is de-fined only
+
+Underfull \vbox (badness 1502) has occurred while \output is active [1{C:/Users
+/Wang Keting/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Wang Ke
+ting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Use
+rs/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
+c.enc}]
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.f
+d) (figures/placeholders/fig1_problem_solution.tex))
+(sections/02_related_work.tex
+Underfull \hbox (badness 2762) in paragraph at lines 20--34
+\T1/ntxtlf/m/n/10 Monte-Carlo sig-nals: reward-driven man-agers \T1/ntxtlf/m/it
+/10 [TBD]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 1325) in paragraph at lines 20--34
+\T1/ntxtlf/m/n/10 policy-optimized mem-ory agents \T1/ntxtlf/m/it/10 [TBD]\T1/n
+txtlf/m/n/10 , value-learned
+) (sections/03_problem_formulation.tex
+Underfull \hbox (badness 1540) in paragraph at lines 48--1
+\T1/ntxtlf/m/n/10 ter-fer-ence in mixed-stream de-ploy-ment has been ob-
+
+Underfull \hbox (badness 1735) in paragraph at lines 48--1
+\T1/ntxtlf/m/n/10 served \T1/ntxtlf/m/it/10 [TBD] [TBD]\T1/ntxtlf/m/n/10 , and 
+test-time rea-son-ing meth-
+[2{C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
+q-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+[]\T1/ntxtlf/m/it/10 The base-line
+[3]) (sections/04_pilot_diagnostic.tex [4]
+(figures/placeholders/fig2_diagnostic_baseline.tex)) (sections/05_method.tex
+(figures/placeholders/fig3_method_architecture.tex)
+Underfull \hbox (badness 8151) in paragraph at lines 14--27
+\T1/ntxtlf/m/sc/10 Rit \T1/ntxtlf/m/n/10 con-tin-u-ously pro-duces in-ter-ven-t
+ional outcome-
+[5]
+Underfull \hbox (badness 1281) in paragraph at lines 132--133
+[] []\T1/ntxtlf/m/n/10 governance$\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 M\OT1/cmr/m
+/n/10 )$\T1/ntxtlf/m/n/10 : evict / merge / quar-an-tine by
+) (sections/06_experiments_analysis.tex [6] (tables/table1_main_results.tex)
+(figures/placeholders/fig4_streaming_efficiency.tex) [7]
+(tables/table2_reward_swap.tex) (tables/table3_ablation.tex)
+(tables/table4_hypotheses_map.tex
+Underfull \hbox (badness 1281) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 SR@20% slope over $\OML/cmm/m/it/9 t$\T1/ntxtlf/m/n/9 ;
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 pilot au-dit
+
+Underfull \hbox (badness 2680) in paragraph at lines 10--10
+[]\T1/ntxtlf/m/n/9 slope-CI ex-cludes $\OT1/cmr/m/n/9 0$ \T1/ntxtlf/m/n/9 up-wa
+rd \T1/ntxtlf/m/it/9 and
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[]\T1/ntxtlf/m/n/9 narrow C1 to
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+\T1/ntxtlf/m/n/9 het-ero-ge-neous
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+\T1/ntxtlf/m/n/9 CCC; ACA$\OMS/cmsy/m/n/9 ^^@$\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]\T1/ntxtlf/m/n/9 correlational
+
+Underfull \hbox (badness 5504) in paragraph at lines 11--11
+[]\T1/ntxtlf/m/n/9 sealed final-
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\T1/ntxtlf/m/n/9 Full-vs-A4 SR@20%
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\T1/ntxtlf/m/n/9 mechanism
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\T1/ntxtlf/m/n/9 drop flat-ten-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]\T1/ntxtlf/m/n/9 A3 (no
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]\T1/ntxtlf/m/n/9 A/B mixed-
+
+Underfull \hbox (badness 6608) in paragraph at lines 14--14
+[]\T1/ntxtlf/m/n/9 original re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\T1/ntxtlf/m/n/9 reward-swap
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]\T1/ntxtlf/m/n/9 max-
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\T1/ntxtlf/m/n/9 baseline
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]\T1/ntxtlf/m/n/9 main runs,
+
+Underfull \hbox (badness 3907) in paragraph at lines 16--16
+[]\T1/ntxtlf/m/n/9 zero-shot trans-fer CCC
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]\T1/ntxtlf/m/n/9 in-domain
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/ntxtlf/m/n/9 budget
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/ntxtlf/m/n/9 efficiency
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]\T1/ntxtlf/m/n/9 boundary
+)
+Underfull \vbox (badness 6625) has occurred while \output is active
+(figures/placeholders/fig5_mechanism_recovery.tex) [8]
+(tables/table5_method_positioning.tex) (tables/table6_efficiency.tex)
+(figures/placeholders/fig6_case_study.tex))
+(sections/07_limitations_conclusion.tex [9] [10])
+Underfull \vbox (badness 10000) has occurred while \output is active [11]
+(E:\Project\MERIT-AAAI\paper\build\main.aux) )
+(see the transcript file for additional information)<C:/Users/Wang Keting/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Wa
+ng Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cmextra/cmex9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wang Keting/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Wang Keting/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Wang
+ Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wang Keting/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Wang Keting/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/
+Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/Wang Keting/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/Wang Keting/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Wang Keting/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on E:\Project\MERIT-AAAI\paper\build\main.pdf (11 pages, 330288 
+bytes).
+Transcript written on E:\Project\MERIT-AAAI\paper\build\main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: Log file says output to 'E:/Project/MERIT-AAAI/paper/build/main.pdf'
+Latexmk: Log file says output to 'E:/Project/MERIT-AAAI/paper/build/main.pdf'
+Latexmk: All targets (build/main.pdf) are up-to-date
+

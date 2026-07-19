@@ -1,0 +1,26 @@
+\begin{abstract}
+Self-evolving language-model agents distill interaction trajectories into a
+persistent memory bank, and the quality of that self-improvement loop depends on
+how credit is assigned to individual memories. We argue that the credit signals
+used by current systems are \emph{correlational}: a memory that merely co-occurs
+with success is reinforced, so \emph{retrieval is mistaken for contribution}.
+We hypothesize that under such credit \emph{superstitious memories}---entries with
+zero or negative causal effect that nonetheless accumulate utility and occupy
+retrieval slots---are not corrected, and that their fraction grows with
+deployment length. The difficulty is that a memory's \emph{immediate conditional
+retrieval contribution}---how much the immediate task outcome degrades when the
+memory is removed from the retrieved set---is defined only counterfactually, and
+per-memory intervention appears unaffordable in an online, non-stationary, closed
+loop. We propose \method{},
+which is designed to make this counterfactual
+credit affordable through a strictly linear pipeline: Randomized Interventional
+Trials (\rit{}) collect small-budget causal labels, Amortized Counterfactual
+Attribution (\aca{}) compresses them into a per-event score that is constant in
+bank size (at fixed feature dimension $d$ and top-$k$), and two
+minimal consumers---threshold governance and scope-gated retrieval---read the
+same signal. We plan a systematic evaluation testing whether \aca{} recovers
+this immediate credit at low cost, whether its consumers flatten superstition and
+reduce cross-task interference, and whether \method{} improves average success
+over the strongest baseline; the planned headline gain is
+\tbd{MAIN_AVG_GAIN_OVER_BEST_BASELINE}, pending verification.
+\end{abstract}

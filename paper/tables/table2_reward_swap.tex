@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lll}
+\toprule
+Manager / reward & AVG & $\Delta$ original \\
+\midrule
+Memory-R1 / original & \tbdcell{PLUGIN_MEMR1_ORIG_AVG} & -- \\
+Memory-R1 / $\widehat{\phi}$ & \tbdcell{PLUGIN_MEMR1_PHI_AVG} & \tbdcell{REWARD_SWAP_MEMORY_R1_GAIN} \\
+Mem-$\alpha$ / original & \tbdcell{PLUGIN_MEMALPHA_ORIG_AVG} & -- \\
+Mem-$\alpha$ / $\widehat{\phi}$ & \tbdcell{PLUGIN_MEMALPHA_PHI_AVG} & \tbdcell{REWARD_SWAP_MEMALPHA_GAIN} \\
+\bottomrule
+\end{tabular}
+\caption{Reward-substitution skeleton. The table will test signal portability; it does not yet establish that any improvement originates at the signal layer.}
+\label{tab:reward-swap}
+\end{table}

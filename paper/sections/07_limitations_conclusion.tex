@@ -1,0 +1,44 @@
+% Flush all pending floats from the experiments section so that no table or figure
+% is deferred past the start of the conclusion (avoids the stranded-conclusion and
+% end-of-paper float-interruption issue).
+\clearpage
+\section{Limitations and Conclusion}
+
+\paragraph{Limitations.}
+\method{} inherits three scope boundaries. It depends on local replayability
+(AS2): fully non-replayable, single-shot environments cannot yield \rit{} labels,
+and world-model-simulated replay or off-policy evaluation would be needed as a
+substitute. It is subject to an interaction caveat (AS3): leave-one-out does not
+capture higher-order interactions, most visibly for redundant/substitutable
+memories, and the exploratory group-intervention analysis that surfaces them adds
+cost and carries no numerical guarantee. And
+its benefit has a boundary (H5): single-domain short streams and small banks are
+expected to yield little gain, so \method{} is intended for long-term deployment
+rather than short sessions. We further scope the contribution to credit assignment
+for existing memories and leave write-time quality out of scope; \method{}
+composes with methods that address it. We emphasize that governance and scope
+gating are \emph{empirically tested consumers} of the immediate-credit signal, not
+validated causal estimators of long-horizon retention value. A rebuttal-sensitive
+risk is that, if
+attribution scores can be influenced by externally supplied content, the audit
+becomes a new attack surface for memory-poisoning ``credit laundering,'' which we
+flag for future defense. Whether \aca{} transfers across fundamentally different
+modalities beyond the tested text and agentic environments is not specified by our
+source and is left as an open question, excluded from C1--C4.
+
+\paragraph{Conclusion.}
+We argued that self-evolving agent memory is limited, in its credit-assignment
+step, less by better heuristics than by a missing primitive: reliable immediate
+counterfactual credit, in the immediate-contribution setting we study.
+Correlational bookkeeping mistakes retrieval for contribution and, we hypothesize,
+is associated with superstitious memories that accumulate over deployment.
+\method{} is designed to supply this counterfactual credit
+affordably by collecting small-budget interventional labels (\rit{}), amortizing
+them into a per-event score that is constant in bank size (\aca{}), and exposing
+that single score to two
+minimal consumers. The evaluation is planned rather than completed: it tests
+whether \aca{} recovers the audited signal in closed loop, whether its consumers
+flatten superstition and reduce cross-task interference, and whether the recovered
+signal improves average success at low overhead---each behind an explicit
+falsification gate. Two concrete directions follow: structure-aware interaction
+attribution to relax AS3, and replay substitutes to relax AS2.

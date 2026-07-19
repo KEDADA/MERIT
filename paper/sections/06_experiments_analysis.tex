@@ -1,0 +1,172 @@
+\section{Experiments and Analysis}
+
+This section specifies protocols, table skeletons, figure placeholders, and
+conditional interpretation plans. No ranking or numerical conclusion is asserted
+before verification; every result cell is an unresolved ledger placeholder, and
+each analysis states the test it will run and the reading that would support or
+fail its hypothesis. Table~\ref{tab:hypotheses-map} states, for each claim, its
+atomic falsification gate: estimand, comparator, audit population, decision rule,
+and the claim-narrowing action on failure.
+
+\subsection{Setup}
+We plan to evaluate three backbones---a primary open model, a larger open model as
+a scale-trend point, and a closed model as a generalization row---on a unified
+memory-system codebase for baseline fairness. \aca{} uses a frozen embedding
+encoder with a two-layer head. Evaluation spans four benchmark categories:
+streaming task streams (dialogue and agentic), a web-agent benchmark, a long-term
+memory benchmark, and a conversational memory benchmark; the pilot uses two
+replayable environments. For fairness, all methods share the backbone, retriever,
+and top-$k = 4$ budget, with baselines given an equal token budget for their own
+mechanism. We report a two-stage macro-average---streams aggregated to a
+benchmark-category score, then equal weight across the four categories---with
+task-clustered paired BCa intervals and a simultaneous max-baseline comparison
+under Holm correction; seeds default to $\{13, 42, 2026\}$, with the final count
+fixed by a pre-registered power analysis. The inferential unit is the
+\emph{seed/deployment run}: we use hierarchical/block resampling (block = stream,
+pairing = seed) and note that task-clustered BCa alone does not cover run-level
+variation; the confirmatory multiplicity family (the C1--C4 gates and the
+max-baseline contrast) is predefined under Holm FWER control, with FDR reserved for
+exploratory sweeps, and the seed count is computed from the independent-pilot power
+analysis (\emph{USER\_APPROVAL\_REQUIRED} sizing inputs). Baselines follow a
+fidelity checklist: each is marked a \emph{source-faithful reproduction} or a
+\emph{standardized credit-variant wrapper}, and results are reported under exact
+method names only for source-faithful reproductions. A subset uses a cross-source
+judge, of which $200$ examples are human-checked for agreement
+$\tbd{JUDGE_HUMAN_AGREEMENT_KAPPA}$. A single main run costs
+$\tbd{MAIN_GPU_HOURS_PER_RUN}$, with the full cost table in the appendix.
+
+\paragraph{Cross-task interference (CTI).}
+We adopt the definition
+\begin{equation}
+\mathrm{CTI} = \mathrm{Acc}_B(\text{B-only bank}) - \mathrm{Acc}_B(\text{A}\cup\text{B mixed bank}),
+\end{equation}
+the drop in domain-$B$ accuracy when a domain-$A$ bank is mixed in; $\mathrm{CTI}\ge0$
+indicates interference. The specific A/B domain pairs are not enumerated in the
+source and are locked before running (\emph{USER\_APPROVAL\_REQUIRED}).
+
+\paragraph{Reproducibility protocol.}
+Before any confirmatory run we lock, and will report, the following items; each is
+currently an open \emph{USER\_APPROVAL\_REQUIRED} decision and none is guessed here:
+the S2--S4 stream identities and heterogeneity bins; datasets and versions; the
+three backbones; stream construction and task ordering; the bank-size schedule and
+warm-up length; the fit/calibration/development/sealed-audit split policy; the judge
+protocol; the baseline adapters and fidelity labels; the CTI A/B domain pairs; the
+max-baseline contrast statistic; the Holm $\alpha$ and exploratory FDR $q$; and the
+per-gate CI/threshold rules of Table~\ref{tab:hypotheses-map}.
+
+\subsection{Main results}
+Table~\ref{tab:main-results} orders methods by lineage---no-memory, heuristic
+credit, learned credit, orthogonal reasoning, and an intervention reference---and
+orders the stream columns S1--S5 by increasing heterogeneity; the identities of
+S2--S4 are not specified in the source. We test three predictions against the
+eventual numbers: whether the gain grows with stream heterogeneity (from
+\tbd{MAIN_GAIN_SINGLE_DOMAIN} on the single-domain stream to
+\tbd{MAIN_GAIN_MIXED_STREAM} on the mixed stream); whether learned-credit
+baselines are reliably better than heuristic ones; and whether \method{} reaches
+\tbd{MERIT_FRACTION_OF_RITFULL_GAIN} of the RIT-Full reference gain at a fraction
+of its cost. The headline average gain over the strongest baseline is
+\tbd{MAIN_AVG_GAIN_OVER_BEST_BASELINE}. The RIT-Full row is an intervention
+reference and is treated as a ceiling only for quantities where that status
+follows by construction.
+
+\input{tables/table1_main_results}
+
+Figure~\ref{fig:streaming-efficiency} gives the streaming cumulative-success view
+of these results, with the planned \rit{}-budget sweep as an inset (detailed under
+Efficiency).
+
+\input{figures/placeholders/fig4_streaming_efficiency}
+
+\subsection{Signal-portability check: reward substitution (secondary analysis)}
+The contribution vocabulary of the paper is C1--C4 only. Reward portability, the
+zero-shot transfer trend (H3), the Pareto-knee analysis (H4), and the boundary
+trends (H5) are reported as \emph{secondary analyses} that probe C1--C4, not as
+additional claims; they are kept in the main paper. To test whether the improvement
+originates at the signal layer rather than in a
+particular pipeline, we substitute $\phihat$ for a manager's original outcome
+reward, leaving its optimization otherwise unchanged
+(Table~\ref{tab:reward-swap}). We test whether this substitution lifts two
+outcome-reward managers, which we treat as complementary rather than merely
+correlational, by \tbd{REWARD_SWAP_MEMORY_R1_GAIN} and
+\tbd{REWARD_SWAP_MEMALPHA_GAIN} respectively. This is a portability check on one
+signal, not a separate method; the full table is a candidate for the appendix.
+
+\input{tables/table2_reward_swap}
+
+\subsection{Ablation}
+Table~\ref{tab:ablation} removes one component at a time and adds two
+alternative-signal controls. We read it as a mechanism-consistent sequence---credit
+fidelity (CCC) $\rightarrow$ mechanism and interference change (SR@$20\%$, CTI)
+$\rightarrow$ task outcome (AVG)---rather than as isolated cells or a proven
+mediation. The pivotal test is A2: the identical \aca{} architecture, features,
+update rule, and compute budget, trained on a matched observational/outcome label
+instead of the interventional label. If the gain persists under A2, the
+contribution is not localized to interventional supervision, and the interpretation
+must be revised.
+
+\input{tables/table3_ablation}
+\input{tables/table4_hypotheses_map}
+
+\subsection{Mechanism and calibration}
+Figure~\ref{fig:mechanism-recovery} reuses the axes and statistical definitions of
+the baseline diagnostic (Figure~\ref{fig:diagnostic-baseline}) so that the two are
+directly comparable. Panel (a) tests whether \aca{}'s sealed-audit
+credit--contribution correlation \tbd{ACA_HELDOUT_CCC_T500} improves on the baseline
+\tbd{PILOT_CCC_REASONINGBANK_T500} (H2, gated by G-C2); the source gate for H2 is a
+Spearman correlation of at least $0.6$. Panel (b) tests whether the superstition rate
+is flattened to \tbd{SR_MERIT_T500}, a reduction of
+\tbd{SR_REDUCTION_MERIT_T500_PERCENT} relative to the baseline at $t = 500$; the H1
+reading (gated by G-C3a) is the \emph{slope} of this trajectory, compared between the
+full method and the no-governance ablation across the deployment checkpoints. Calibration is
+assessed with a held-out reliability diagram and expected calibration error
+\tbd{ECE_ACA_HELDOUT}, per-domain calibration, and a split-half re-test, with
+particular attention to sign instability near $\phicf \approx 0$.
+
+\input{figures/placeholders/fig5_mechanism_recovery}
+
+\subsection{Boundary and scaling (secondary analysis)}
+We test whether the gain holds under a larger backbone (from
+\tbd{SCALING_GAIN_32B} to \tbd{SCALING_GAIN_235B}, with stronger baselines; the
+superstition mechanism is hypothesized to persist) and whether an attributor trained
+on the pilot environments transfers zero-shot, measured by the transfer correlation
+\tbd{ACA_ZEROSHOT_TRANSFER_CCC_WEBARENA} (H3). For the boundary (H5), we plan three
+trend lines: gain versus bank size (the small-bank bin has planned gain
+\tbd{H5_GAIN_SMALL_BANK_LT100}), gain versus stream heterogeneity (single-domain
+gain \tbd{H5_GAIN_SINGLE_DOMAIN}), and gain versus injected redundancy. The
+redundancy trend has no registered result identifier and is reported as an
+\textsc{Evidence Gap}, kept exploratory; the hypotheses are that leave-one-out
+underestimation grows with redundancy and that the group-intervention variant (A7)
+mitigates it.
+
+\subsection{Efficiency}
+Figure~\ref{fig:streaming-efficiency} plots cumulative success over the stream and,
+as an inset shown only after verification, a planned \rit{}-budget sweep over
+$p \in \{1, 2, 5, 10\}\%$; the inset is labeled a planned comparison rather than a
+measured curve. We test whether performance differences concentrate in the later,
+most-polluted portion of the stream---what share \tbd{FIG4_LATE_STREAM_GAIN_SHARE}
+of the average gain arises there---and whether the \rit{} budget saturates near the
+source default, placing \method{} at a Pareto-efficient knee (H4).
+Table~\ref{tab:efficiency} records relative token cost, success, latency, and
+memory overhead against the co-occurrence baseline and the intervention reference.
+
+\input{tables/table5_method_positioning}
+\input{tables/table6_efficiency}
+
+\subsection{Case study}
+Figure~\ref{fig:case-study} plans two qualitative timelines. In the success case, a
+useful multi-hop memory and a superstitious ``retry the same query'' memory are
+tracked over deployment; we test whether the latter's inflated utility is assigned
+near-zero \rit{} credit and leads to eviction at task
+\tbd{CASE_SUPERSTITION_EVICTION_TASK_INDEX}, while the former's scope is
+characterized correctly. In the interaction-boundary case, two
+\emph{redundant/substitutable} memories encode overlapping copies of the same
+sub-procedure, so that either alone suffices; we test whether individual
+leave-one-out is near zero for both---even though their joint value is
+positive---so that governance nearly removes both, and whether the exploratory
+group-intervention analysis recovers their joint value---an honest display of the
+AS3 interaction boundary, with no numerical guarantee. We expect a
+share \tbd{RESIDUAL_FAILURE_NO_RELEVANT_MEMORY_FRACTION} of \method{}'s remaining
+failures to stem from the bank simply lacking relevant experience, which no credit
+signal can repair.
+
+\input{figures/placeholders/fig6_case_study}

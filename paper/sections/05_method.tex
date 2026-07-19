@@ -1,0 +1,138 @@
+\section{Method: MERIT}
+
+\aca{} amortizes the \rit{} estimate $\phirit$ of the same target $\phicf$ audited
+in Figure~\ref{fig:diagnostic-baseline}, producing a per-event prediction $\phihat$;
+it introduces no new quantity. \method{} adds three components to the standard
+retrieve--execute--write loop in an architecturally linear dependency,
+\rit{}~$\rightarrow$~\aca{}~$\rightarrow$~consumers
+(Figure~\ref{fig:method-architecture}). All thresholds and coefficients below are
+provisional hyperparameters.
+
+\input{figures/placeholders/fig3_method_architecture}
+
+\subsection{Randomized Interventional Trials}
+\rit{} continuously produces interventional outcome-difference labels at low budget.
+With sampling probability $p = \tbd{RIT_SAMPLING_PROB_PERCENT}$ (a provisional
+hyperparameter; the source default is $5\%$), a replayable task enters the trial
+group. For each audited memory, \rit{} performs the paired leave-one-out comparison
+of Section~4 as a \emph{shadow} (non-mutating) intervention with the frozen formal
+$K$ (Stage-1 pilot $K = 5$) and the neutral pad, and emits a quadruple
+$(q, m_i, \text{trajectory}, \phirit_i)$ routed to one of four disjoint label roles
+(fit, calibration, development, and a sealed final audit; Section~4). Under the
+neutral-pad equivalence precondition the label estimates the removal effect;
+otherwise it estimates the pad-replacement contribution. Sampling runs only on
+tasks that satisfy AS2. Because the naive alternative---letting the agent
+self-judge whether a memory helped---can reproduce a self-confirmation trap, we
+retain it only as the ablation variant A-judge rather than as the label source.
+
+\subsection{Amortized Counterfactual Attribution}
+\aca{} compresses the training labels into a per-event prediction $\phihat$, scored
+in $O(d)$ per retrieved memory at a fixed feature dimension $d$. The feature vector
+$x_i(q)$ has three groups: a query representation, a memory representation (a frozen
+embedding encoder), and \emph{usage-behavior} features that distinguish a memory
+that was retrieved but ignored from one that was actually used---$n$-gram and edit
+overlap between memory content and output, explicit citation markers, context
+position and retrieval rank, and the log-likelihood gain on memory tokens. A
+two-layer perceptron regresses $\phihat \in [-1, 1]$ under a Huber loss
+($\delta_{\mathrm{H}} = 0.1$, provisional; distinct from the SR equivalence band
+$\delta$ and the governance dead-zone). Because the consumers change the closed-loop
+retrieval distribution, \aca{} performs \emph{periodic recalibration} every $100$
+tasks (planned configuration), fine-tuning on the newest \emph{fit}-role labels and
+applying isotonic calibration on the disjoint \emph{calibration}-role labels;
+provisional thresholds use the \emph{development} role, and the \emph{sealed
+final-audit} pool is never used for fitting, calibration, threshold selection, or
+stopping. Event-level fidelity is measured by
+$\mathrm{CCC}(\phihat_{i,t}, \phirit_{i,t})$ on that sealed final-audit split. At
+inference, \aca{} scores each of the top-$k$ retrieved memories and updates an
+exponential moving average of the running credit $\phibar_i$ and the
+positive/negative query prototype sets. The trainable parameter count is
+\tbd{ACA_TRAINABLE_PARAMS}. Where a backbone exposes no token log-probabilities
+(the closed-source row), the log-likelihood feature is masked and the remaining
+features are used.
+
+\subsection{Two consumers of one signal}
+Governance reads the running credit $\phibar$; scope gating reads $\phibar$ (in its
+retrieval score) together with the positive/negative query prototypes, which are
+learned from the event-level prediction $\phihat$. Both are consumers of the single
+\aca{} signal, not independent methods.
+
+\paragraph{Credit governance.}
+Three threshold rules update retention, each based on an uncertainty-aware bound
+rather than a bare point estimate. A memory is \emph{evicted} when a conservative
+confidence bound on $\phibar_i$ (its calibrated interval, not the point value)
+remains within or below the governance dead-zone across repeated updates; two
+memories are \emph{merged} when their embedding similarity exceeds $0.9$ and both
+have credit intervals confidently above $0$, with the merged content inherited
+unchanged from the baseline writer and only the merge \emph{trigger} credit-based
+(write-time content quality is out of scope); and new memories are
+\emph{quarantined}, receiving a UCB-style forced exploration bonus over their first
+$n_{\min} = 3$ retrievals that does not enter the
+ranking score, to avoid cold-start death. The $\pm 0.02$ governance dead-zone is a
+governance hyperparameter only (not the SR equivalence band $\delta$), deliberate
+because the sign of the estimate is least stable near $\phicf \approx 0$; the
+confidence level and the required number of repeated updates before an irreversible
+eviction are locked before running (\emph{USER\_APPROVAL\_REQUIRED}), keeping
+governance consistent with the CI-based audit policy. The prior minimum-evidence
+guard $n_i \ge 8$ is retained. Ablation
+A2 uses the identical \aca{} architecture, features, update rule and compute budget
+but swaps the interventional label for a matched observational/outcome label,
+isolating interventional supervision at matched capacity; it is a matched control,
+not a causal-mediation proof.
+
+\paragraph{Scope-gated retrieval.}
+Each memory maintains positive and negative query prototypes (the mean embedding
+of queries with $\phihat > \tau^{+}$ and $\phihat < \tau^{-}$). The retrieval score
+combines semantic relevance, scope agreement, and credit,
+\begin{equation}
+\text{score} = \alpha\cdot\text{rel} + \beta\big(\mathrm{sim}(q,\text{proto}^{+})
+  - \mathrm{sim}(q,\text{proto}^{-})\big) + \gamma\cdot\phibar_i,
+\end{equation}
+with $(\alpha,\beta,\gamma) = (1.0, 0.5, 0.3)$ as provisional defaults. This is
+intended to address cross-task interference by learning \emph{where} each memory
+applies. The same $\phihat$ can also replace a manager's outcome reward, which we
+evaluate later as a signal-portability check rather than a separate contribution.
+
+\subsection{Cost and complexity}
+The dependency $\rit{} \rightarrow \aca{} \rightarrow \text{consumers}$ is an
+architecturally linear chain. \aca{} inference is $O(kd)$ per query (top-$k$
+memories at feature dimension $d$), i.e. $O(d)$ per retrieved-memory event and
+independent of bank size; \rit{} label collection and periodic recalibration are
+amortized over the stream and accounted for separately. Constant-per-event scoring
+is a design property; the end-to-end token and memory overhead---%
+\tbd{TOKEN_OVERHEAD_PERCENT} tokens and \tbd{ACA_VRAM_OVERHEAD_GB} of resident
+VRAM---the per-event latency \tbd{ACA_SCORING_LATENCY_MS}, and the amortized \rit{}
+cost \tbd{RIT_ROLLOUT_EQUIV_PER_EVENT} remain planned measurements.
+Algorithm~\ref{alg:merit} summarizes the loop.
+
+\begin{algorithm}[t]
+\caption{\method{} main loop}
+\label{alg:merit}
+\textbf{Input}: stream $\{q_t\}$, bank $\bank$, retriever $\ret$, policy
+$\policy$, attributor $\attr$, sampling budget $p$, forced-inclusion rate $\eta$\\
+\textbf{State}: fit / calibration / development / sealed-audit label pools, running
+credit $\phibar$, prototypes $\text{proto}^{\pm}$, counts $n$, quarantine set,
+calibration state\\
+\textbf{Init}: empty pools; $\attr$ warm-started on pilot labels; new memories
+quarantined
+\begin{algorithmic}[1]
+\FOR{$t = 1, 2, \dots$}
+  \STATE $C \gets \ret_t(q_t;\bank_t,\phibar,S)$ \COMMENT{scope-gated score; quarantine bonus excluded from ranking}
+  \STATE with prob.\ $\eta$, add one random eligible memory to $C$ \COMMENT{forced exploration, distinct from the quarantine bonus}
+  \STATE $y_t, \text{traj} \gets \policy(q_t, C)$;\quad $r_t \gets \text{env/judge}(y_t)$
+  \FOR{$m_i \in C$}
+    \STATE $\phihat_i \gets \attr(x_i(q_t, \text{traj}))$; update $\phibar_i, \text{proto}^{\pm}_i, n_i$
+  \ENDFOR
+  \STATE $\bank \gets \text{write}(\bank, q_t, \text{traj}, r_t)$ \COMMENT{baseline writer; content design out of scope}
+  \IF{$\text{replayable}(q_t)$ \AND $\text{rand}() < p$}
+    \FOR{$m_i$ in probability-sampled subset of $C$}
+      \STATE $\phirit \gets$ shadow paired-LOO$(q_t, C, m_i, K)$ \COMMENT{non-mutating: does not alter $\bank$}
+      \STATE route $(q_t, m_i, \text{traj}, \phirit)$ to a fit / calibration / development / sealed-audit pool
+    \ENDFOR
+  \ENDIF
+  \STATE governance$(\bank)$: evict / merge / quarantine by uncertainty-aware rules on the $\phibar$ interval and $n$
+  \IF{$t \bmod 100 = 0$}
+    \STATE recalibrate $\attr$: fine-tune on fit pool, isotonic on calibration pool
+  \ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}

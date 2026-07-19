@@ -1,0 +1,106 @@
+\section{Pilot and Diagnostic Study}
+
+This section specifies a diagnostic test of the failure mode that \method{}
+targets, on the specific memory systems and task streams we evaluate; it introduces
+no second method and makes no claim about self-evolving memory in general. Every
+plotted quantity is an unresolved pilot output, and the study is governed by a
+prespecified falsification gate.
+
+\paragraph{Systems and streams.}
+We reproduce two credit designs on a unified codebase---a heuristic-credit bank in
+the style of ReasoningBank~\tbd{CITATION_REASONINGBANK} and a Monte-Carlo-learned
+bank in the style of MemRL~\tbd{CITATION_MEMRL}---using the same backbone and
+retriever. These are \emph{standardized credit-variant wrappers} that isolate the
+credit signal on a shared codebase, not source-faithful re-implementations; we
+report them as ``in the style of'' variants and do not attach the exact method names
+to their numbers unless the baseline-fidelity check (Section~6) confirms
+source-faithful behavior. We run them on two replayable streams (a text embodied
+environment and a multi-hop retrieval task), which are required because
+interventions must re-run paired rollouts from an identical initial state (AS2).
+Stream length and seed count are fixed as a planned configuration.
+
+\paragraph{Two-stage interventional protocol.}
+This is the first appearance of \rit{}. Thresholds of scientific meaning are fixed
+\emph{before} the pilot: the equivalence half-width $\delta$ (the smallest
+memory-level contribution we treat as practically meaningful) and the minimal
+effect of interest are pre-registered as user-approved values, not read from pilot
+noise. Stage~1 is a pilot with $K=5$ paired rollouts that estimates variance;
+Stage~2 then computes and freezes the formal $K$, the per-memory audit sample size
+$n^{\text{audit}}$, and the seed count so the confidence-interval half-width falls
+below the pre-fixed $\delta$. The confirmatory statistics use data disjoint from the
+Stage-1 pilot.
+
+At snapshot points $t \in \{100, 200, 300, 400, 500\}$ we sample retrieval events
+and, for each audited memory, perform a paired leave-one-out comparison---the full
+retrieved set versus the same set with the memory removed---holding context order
+fixed and inserting a length-matched neutral pad whose neutrality is validated
+separately (\tbd{PILOT_NEUTRAL_PAD_VALIDATION}). The pad makes each label a
+\emph{pad-replacement} contribution; it may be interpreted as the literal removal
+effect only if that pad-equivalence validation passes a pre-registered equivalence
+test, otherwise the estimand stays pad-replacement and literal removal is left as
+unvalidated future work (no no-pad arm is added in this study). The event label is
+$\phirit_i(q)$, the $K$-rollout success-rate difference. To keep audit estimates
+unbiased, the audit pool is a random or stratified probability sample with known
+inclusion probabilities (any priority sampling is confined to the training pool),
+and estimates are restricted to memories with adequate common support (coverage
+\tbd{PILOT_AUDIT_SUPPORT_COVERAGE}). \rit{} labels are partitioned into four
+disjoint roles---\emph{fit} (trains \aca{}), \emph{calibration} (isotonic
+calibration), \emph{development} (provisional threshold/hyperparameter selection),
+and a \emph{sealed final-audit} pool that scores CCC/SR/gates and remains blind to
+model, threshold, calibration, and stopping selection; the split fractions are
+locked before running (\emph{USER\_APPROVAL\_REQUIRED}). Rollout counts and snapshot
+points are a planned configuration; the amortized cost is
+\tbd{RIT_ROLLOUT_EQUIV_PER_EVENT} per
+event, and the totals \tbd{PILOT_TOTAL_ROLLOUT_BUDGET} and
+\tbd{PILOT_TOTAL_TOKEN_COST} appear in an appendix cost table.
+
+\paragraph{Statistics.}
+We separate the true memory-level aggregate target
+$\phiagg_i = \E[\phicf_{i,t}]$ from its finite \rit{} audit estimate
+$\phiaggrit_i$, reported with a task-clustered paired confidence interval.
+Concretely, $\phiaggrit_i$ is the design-based (inverse-inclusion-probability
+weighted) mean of the per-event labels $\phirit_i(q)$ over the probability-sampled
+audit events of $m_i$; it is an estimate, not ground truth. All three memory-level
+signals ($\coutil_i$, $\phibar_i$, and $\phiaggrit_i$) are computed on this same
+audit population and context distribution, so their comparison is not confounded by
+differing endogenous supports. The \emph{credit--contribution
+correlation} at the memory level, $\mathrm{CCC}(s, \phiaggrit)$ for a ranking signal
+$s \in \{\coutil, \phibar\}$, is the Spearman correlation between the signal and the
+audit estimate. The \emph{superstition rate} $\mathrm{SR@}k(s)$ is the fraction of
+the top-$k\%$ memories by $s$ whose contribution is non-positive, judged from the CI
+of $\phiaggrit_i$ against the pre-fixed equivalence band $[-\delta, \delta]$---not a
+bare $\le 0$ cut. We report $\mathrm{SR@}20\%$ split into a \emph{harmful} subset
+($\phiaggrit_i$ confidently below $-\delta$) and a \emph{practically null} subset
+(CI within $[-\delta, \delta]$); redundant-but-useful memories are separated and
+treated in the AS3 boundary study. Figure~\ref{fig:diagnostic-baseline} plots the
+baseline memory-level $\mathrm{CCC}$ and the $\mathrm{SR@}20\%$ trajectory over
+deployment.
+
+\input{figures/placeholders/fig2_diagnostic_baseline}
+
+\paragraph{Planned readings and controls.}
+We test whether the baseline memory-level correlation is low
+(\tbd{PILOT_CCC_REASONINGBANK_T500} for the heuristic bank and
+\tbd{PILOT_CCC_MEMRL_T500} for the learned bank) and whether the superstition
+subsets rise over deployment: harmful from \tbd{PILOT_SR20_HARMFUL_T100} to
+\tbd{PILOT_SR20_HARMFUL_T500} and practically null from \tbd{PILOT_SR20_NULL_T100}
+to \tbd{PILOT_SR20_NULL_T500}, with the combined $\mathrm{SR@}20\%$ moving from
+\tbd{PILOT_SR20_T100} to \tbd{PILOT_SR20_T500} (each a point estimate with its CI),
+as predicted if correlational credit does not self-correct. Two controls guard
+against alternative explanations. A split-half re-test of $\phirit$ gives
+reliability \tbd{PILOT_SPLITHALF_PHI_RELIABILITY}, testing whether a low correlation
+is a measurement artifact. Removing the entire positive-contribution subset and
+measuring the success drop \tbd{PILOT_UTILITY_SUBSET_REMOVAL_DROP} tests whether
+memory has value at all, so that a defective credit assignment---rather than
+useless memory---is the operative problem.
+
+\paragraph{Falsification gate.}
+If the upper bound of the memory-level credit--contribution correlation interval
+falls above the pre-registered bound (the source names $\mathrm{CCC} > 0.5$ as the
+falsifier), or if the superstition subsets do not rise with deployment, the
+attribution hypothesis is not supported; the decision uses the confidence interval,
+not a point estimate. We will then narrow the claim to heterogeneous streams rather
+than force a positive reading. The diagnostic yields two requirements for the method:
+approximate the \rit{} credit online, and expose the same credit signal to
+downstream consumers. Both are realized by \method{}, whose architecture is shown in
+Figure~\ref{fig:method-architecture}.

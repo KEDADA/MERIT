@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccc}
+\toprule
+Variant & AVG & $\Delta$AVG & SR@20\% ($t=500$) & CCC & CTI \\
+\midrule
+Full MERIT & \tbdcell{ABL_FULL_AVG} & 0 & \tbdcell{ABL_FULL_SR20} & \tbdcell{ABL_FULL_CCC} & \tbdcell{ABL_FULL_CTI} \\
+A1: no recalibration & \tbdcell{ABL_A1_AVG} & \tbdcell{ABL_A1_DELTA} & \tbdcell{ABL_A1_SR20} & \tbdcell{ABL_A1_CCC} & \tbdcell{ABL_A1_CTI} \\
+A2: matched obs.-label control & \tbdcell{ABL_A2_AVG} & \tbdcell{ABL_A2_DELTA} & \tbdcell{ABL_A2_SR20} & \tbdcell{ABL_A2_CCC} & \tbdcell{ABL_A2_CTI} \\
+A3: no scope gating & \tbdcell{ABL_A3_AVG} & \tbdcell{ABL_A3_DELTA} & \tbdcell{ABL_A3_SR20} & \tbdcell{ABL_A3_CCC} & \tbdcell{ABL_A3_CTI} \\
+A4: no governance & \tbdcell{ABL_A4_AVG} & \tbdcell{ABL_A4_DELTA} & \tbdcell{ABL_A4_SR20} & \tbdcell{ABL_A4_CCC} & \tbdcell{ABL_A4_CTI} \\
+A5: no usage features & \tbdcell{ABL_A5_AVG} & \tbdcell{ABL_A5_DELTA} & \tbdcell{ABL_A5_SR20} & \tbdcell{ABL_A5_CCC} & \tbdcell{ABL_A5_CTI} \\
+A-judge: LLM self-judge & \tbdcell{ABL_AJUDGE_AVG} & \tbdcell{ABL_AJUDGE_DELTA} & \tbdcell{ABL_AJUDGE_SR20} & \tbdcell{ABL_AJUDGE_CCC} & \tbdcell{ABL_AJUDGE_CTI} \\
+A7: group intervention (exploratory) & \tbdcell{ABL_A7_AVG} & \tbdcell{ABL_A7_DELTA} & \tbdcell{ABL_A7_SR20} & \tbdcell{ABL_A7_CCC} & \tbdcell{ABL_A7_CTI} \\
+\bottomrule
+\end{tabular}
+\caption{Ablation skeleton. The table tests credit fidelity, mechanism statistics, interference, and task outcomes without presupposing that any component is necessary. A2 is a capacity-matched control: the identical \aca{} architecture, features, update rule, and compute budget, with only the supervision label swapped from the interventional \rit{} label to a matched observational/outcome label.}
+\label{tab:ablation}
+\end{table*}

@@ -1,0 +1,130 @@
+\section{Problem Formulation and Superstitious-Memory Hypothesis}
+
+\paragraph{Setting and notation.}
+An agent processes a stream of tasks $\{(q_t, r_t)\}$, where $q_t$ is a query or
+task and $r_t \in [0,1]$ is an outcome signal (an environment success indicator or
+a consistency-checked judge score). It maintains a memory bank
+$\bank_t = \{m_i\}$, a time/state-indexed retrieval operator
+$\ret_t(q_t;\bank_t,\phibar,S) = C_t \subseteq \bank_t$
+returning a top-$k$ set (the operator depends on the current bank, running credit,
+and scope state, so it changes over deployment), and a policy $\policy(y \given q, C)$ that produces an
+output $y$. \method{} adds an attributor $\attr$, a per-memory running credit
+$\phibar_i$, and a scope representation $S_i$. These are the core symbols;
+Algorithm~\ref{alg:merit} lists the full runtime state (label pools, trajectories,
+per-memory counts, prototypes, quarantine and calibration state).
+
+\paragraph{Immediate retrieval contribution.}
+We define a memory's value by intervention, at a single retrieval event and
+conditioned on the deployment history.
+
+\begin{definition}[Immediate retrieval contribution]\label{def:phi}
+For a retrieval event with query $q$, realized retrieved set $C=\ret(q)$, and
+history $H_t$,
+\begin{equation}
+\phicf_{i,t}(q,C) \triangleq
+  \E_\xi\!\left[\, r_t(C;\xi) - r_t(C\setminus\{m_i\};\xi) \given H_t \,\right],
+\end{equation}
+the expected outcome difference from removing $m_i$, over policy and environment
+randomness $\xi$.
+\end{definition}
+
+\noindent This is the single-event effect, \emph{not} a long-horizon memory value;
+long-horizon value is out of scope. The estimand is the \emph{literal removal}
+effect. Because \rit{} implements the removal by inserting a length-matched neutral
+pad rather than leaving an empty slot (Section~4), the interventional labels may be
+interpreted as estimating the removal effect \emph{only if} the neutral-pad
+equivalence validation (\tbd{PILOT_NEUTRAL_PAD_VALIDATION}) passes a pre-registered
+equivalence test; if that validation fails or has not been run, the estimand
+downgrades to the \emph{pad-replacement contribution}, and literal removal remains
+unvalidated future work. Higher-order interactions within $C$ are not part of this
+estimand: leave-one-out is the target, and where interactions matter they are
+surfaced only in the boundary study through an exploratory group-intervention
+analysis (A7) that carries no numerical guarantee (AS3).
+We separate four
+related quantities and never conflate them: the true effect $\phicf$; its
+finite-rollout \rit{} estimate $\phirit$ (Definition~\ref{def:phi} evaluated with
+$K$ paired rollouts), which estimates the removal effect under the equivalence
+precondition above; the amortized \aca{} prediction $\phihat$; and the online
+running aggregate $\phibar_i$ (an EMA of $\phihat$). At the memory level we
+distinguish the true aggregate target $\phiagg_i \triangleq \E[\phicf_{i,t}]$ from
+its finite \rit{} audit estimate $\phiaggrit_i$ (reported with a confidence
+interval; Section~4). The aggregation is taken over an explicit \emph{audit
+distribution}: the retrieval-conditioned event distribution of $m_i$ on frozen bank
+snapshots, restricted to the common-support region, with uniform weight per audited
+retrieval event; $\phiaggrit_i$ is the corresponding design-based (probability-sampled)
+finite estimator. The three memory-level signals $\coutil_i$, $\phibar_i$, and
+$\phiaggrit_i$ are compared on this same audit population. The window, minimum sample,
+and inclusion design are locked before running (\emph{USER\_APPROVAL\_REQUIRED};
+Section~4). The baseline signal, by contrast, is associational.
+
+\begin{definition}[Co-occurrence utility]\label{def:util}
+The baseline memory-level signal is
+\begin{equation}
+\coutil(m_i) = \frac{\sum_t \mathbf{1}[m_i \in \ret(q_t)]\, r_t}
+                    {\sum_t \mathbf{1}[m_i \in \ret(q_t)]},
+\end{equation}
+the average outcome of tasks in which $m_i$ was retrieved.
+\end{definition}
+
+\paragraph{Why correlational credit can be superstitious.}
+\begin{observation}[Decomposition identity]\label{obs:decomp}
+Because $\phicf$ is a definitional removal difference, the memory-level
+decomposition
+\begin{equation}
+\E[r(C)\given i\text{ retr.}] =
+  \underbrace{\E[r(C\setminus\{m_i\})\given i\text{ retr.}]}_{\text{leave-one-out baseline}}
+  + \underbrace{\E[\phicf_i\given i\text{ retr.}]}_{\text{mean contribution}}
+\end{equation}
+holds as an \emph{identity}, requiring no assumption. Consequently $\coutil_i$ mixes
+the leave-one-out baseline success with the mean contribution: it is a
+\emph{composite signal that can be misaligned with immediate contribution},
+differing from $\E[\phicf_i\given i\text{ retrieved}]$ by exactly the leave-one-out
+baseline term, which is nonzero whenever
+$\E[r(C\setminus\{m_i\})\given i\text{ retr.}]\neq 0$.
+\end{observation}
+
+\noindent The identity is not conjectural. It does not by itself establish that a
+\emph{persistent} misalignment arises in a running system; that is a separate,
+genuinely conjectural claim about the closed-loop dynamics, which we state as a
+hypothesis rather than a theorem.
+
+\begin{conjecture}[Superstition equilibrium, informal]\label{conj:equilibrium}
+If retrieval is statistically dependent on baseline solvability, this dependence
+amplifies and systematizes the misalignment; and under positive feedback in which
+utility participates in retrieval ranking, a stable \emph{superstition equilibrium}
+can arise, with $\coutil_i$ high while $\phicf_i = 0$.
+\end{conjecture}
+
+\noindent Retrieval--solvability dependence is a mechanism that may amplify the
+misalignment under the conditions tested in the pilot; it is \emph{not} necessary
+for the misalignment to exist or for the decomposition identity
+(Observation~\ref{obs:decomp}) to hold. A formal statement and proof of the
+equilibrium claim are deferred; Conjecture~\ref{conj:equilibrium} is not proven in
+this paper and must not be read as established.
+
+\paragraph{Assumptions.}
+Three assumptions scope the method and are stated for rebuttal. To avoid collision
+with the ablation labels A1--A7 used later, we name the assumptions AS1--AS3.
+\begin{itemize}
+  \item \textbf{AS1 (observable outcome).} Each task admits a usable $r_t$, either
+  an environment success signal or a consistency-checked judge score.
+  \item \textbf{AS2 (local replayability).} A task subset can be replayed from a
+  fixed initial state (e.g., container snapshots or text environments). Only
+  \rit{} label collection requires AS2; \aca{} online scoring does not.
+  \item \textbf{AS3 (interaction caveat).} Leave-one-out is the estimand; it does
+  not capture higher-order interactions within a retrieved set, and we do not treat
+  such interactions as estimation error against any allocation rule (e.g., the
+  Shapley value). Where interactions matter---most visibly for
+  redundant/substitutable memory pairs, whose individual leave-one-out effects can
+  be near zero while their joint value is positive---we surface them only in the
+  boundary study through an exploratory group-intervention analysis (A7) that
+  carries no numerical guarantee.
+\end{itemize}
+
+\paragraph{Objectives.}
+\aca{} learns $\attr$ by minimizing a regression loss on \rit{} labels,
+$\E[(\attr(x_i(q)) - \phirit_i(q))^2]$, where $x_i(q)$ is a feature vector for the
+event. The system objective maximizes streaming cumulative success $\sum_t r_t$
+subject to a token budget: retrieval plus \rit{} sampling stay within
+$1 + \varepsilon$ times the baseline cost, with
+$\varepsilon = \tbd{RIT_BUDGET_EPSILON_PERCENT}$ as a provisional hyperparameter.

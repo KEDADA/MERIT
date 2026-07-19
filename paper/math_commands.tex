@@ -1,0 +1,33 @@
+% Canonical method names.
+\newcommand{\method}{\textsc{Merit}}
+\newcommand{\rit}{\textsc{Rit}}
+\newcommand{\aca}{\textsc{Aca}}
+
+% Evidence-safe placeholders.
+% Keep the complete ledger identifier in the source argument, but render a
+% compact marker in the PDF so long identifiers cannot cross column bounds.
+\newcommand{\tbd}[1]{\textit{[TBD]}}
+% \tbdcell keeps table cells compact; its argument is the ledger identifier.
+\newcommand{\tbdcell}[1]{\textit{TBD}}
+
+% Compilable textual figure placeholder. Internal text is 9pt (\small),
+% satisfying the AAAI minimum for text inside figures.
+\newcommand{\figureplaceholder}[2]{%
+  \fbox{\parbox[c][#1][c]{0.94\linewidth}{\centering\small #2}}%
+}
+
+% Paper-specific notation (used by the problem-formulation and method sections).
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\given}{\mid}
+\newcommand{\bank}{\mathcal{M}}          % memory bank
+\newcommand{\ret}{R}                       % retrieval operator
+\newcommand{\phicf}{\varphi}               % true immediate contribution (event)
+\newcommand{\phirit}{\widetilde{\varphi}}  % RIT finite-rollout estimate (event label)
+\newcommand{\phihat}{\widehat{\varphi}}    % ACA prediction ONLY
+\newcommand{\phibar}{\bar{\varphi}}        % online running aggregate (EMA of ACA)
+\newcommand{\phiagg}{\Phi}                 % true memory-level aggregate target
+\newcommand{\phiaggrit}{\widetilde{\Phi}}  % finite RIT audit estimate of \phiagg
+\newcommand{\coutil}{\widehat{U}}          % co-occurrence utility (baseline signal)
+\newcommand{\policy}{\pi}
+\newcommand{\attr}{g_{\theta}}             % amortized attributor

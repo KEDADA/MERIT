@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccc}
+\toprule
+Configuration & Relative tokens & AVG & ACA ms/event & Extra VRAM & RIT overhead \\
+\midrule
+Co-occurrence baseline & $1\times$ & \tbdcell{EFF_BASELINE_AVG} & -- & -- & 0 \\
+MERIT & \tbdcell{MERIT_RELATIVE_TOKEN_COST} & \tbdcell{EFF_MERIT_AVG} & \tbdcell{ACA_SCORING_LATENCY_MS} & \tbdcell{ACA_VRAM_OVERHEAD_GB} & \tbdcell{RIT_TOKEN_OVERHEAD_PERCENT} \\
+A1 (static attributor) & \tbdcell{A1_RELATIVE_TOKEN_COST} & \tbdcell{EFF_A1_AVG} & \tbdcell{ACA_SCORING_LATENCY_MS} & \tbdcell{ACA_VRAM_OVERHEAD_GB} & \tbdcell{RIT_TOKEN_OVERHEAD_PERCENT} \\
+RIT-Full reference & \tbdcell{RITFULL_RELATIVE_TOKEN_COST} & \tbdcell{EFF_RITFULL_AVG} & -- & -- & \tbdcell{FULL_RIT_COST_MULTIPLIER} \\
+\bottomrule
+\end{tabular}
+\caption{Efficiency skeleton. All non-reference values remain unresolved; no Pareto ranking is assigned before verification.}
+\label{tab:efficiency}
+\end{table*}

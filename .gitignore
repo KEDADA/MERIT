@@ -1,0 +1,10 @@
+# Machine-local Claude configuration
+.claude/settings.local.json
+
+# Project-local ARIS junctions (targets live outside this repository)
+.claude/skills/
+.aris/tools/
+
+# OS metadata
+Thumbs.db
+.DS_Store

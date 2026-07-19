@@ -1,0 +1,610 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+ (aaai2027.sty
+Conference Style for AAAI for LaTeX 2e
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.s
+ty
+`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
+nd its extensions (msharpe)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.st
+y
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
+nd-pdftex.def))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse
+\xparse.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\colo
+r.cfg)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdft
+ex.def)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolo
+r.ltx))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval
+.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutil
+s.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.
+tex))))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring
+.tex))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.t
+ex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/figureversions\fi
+gureversions.sty)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics
+.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\grap
+hics.cfg)))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.
+sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs
+.sty)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.s
+ty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.s
+ty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
+y)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.st
+y))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.
+sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts
+.sty))
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thm.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty))
+
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algori
+thmic.sty) (math_commands.tex)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
+) (E:\Project\MERIT-AAAI\paper\build\main.aux)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
+pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
+opdf-base.sty
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf
+-sys.cfg)) (sections/00_abstract.tex
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd)
+Underfull \hbox (badness 3168) in paragraph at lines 2--23
+[]\T1/ntxtlf/m/n/9 Self-evolving language-model agents dis-till in-ter-ac-tion
+
+Underfull \hbox (badness 1038) in paragraph at lines 2--23
+\T1/ntxtlf/m/n/9 Coun-ter-fac-tual At-tri-bu-tion (\T1/ntxtlf/m/sc/9 Aca\T1/ntx
+tlf/m/n/9 ) com-presses them into
+
+Underfull \hbox (badness 4621) in paragraph at lines 2--23
+\T1/ntxtlf/m/n/9 threshold gov-er-nance and scope-gated retrieval---read
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--23
+\T1/pcr/m/n/9 [[TBD:MAIN_AVG_GAIN_OVER_BEST_BASELINE]]\T1/ntxtlf/m/n/9 ,
+) (sections/01_introduction.tex
+Underfull \hbox (badness 3612) in paragraph at lines 16--29
+ \T1/ntxtlf/b/n/10 Re-trieval is not con-tri-bu-tion. \T1/ntxtlf/m/n/10 A mem-o
+ry's value
+
+Underfull \hbox (badness 1817) in paragraph at lines 16--29
+\T1/ntxtlf/m/n/10 is de-fined only counterfactually---by how much task
+
+Underfull \hbox (badness 1377) in paragraph at lines 16--29
+\T1/ntxtlf/m/n/10 out-comes de-grade when it is re-moved from the re-
+
+Underfull \hbox (badness 4660) in paragraph at lines 16--29
+\T1/ntxtlf/m/n/10 trieved set. Cor-re-la-tional credit does not mea-sure
+
+Overfull \hbox (6.89555pt too wide) in paragraph at lines 16--29
+\T1/ntxtlf/m/n/10 ment \T1/pcr/m/n/10 [[TBD:CITATION_SKINNER_SUPERSTITION]]\T1/
+ntxtlf/m/n/10 :
+
+Underfull \hbox (badness 4913) in paragraph at lines 31--43
+ \T1/ntxtlf/b/n/10 Why prior sig-nals are in-suf-fi-cient. \T1/ntxtlf/m/n/10 Ex
+-ist-ing ap-
+
+Underfull \hbox (badness 1688) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 proaches in our com-par-i-son com-monly use ob-ser-va-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 tional, co-occurrence credit: success-trajectory dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 til-la-tion \T1/pcr/m/n/10 [[TBD:CITATION_REASONINGBANK]]\T1/
+ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 environment-feedback util-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 ity \T1/pcr/m/n/10 [[TBD:CITATION_SKEMEX]]\T1/ntxtlf/m/n/10 ,
+ and Monte-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 Carlo or re-in-force-ment up-dates over out-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 comes \T1/pcr/m/n/10 [[TBD:CITATION_MEMRL]]\T1/ntxtlf/m/n/10 
+. What is
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 learned is the man-age-ment \T1/ntxtlf/m/it/10 pol-icy\T1/ntx
+tlf/m/n/10 ; the un-der-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 ly-ing sig-nal re-mains cor-re-la-tional. Coun-ter-fac-
+
+Underfull \hbox (badness 7151) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 tual data-valuation meth-ods such as Data Shap-
+
+Underfull \hbox (badness 1259) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 ley \T1/pcr/m/n/10 [[TBD:CITATION_DATA_SHAPLEY]]\T1/ntxtlf/m/
+n/10 , in-flu-ence
+
+Overfull \hbox (17.82556pt too wide) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 func-tions \T1/pcr/m/n/10 [[TBD:CITATION_INFLUENCE_FUNCTIONS]
+]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 3058) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 of-fline train-ing data, while context-attribution meth-
+
+Underfull \hbox (badness 2065) in paragraph at lines 31--43
+\T1/ntxtlf/m/n/10 ods \T1/pcr/m/n/10 [[TBD:CITATION_CONTEXTCITE]] \T1/ntxtlf/m/
+n/10 ex-plain a
+[1{C:/Users/Wang Keting/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Us
+ers/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.
+enc}{C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/n
+tx-ec-tlf-pc.enc}{C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/
+dvips/base/8r.enc}]
+(C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.f
+d)
+Overfull \hbox (0.60562pt too wide) in paragraph at lines 84--93
+\T1/pcr/m/n/10 [[TBD:MAIN_AVG_GAIN_OVER_BEST_BASELINE]]
+(figures/placeholders/fig1_problem_solution.tex)) (sections/02_related_work.tex
+
+Underfull \hbox (badness 5388) in paragraph at lines 8--18
+ \T1/ntxtlf/b/n/10 Self-evolving mem-ory and ex-pe-ri-ence dis-til-la-tion.
+
+Underfull \hbox (badness 1147) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 A first fam-ily equips agents with a per-sis-tent mem-
+
+Underfull \hbox (badness 3019) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 ory that is writ-ten and reused across tasks: gen-
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 eral mem-ory stores \T1/pcr/m/n/10 [[TBD:CITATION_MEM0]]\T1/n
+txtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 agen-tic mem-ory with linked
+
+Underfull \hbox (badness 1661) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 notes \T1/pcr/m/n/10 [[TBD:CITATION_A_MEM]]\T1/ntxtlf/m/n/10 
+, work-flow mem-
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 ory \T1/pcr/m/n/10 [[TBD:CITATION_AWM]]\T1/ntxtlf/m/n/10 , re
+asoning-trajectory
+
+Underfull \hbox (badness 2269) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 banks \T1/pcr/m/n/10 [[TBD:CITATION_REASONINGBANK]]\T1/ntxtlf
+/m/n/10 , skill
+
+Underfull \hbox (badness 1009) in paragraph at lines 8--18
+\T1/ntxtlf/m/n/10 or ex-em-plar mem-ory \T1/pcr/m/n/10 [[TBD:CITATION_SKEMEX]]\
+T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+ \T1/ntxtlf/b/n/10 Learned mem-ory man-age-ment. \T1/ntxtlf/m/n/10 A sec-ond fa
+m-
+
+Underfull \hbox (badness 2799) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 ily learns the memory-management pol-icy with re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 in-force-ment or Monte-Carlo sig-nals: reward-driven
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 man-agers \T1/pcr/m/n/10 [[TBD:CITATION_MEMORY_R1]]\T1/ntxtlf
+/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 policy-optimized mem-ory
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 agents \T1/pcr/m/n/10 [[TBD:CITATION_MEM_ALPHA]]\T1/ntxtlf/m/
+n/10 , value-
+
+Underfull \hbox (badness 1117) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 the re-ward that drives learn-ing re-mains an outcome-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 level, cor-re-la-tional quan-tity. Com-ple-men-tary work
+
+Underfull \hbox (badness 1776) in paragraph at lines 20--31
+\T1/ntxtlf/m/n/10 im-proves write-time qual-ity through multi-agent con-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
+ \T1/ntxtlf/b/n/10 Data val-u-a-tion and con-text at-tri-bu-tion. \T1/ntxtlf/m/
+n/10 A
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 third fam-ily mea-sures the in-flu-ence of data
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 or con-text on model be-hav-ior: Data Shap-
+
+Underfull \hbox (badness 1259) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 ley \T1/pcr/m/n/10 [[TBD:CITATION_DATA_SHAPLEY]]\T1/ntxtlf/m/
+n/10 , in-flu-ence
+
+Overfull \hbox (17.82556pt too wide) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 func-tions \T1/pcr/m/n/10 [[TBD:CITATION_INFLUENCE_FUNCTIONS]
+]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 and TracIn \T1/pcr/m/n/10 [[TBD:CITATION_TRACIN]] \T1/ntxtlf/
+m/n/10 value
+
+Underfull \hbox (badness 3407) in paragraph at lines 33--43
+\T1/ntxtlf/m/n/10 static train-ing points of-fline, while con-text at-tri-bu-
+
+Underfull \hbox (badness 3590) in paragraph at lines 45--53
+ \T1/ntxtlf/b/n/10 In-ter-fer-ence and or-thog-o-nal di-rec-tions. \T1/ntxtlf/m
+/n/10 Cross-task
+
+Overfull \hbox (86.0555pt too wide) in paragraph at lines 45--53
+\T1/ntxtlf/m/n/10 served \T1/pcr/m/n/10 [[TBD:CITATION_EVO_MEMORY]] [[TBD:CITAT
+ION_EEVEE]]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--53
+\T1/ntxtlf/m/n/10 and test-time rea-son-ing meth-
+
+Overfull \hbox (65.4955pt too wide) in paragraph at lines 45--53
+\T1/ntxtlf/m/n/10 ods \T1/pcr/m/n/10 [[TBD:CITATION_REFLEXION]] [[TBD:CITATION_
+MATTS]]
+[2{C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
+q-ts1.enc}] (tables/table5_method_positioning.tex))
+(sections/03_problem_formulation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+[]\T1/ntxtlf/m/it/10 If re-trieval
+
+Underfull \hbox (badness 1117) in paragraph at lines 46--52
+\T1/ntxtlf/m/it/10 events are cor-re-lated with the base-line solv-abil-ity of
+) (sections/04_pilot_diagnostic.tex
+Underfull \hbox (badness 1331) in paragraph at lines 75--1
+ \T1/ntxtlf/b/n/10 Ob-jec-tives. \T1/ntxtlf/m/sc/10 Aca \T1/ntxtlf/m/n/10 learn
+s $\OML/cmm/m/it/10 g[]$ \T1/ntxtlf/m/n/10 by min-i-miz-ing a re-gres-
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+ \T1/ntxtlf/b/n/10 Sys-tems and streams. \T1/ntxtlf/m/n/10 We re-pro-duce two
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+\T1/ntxtlf/m/n/10 credit de-signs on a uni-fied codebase---a
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+\T1/ntxtlf/m/n/10 heuristic-credit bank in the style of Rea-son-ing-
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+\T1/ntxtlf/m/n/10 Bank \T1/pcr/m/n/10 [[TBD:CITATION_REASONINGBANK]]
+
+Underfull \hbox (badness 5231) in paragraph at lines 8--15
+\T1/ntxtlf/m/n/10 and a Monte-Carlo-learned bank in the style of
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+\T1/ntxtlf/m/n/10 MemRL \T1/pcr/m/n/10 [[TBD:CITATION_MEMRL]]\T1/ntxtlf/m/n/10 
+---using the
+
+Underfull \hbox (badness 1077) in paragraph at lines 17--27
+\T1/ntxtlf/m/n/10 text or-der fixed and in-sert-ing a filler place-holder so
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 4 undefined on input
+ line 35.
+
+(figures/placeholders/fig2_diagnostic_baseline.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+ \T1/ntxtlf/b/n/10 Planned read-ings and con-trols. \T1/ntxtlf/m/n/10 We test
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 whether the base-line cor-re-la-tion is low
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 (\T1/pcr/m/n/10 [[TBD:PILOT_CCC_REASONINGBANK_T500]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 for the heuris-tic bank and
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/pcr/m/n/10 [[TBD:PILOT_CCC_MEMRL_T500]] \T1/ntxtlf/m/n/10 for the
+
+Underfull \hbox (badness 6526) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 learned bank) and whether $[]\OT1/cmr/m/n/10 20%$ \T1/ntxtlf/
+m/n/10 rises from
+
+Underfull \hbox (badness 6691) in paragraph at lines 41--52
+\T1/pcr/m/n/10 [[TBD:PILOT_SR20_T100]] \T1/ntxtlf/m/n/10 at $\OML/cmm/m/it/10 t
+ \OT1/cmr/m/n/10 = 100$ \T1/ntxtlf/m/n/10 to
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/pcr/m/n/10 [[TBD:PILOT_SR20_T500]] \T1/ntxtlf/m/n/10 at $\OML/cmm/m/it/10 t
+ \OT1/cmr/m/n/10 = 500$\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 3977) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 as pre-dicted if cor-re-la-tional credit does not self-
+
+Underfull \hbox (badness 3557) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 correct. Two con-trols guard against al-ter-na-tive ex-
+
+Underfull \hbox (badness 1642) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 pla-na-tions. A split-half re-test of $[]$ gives re-li-a-bil-
+ity
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/pcr/m/n/10 [[TBD:PILOT_SPLITHALF_PHI_RELIABILITY]]\T1/ntxtlf/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 test-ing whether a low cor-re-la-tion is a mea-
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\T1/ntxtlf/m/n/10 sure-ment ar-ti-fact. Re-mov-ing the en-tire $\OML/cmm/m/it/1
+0 ' >
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--52
+\OT1/cmr/m/n/10 0$ \T1/ntxtlf/m/n/10 sub-set and mea-sur-ing the suc-cess drop
+
+Overfull \hbox (6.60562pt too wide) in paragraph at lines 41--52
+\T1/pcr/m/n/10 [[TBD:PILOT_UTILITY_SUBSET_REMOVAL_DROP]]
+) (sections/05_method.tex
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 4 undefined on input
+ line 4.
+
+
+Underfull \vbox (badness 2418) has occurred while \output is active [4]
+(figures/placeholders/fig3_method_architecture.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 14--24
+\T1/ntxtlf/m/sc/10 Rit \T1/ntxtlf/m/n/10 con-tin-u-ously pro-duces causal la-be
+ls at
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--24
+\T1/ntxtlf/m/n/10 low bud-get. With sam-pling prob-a-bil-ity $\OML/cmm/m/it/10 
+p \OT1/cmr/m/n/10 =
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--24
+[]$ \T1/ntxtlf/m/n/10 (a
+
+Underfull \hbox (badness 2005) in paragraph at lines 72--81
+\T1/ntxtlf/m/n/10 pe-ri-odic re-cal-i-bra-tion are amor-tized over the stream
+
+Underfull \hbox (badness 2799) in paragraph at lines 72--81
+\T1/ntxtlf/m/n/10 erty: constant-time on-line scor-ing fol-lows from the
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--81
+\T1/ntxtlf/m/n/10 overhead---\T1/pcr/m/n/10 [[TBD:TOKEN_OVERHEAD_PERCENT]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--81
+\T1/ntxtlf/m/n/10 to-kens and \T1/pcr/m/n/10 [[TBD:ACA_VRAM_OVERHEAD_GB]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--81
+\T1/ntxtlf/m/n/10 of res-i-dent VRAM---and the per-event la-tency
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--81
+\T1/pcr/m/n/10 [[TBD:ACA_SCORING_LATENCY_MS]] \T1/ntxtlf/m/n/10 re-main
+
+Underfull \hbox (badness 2790) in paragraph at lines 89--90
+[] []$\OML/cmm/m/it/10 C \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 )$ \T1/ntxtlf/m/n/10 {scope-gated: $\OML/cm
+m/m/it/10 \OMS/cmsy/m/n/10 ^^A$\T1/ntxtlf/m/n/10 rel $\OT1/cmr/m/n/10 + \OML/c
+mm/m/it/10 ^^L\OMS/cmsy/m/n/10 ^^A$\T1/ntxtlf/m/n/10 scope
+) (sections/06_experiments_analysis.tex [5] (tables/table4_hypotheses_map.tex)
+Underfull \hbox (badness 1057) in paragraph at lines 13--26
+\T1/ntxtlf/m/n/10 ment $[]$.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--26
+\T1/ntxtlf/m/n/10 A sin-gle main run costs
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--26
+[]$\T1/ntxtlf/m/n/10 , with the
+
+Underfull \hbox (badness 2435) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 tic credit, learned credit, or-thog-o-nal rea-son-ing, and
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 an in-ter-ven-tion reference---and or-ders the stream
+
+Underfull \hbox (badness 1152) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 ti-ties of S2--S4 are not spec-i-fied in the source. We
+
+Underfull \hbox (badness 2591) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 test three pre-dic-tions against the even-tual num-bers:
+
+Underfull \hbox (badness 3849) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 whether the gain grows with stream het-ero-gene-ity
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 (from \T1/pcr/m/n/10 [[TBD:MAIN_GAIN_SINGLE_DOMAIN]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--41
+\T1/ntxtlf/m/n/10 on the single-domain stream to
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--41
+\T1/pcr/m/n/10 [[TBD:MAIN_GAIN_MIXED_STREAM]] \T1/ntxtlf/m/n/10 on the
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--41
+\T1/pcr/m/n/10 [[TBD:MERIT_FRACTION_OF_RITFULL_GAIN]]
+
+Overfull \hbox (3.10562pt too wide) in paragraph at lines 28--41
+\T1/pcr/m/n/10 [[TBD:MAIN_AVG_GAIN_OVER_BEST_BASELINE]]\T1/ntxtlf/m/n/10 .
+(tables/table1_main_results.tex)
+Underfull \hbox (badness 1997) in paragraph at lines 45--52
+\T1/ntxtlf/m/n/10 and \T1/pcr/m/n/10 [[TBD:REWARD_SWAP_MEMALPHA_GAIN]] \T1/ntxt
+lf/m/n/10 re-
+(tables/table2_reward_swap.tex) (tables/table3_ablation.tex)
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 6 undefined on input
+ line 68.
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 Figure 5[] reuses the axes and sta-tis-ti-cal def-i-ni-
+
+Underfull \hbox (badness 1460) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 tions of the base-line di-ag-nos-tic (Fig-ure []) so that
+
+Underfull \hbox (badness 5302) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 the two are di-rectly com-pa-ra-ble. Panel (a) tests
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 whether \T1/ntxtlf/m/sc/10 Aca\T1/ntxtlf/m/n/10 's held-out c
+redit--contribution cor-
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 re-la-tion \T1/pcr/m/n/10 [[TBD:ACA_HELDOUT_CCC_T500]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--80
+\T1/ntxtlf/m/n/10 im-proves on the base-line
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--80
+\T1/pcr/m/n/10 [[TBD:PILOT_CCC_REASONINGBANK_T500]]\T1/ntxtlf/m/n/10 ;
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--80
+\T1/pcr/m/n/10 [[TBD:SR_REDUCTION_MERIT_T500_PERCENT]]
+(figures/placeholders/fig5_mechanism_recovery.tex
+
+LaTeX Warning: Reference `fig:diagnostic-baseline' on page 6 undefined on input
+ line 13.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 84--96
+\T1/ntxtlf/m/n/10 bone (from \T1/pcr/m/n/10 [[TBD:SCALING_GAIN_32B]] \T1/ntxtlf
+/m/n/10 to
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--96
+\T1/pcr/m/n/10 [[TBD:SCALING_GAIN_235B]]\T1/ntxtlf/m/n/10 , with stronger
+
+Overfull \hbox (12.60562pt too wide) in paragraph at lines 84--96
+\T1/pcr/m/n/10 [[TBD:ACA_ZEROSHOT_TRANSFER_CCC_WEBARENA]]
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--96
+\T1/ntxtlf/m/n/10 gain \T1/pcr/m/n/10 [[TBD:H5_GAIN_SMALL_BANK_LT100]]\T1/ntxtl
+f/m/n/10 ),
+
+Underfull \hbox (badness 1838) in paragraph at lines 84--96
+\T1/ntxtlf/m/n/10 gain ver-sus stream het-ero-gene-ity (single-domain gain
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--96
+\T1/pcr/m/n/10 [[TBD:H5_GAIN_SINGLE_DOMAIN]]\T1/ntxtlf/m/n/10 ), and gain
+
+Underfull \hbox (badness 1571) in paragraph at lines 84--96
+\T1/ntxtlf/m/n/10 un-der-es-ti-ma-tion grows with re-dun-dancy and that the
+[6] (figures/placeholders/fig4_streaming_efficiency.tex)
+(tables/table6_efficiency.tex)
+Underfull \hbox (badness 1087) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 case, a use-ful multi-hop mem-ory and a su-per-sti-tious
+
+Overfull \hbox (33.10562pt too wide) in paragraph at lines 112--124
+\T1/pcr/m/n/10 [[TBD:CASE_SUPERSTITION_EVICTION_TASK_INDEX]]\T1/ntxtlf/m/n/10 ,
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 while the for-mer's scope is char-ac-ter-ized cor-rectly.
+
+Underfull \hbox (badness 4156) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 In the fail-ure case, two com-ple-men-tary mem-o-ries
+
+Underfull \hbox (badness 1215) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 each hold half of a pro-ce-dure; we test whether in-
+
+Underfull \hbox (badness 1365) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 di-vid-ual leave-one-out is near zero for both so that
+
+Underfull \hbox (badness 4242) in paragraph at lines 112--124
+\T1/ntxtlf/m/n/10 intervention fall-back re-cov-ers their joint credit---an
+
+Overfull \hbox (72.60562pt too wide) in paragraph at lines 112--124
+\T1/pcr/m/n/10 [[TBD:RESIDUAL_FAILURE_NO_RELEVANT_MEMORY_FRACTION]]
+[7] (figures/placeholders/fig6_case_study.tex))
+(sections/07_limitations_conclusion.tex
+Underfull \vbox (badness 7759) has occurred while \output is active [8])
+[9] (E:\Project\MERIT-AAAI\paper\build\main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Users/Wang Keting/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Wa
+ng Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cmextra/cmex9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wang Keting/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Wang Keting/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Wang
+ Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wang Keting/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Wang Keting/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/
+Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Users/Wang Keting/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/Wang Keting/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wang Keting/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/Wang Keting/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Wang Ke
+ting/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on E:\Project\MERIT-AAAI\paper\build\main.pdf (9 pages, 317624 b
+ytes).
+Transcript written on E:\Project\MERIT-AAAI\paper\build\main.log.

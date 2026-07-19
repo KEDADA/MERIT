@@ -1,0 +1,326 @@
+PWD E:\Project\MERIT-AAAI\paper
+INPUT C:\Users\Wang Keting\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT main.tex
+OUTPUT E:\Project\MERIT-AAAI\paper\build\main.log
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT .\aaai2027.sty
+INPUT aaai2027.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\newtxtext.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\newtxtext.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\xkeyval\xkeyval.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\xkeyval\xkvutils.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\xkeyval\keyval.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\xstring\xstring.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\carlisle\scalefnt.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\carlisle\scalefnt.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\mweights\mweights.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\fontaxes\fontaxes.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\fontaxes\fontaxes.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\figureversions\figureversions.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\figureversions\figureversions.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\helvet.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\helvet.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\courier.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\courier.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithm.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithm.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithmic.sty
+INPUT .\math_commands.tex
+INPUT .\math_commands.tex
+INPUT .\math_commands.tex
+INPUT .\math_commands.tex
+INPUT math_commands.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT E:\Project\MERIT-AAAI\paper\build\main.aux
+INPUT E:\Project\MERIT-AAAI\paper\build\main.aux
+INPUT E:\Project\MERIT-AAAI\paper\build\main.aux
+OUTPUT E:\Project\MERIT-AAAI\paper\build\main.aux
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT .\sections\00_abstract.tex
+INPUT .\sections\00_abstract.tex
+INPUT .\sections\00_abstract.tex
+INPUT .\sections\00_abstract.tex
+INPUT sections\00_abstract.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT .\sections\01_introduction.tex
+INPUT .\sections\01_introduction.tex
+INPUT .\sections\01_introduction.tex
+INPUT .\sections\01_introduction.tex
+INPUT sections\01_introduction.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+OUTPUT E:\Project\MERIT-AAAI\paper\build\main.pdf
+INPUT C:\Users\Wang Keting\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ec-tlf.enc
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ec-tlf-pc.enc
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\ts1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\ts1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\tex\latex\newtx\ts1ntxtlf.fd
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ts1-qtmr.tfm
+INPUT .\figures\placeholders\fig1_problem_solution.tex
+INPUT .\figures\placeholders\fig1_problem_solution.tex
+INPUT .\figures\placeholders\fig1_problem_solution.tex
+INPUT .\figures\placeholders\fig1_problem_solution.tex
+INPUT figures\placeholders\fig1_problem_solution.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
+INPUT .\sections\02_related_work.tex
+INPUT .\sections\02_related_work.tex
+INPUT .\sections\02_related_work.tex
+INPUT .\sections\02_related_work.tex
+INPUT sections\02_related_work.tex
+INPUT .\sections\03_problem_formulation.tex
+INPUT .\sections\03_problem_formulation.tex
+INPUT .\sections\03_problem_formulation.tex
+INPUT .\sections\03_problem_formulation.tex
+INPUT sections\03_problem_formulation.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\tex-gyre\q-ts1.enc
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT .\sections\04_pilot_diagnostic.tex
+INPUT .\sections\04_pilot_diagnostic.tex
+INPUT .\sections\04_pilot_diagnostic.tex
+INPUT .\sections\04_pilot_diagnostic.tex
+INPUT sections\04_pilot_diagnostic.tex
+INPUT .\figures\placeholders\fig2_diagnostic_baseline.tex
+INPUT .\figures\placeholders\fig2_diagnostic_baseline.tex
+INPUT .\figures\placeholders\fig2_diagnostic_baseline.tex
+INPUT .\figures\placeholders\fig2_diagnostic_baseline.tex
+INPUT figures\placeholders\fig2_diagnostic_baseline.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx9.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT .\sections\05_method.tex
+INPUT .\sections\05_method.tex
+INPUT .\sections\05_method.tex
+INPUT .\sections\05_method.tex
+INPUT sections\05_method.tex
+INPUT .\figures\placeholders\fig3_method_architecture.tex
+INPUT .\figures\placeholders\fig3_method_architecture.tex
+INPUT .\figures\placeholders\fig3_method_architecture.tex
+INPUT .\figures\placeholders\fig3_method_architecture.tex
+INPUT figures\placeholders\fig3_method_architecture.tex
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
+INPUT .\sections\06_experiments_analysis.tex
+INPUT .\sections\06_experiments_analysis.tex
+INPUT .\sections\06_experiments_analysis.tex
+INPUT .\sections\06_experiments_analysis.tex
+INPUT sections\06_experiments_analysis.tex
+INPUT .\tables\table1_main_results.tex
+INPUT .\tables\table1_main_results.tex
+INPUT .\tables\table1_main_results.tex
+INPUT .\tables\table1_main_results.tex
+INPUT tables\table1_main_results.tex
+INPUT .\figures\placeholders\fig4_streaming_efficiency.tex
+INPUT .\figures\placeholders\fig4_streaming_efficiency.tex
+INPUT .\figures\placeholders\fig4_streaming_efficiency.tex
+INPUT .\figures\placeholders\fig4_streaming_efficiency.tex
+INPUT figures\placeholders\fig4_streaming_efficiency.tex
+INPUT .\tables\table2_reward_swap.tex
+INPUT .\tables\table2_reward_swap.tex
+INPUT .\tables\table2_reward_swap.tex
+INPUT .\tables\table2_reward_swap.tex
+INPUT tables\table2_reward_swap.tex
+INPUT .\tables\table3_ablation.tex
+INPUT .\tables\table3_ablation.tex
+INPUT .\tables\table3_ablation.tex
+INPUT .\tables\table3_ablation.tex
+INPUT tables\table3_ablation.tex
+INPUT .\tables\table4_hypotheses_map.tex
+INPUT .\tables\table4_hypotheses_map.tex
+INPUT .\tables\table4_hypotheses_map.tex
+INPUT .\tables\table4_hypotheses_map.tex
+INPUT tables\table4_hypotheses_map.tex
+INPUT .\figures\placeholders\fig5_mechanism_recovery.tex
+INPUT .\figures\placeholders\fig5_mechanism_recovery.tex
+INPUT .\figures\placeholders\fig5_mechanism_recovery.tex
+INPUT .\figures\placeholders\fig5_mechanism_recovery.tex
+INPUT figures\placeholders\fig5_mechanism_recovery.tex
+INPUT .\tables\table5_method_positioning.tex
+INPUT .\tables\table5_method_positioning.tex
+INPUT .\tables\table5_method_positioning.tex
+INPUT .\tables\table5_method_positioning.tex
+INPUT tables\table5_method_positioning.tex
+INPUT .\tables\table6_efficiency.tex
+INPUT .\tables\table6_efficiency.tex
+INPUT .\tables\table6_efficiency.tex
+INPUT .\tables\table6_efficiency.tex
+INPUT tables\table6_efficiency.tex
+INPUT .\figures\placeholders\fig6_case_study.tex
+INPUT .\figures\placeholders\fig6_case_study.tex
+INPUT .\figures\placeholders\fig6_case_study.tex
+INPUT .\figures\placeholders\fig6_case_study.tex
+INPUT figures\placeholders\fig6_case_study.tex
+INPUT .\sections\07_limitations_conclusion.tex
+INPUT .\sections\07_limitations_conclusion.tex
+INPUT .\sections\07_limitations_conclusion.tex
+INPUT .\sections\07_limitations_conclusion.tex
+INPUT sections\07_limitations_conclusion.tex
+INPUT E:\Project\MERIT-AAAI\paper\build\main.aux
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\tex-gyre\qtmr.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\tex-gyre\qtmr.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmb.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmb.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmr.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmr.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmri.pfb
+INPUT C:\Users\Wang Keting\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmri.pfb
