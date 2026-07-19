@@ -1,10 +1,8 @@
 <!-- ARIS:BEGIN -->
 ## ARIS Skill Scope
-ARIS skills installed in this project: 15 entries.
-Manifest: `.aris/installed-skills.txt`
-ARIS repo root: `E:\Project\ARIS`
-Project skill path: `.claude/skills/<skill-name>`
-For ARIS workflows, prefer the project-local skills under `.claude/skills/`.
-Do not edit or delete junctioned skills in place; update upstream or rerun:
-`powershell -NoProfile -ExecutionPolicy Bypass -File "E:\Project\ARIS\tools\install_aris.ps1" "E:\Project\MERIT-AAAI" -Platform claude -Reconcile`
+ARIS skills installed in this project: 19 entries.
+Manifest: `.aris/installed-skills.txt` (lists every skill ARIS installed and its upstream target).
+For ARIS workflows, prefer the project-local skills under `.claude/skills/` over global skills.
+Do not modify or delete files inside any skill that is a symlink (symlinks point into `/mnt/qjh000/zys/src/MERIT/third_party/ARIS`).
+Update with: `bash /mnt/qjh000/zys/src/MERIT/third_party/ARIS/tools/install_aris.sh`  (re-runnable; reconciles new/removed skills).
 <!-- ARIS:END -->

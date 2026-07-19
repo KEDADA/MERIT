@@ -1,0 +1,60 @@
+{
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "capture": {
+    "metadata_only": true,
+    "private_executable_reference_recorded": false,
+    "probe_script": "scripts/preflight_runtime.py",
+    "probe_script_sha256": "7bb9fcc66ff6f96a6ecbd1d8028cbd2bbce41ca4d8060a674848ed048137e83c",
+    "resolution_source": "existing-runtime-registry"
+  },
+  "captured_at_utc": "2026-07-19T08:43:41Z",
+  "dependency_inventory": {
+    "fields": [
+      "normalized package name",
+      "version"
+    ],
+    "package_count": 193,
+    "path": "environments/dependency-inventory.20260719.attempt-002.json",
+    "sha256": "e8cda7378e3a23fa4ca9065a14679f46666959bd1ed9698f6a32983c9ed78ecd"
+  },
+  "lock_id": "environment-lock-20260719-attempt-002",
+  "observed": {
+    "cuda_available": true,
+    "cudnn": "9.19.0",
+    "gpu_count": 8,
+    "gpu_models": [
+      "NVIDIA H20"
+    ],
+    "nccl": "2.28.9",
+    "python": "3.12.13",
+    "pytorch": "2.11.0+cu130",
+    "pytorch_cuda_runtime": "13.0"
+  },
+  "readiness": {
+    "formal_r001_r002": "BLOCKED_PENDING_MODEL_DATA_ADAPTER_AND_RUN_MANIFEST",
+    "metadata_runtime": "READY",
+    "real_toy_adapter_engineering": "READY_ENVIRONMENT_ONLY"
+  },
+  "runtime_alias": "runtime://merit-r000-h20-py312-torch211-cu130",
+  "safety_boundary": {
+    "benchmarks": 0,
+    "collective_communication_tests": 0,
+    "dependencies_installed_or_downloaded": 0,
+    "formal_r001_r002_runs": 0,
+    "gpu_stress_tests": 0,
+    "model_inference_calls": 0,
+    "training_runs": 0
+  },
+  "schema_version": "1.0",
+  "sources": {
+    "r000_profile": {
+      "path": "repository://paper/02_experiments/environment/SYSTEM_PROFILE.json",
+      "sha256": "537e7f5bface0ca313ed59f9dfbd0dcf8830b7b38bbabc76f0b17bbbd65e3e25"
+    },
+    "target": {
+      "path": "environments/runtime-target.locked.20260719.json",
+      "sha256": "13a4d53159bf50d035c1c60058e89550ce27aff64f2bf42857ea504ce51e72cd"
+    }
+  },
+  "status": "RUNTIME_ENVIRONMENT_LOCKED"
+}

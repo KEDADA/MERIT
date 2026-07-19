@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "sanity-engineering-20260719-user-delegated",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "approval_snapshots": [
+    {
+      "path": "configs/pilot-implementation.locked.20260719.json",
+      "sha256": "cd48278c77c8cb4c7b32efb120c336507823ce22ebf797eb7ed60637cd641877"
+    },
+    {
+      "path": "configs/sanity-baseline.locked.20260719.json",
+      "sha256": "33550255b917d21b05a47c43a5bce919545a01b7e868770aa984dcdeae92dfaf"
+    },
+    {
+      "path": "environments/runtime-target.locked.20260719.json",
+      "sha256": "13a4d53159bf50d035c1c60058e89550ce27aff64f2bf42857ea504ce51e72cd"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/merit_experiment/baselines.py",
+      "sha256": "9bbff37089d6b563065fd691040cd10f552c1460dc73aa19a0aeda548aaf99e9"
+    },
+    {
+      "path": "src/merit_experiment/bootstrap.py",
+      "sha256": "864852dcf73a523916b919427c70a4c4968835cbdc2a29acda67922f0e4aa4ea"
+    },
+    {
+      "path": "src/merit_experiment/budget.py",
+      "sha256": "63e6bda7442fbe1c1f3f4405d4c15e98b6ae9281967d744ef29133c31a5b8f77"
+    },
+    {
+      "path": "src/merit_experiment/metrics.py",
+      "sha256": "e5d4f59f28099b4b7c3217c93e1b51d6fb6306e93cfab9d97e21b18ed6da7018"
+    },
+    {
+      "path": "src/merit_experiment/neutral_pad.py",
+      "sha256": "5579b7fd7bafa39dca538f89866b8e9ea05743aa7d45cabb4be595fe68c0c317"
+    },
+    {
+      "path": "src/merit_experiment/replay.py",
+      "sha256": "1cacee6f18bed0a9581ae6a17b12140963aeebd66705016e3acd9f3a07b75f68"
+    },
+    {
+      "path": "src/merit_experiment/sampling.py",
+      "sha256": "b3504bc53f42af6590f81e4de8dcc2e398fde049ce1661c57db24c8e8000d15d"
+    }
+  ],
+  "execution_boundary": {
+    "formal_runs_executed": 0,
+    "gpu_calls": 0,
+    "model_calls": 0,
+    "dependencies_installed": 0
+  }
+}

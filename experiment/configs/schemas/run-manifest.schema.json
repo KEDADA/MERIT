@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/run-manifest.schema.json",
+  "title": "MERIT run manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_family_id",
+    "phase",
+    "status",
+    "failure",
+    "seed",
+    "git",
+    "config_snapshot",
+    "environment_snapshot",
+    "data_manifest",
+    "logs",
+    "raw_outputs",
+    "artifact_manifest",
+    "timestamps"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^R[0-9]{3}__[a-z0-9-]+__[a-z0-9-]+__seed-(pending|-?[0-9]+)__a[0-9]{3}$"},
+    "run_family_id": {"type": "string", "pattern": "^R[0-9]{3}$"},
+    "phase": {"enum": ["sanity", "pilot", "confirmatory", "secondary"]},
+    "status": {"enum": ["PLANNED", "READY", "RUNNING", "SUCCEEDED", "FAILED", "ABORTED", "INVALID", "BLOCKED"]},
+    "seed": {"type": ["integer", "string"]},
+    "failure": {
+      "type": "object",
+      "required": ["type", "message"],
+      "properties": {
+        "type": {"enum": ["NONE", "CONFIGURATION", "DATA_INTEGRITY", "ROLE_LEAKAGE", "ENVIRONMENT", "IMPLEMENTATION", "RESOURCE", "METRIC", "EXTERNAL", "USER_APPROVAL_REQUIRED", "UNKNOWN"]},
+        "message": {"type": "string"}
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/pilot-protocol-lock.schema.json",
+  "title": "MERIT Stage 2C user-approved pilot protocol lock",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "lock_id",
+    "status",
+    "approval_date",
+    "base_commit",
+    "scientific_thresholds",
+    "pilot_data_design",
+    "rit_sampling",
+    "neutral_pad",
+    "budgets",
+    "g_c1",
+    "approved_invariants",
+    "post_pilot_computed_not_approved",
+    "other_not_approved",
+    "implementation_blockers"
+  ],
+  "properties": {
+    "status": {"const": "USER_APPROVED_LOCKED"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "scientific_thresholds": {
+      "type": "object",
+      "properties": {
+        "sr_practical_null_delta": {
+          "type": "object",
+          "properties": {"value": {"const": 0.05}},
+          "required": ["value", "unit"]
+        },
+        "avg_mei": {
+          "type": "object",
+          "properties": {
+            "value": {"const": 2.0},
+            "unit_interval_equivalent": {"const": 0.02}
+          },
+          "required": ["value", "unit", "unit_interval_equivalent"]
+        },
+        "target_power": {"const": 0.8},
+        "target_ci_half_width": {
+          "type": "object",
+          "properties": {"value": {"const": 0.025}},
+          "required": ["value", "unit"]
+        }
+      },
+      "required": ["sr_practical_null_delta", "avg_mei", "target_power", "target_ci_half_width"]
+    },
+    "pilot_data_design": {
+      "type": "object",
+      "properties": {
+        "train_fraction": {"const": 0.7},
+        "audit_fraction": {"const": 0.3},
+        "audit_strata": {"const": ["stream", "snapshot"]},
+        "snapshot_task_indices": {"const": [100, 200, 300, 400, 500]},
+        "audit_population": {"const": "frozen_snapshot_retrieval_conditioned_common_support"},
+        "fixed_heldout_query_set_reused_across_snapshots": {"const": true},
+        "weighting": {"const": "inverse_recorded_inclusion_probability_design_weight"},
+        "pilot_confirmatory_overlap_allowed": {"const": false}
+      },
+      "required": ["split_unit", "train_fraction", "audit_fraction", "audit_strata", "snapshot_task_indices", "audit_population", "weighting"]
+    },
+    "rit_sampling": {
+      "type": "object",
+      "properties": {
+        "memories_per_trial": {"const": 2},
+        "pilot_rollouts_per_loo": {"const": 5},
+        "task_sampling_probability": {"const": 0.05},
+        "train_selection_mixture": {
+          "const": {
+            "uniform": 0.2,
+            "uncertainty_priority": 0.4,
+            "utility_usage_priority": 0.4
+          }
+        },
+        "audit_priority_sampling_allowed": {"const": false}
+      },
+      "required": ["memories_per_trial", "pilot_rollouts_per_loo", "task_sampling_probability", "train_selection_mixture", "audit_priority_sampling_allowed"]
+    },
+    "neutral_pad": {
+      "type": "object",
+      "properties": {
+        "literal": {"const": "[EMPTY_MEMORY_SLOT]"},
+        "token_length_must_match_removed_memory": {"const": true},
+        "equivalence_band_half_width": {"const": 0.025},
+        "test": {"const": "task_clustered_paired_tost"},
+        "confidence_interval_level": {"const": 0.9},
+        "failure_or_not_run_fallback": {"const": "pad-replacement contribution"},
+        "no_pad_main_arm_allowed": {"const": false}
+      },
+      "required": ["literal", "token_length_must_match_removed_memory", "equivalence_band_half_width", "test", "confidence_interval_level", "failure_or_not_run_fallback"]
+    },
+    "budgets": {
+      "type": "object",
+      "properties": {
+        "pilot_rollout_equivalent_ceiling": {"const": 5000},
+        "pilot_input_output_token_ceiling": {"const": 100000000},
+        "confirmatory_incremental_token_overhead_ceiling": {
+          "type": "object",
+          "properties": {
+            "value": {"const": 0.1},
+            "percent": {"const": 10.0},
+            "confidence_level": {"const": 0.95}
+          },
+          "required": ["value", "unit", "percent", "gate", "confidence_level"]
+        }
+      },
+      "required": ["pilot_rollout_equivalent_ceiling", "pilot_input_output_token_ceiling", "confirmatory_incremental_token_overhead_ceiling"]
+    },
+    "g_c1": {
+      "type": "object",
+      "properties": {
+        "baselines": {"const": ["ReasoningBank-style", "MemRL-style"]},
+        "test_separately": {"const": true},
+        "all_baselines_must_pass": {"const": true},
+        "multiplicity_correction": {"const": "Holm"},
+        "alternative": {"const": "one_sided"},
+        "familywise_alpha": {"const": 0.05},
+        "sr_slope_rule": {"const": "lower_confidence_bound_gt_0"},
+        "memory_level_ccc_rule": {"const": "upper_confidence_bound_lt_0.5"}
+      },
+      "required": ["baselines", "test_separately", "all_baselines_must_pass", "multiplicity_correction", "alternative", "familywise_alpha", "sr_slope_rule", "memory_level_ccc_rule"]
+    },
+    "post_pilot_computed_not_approved": {
+      "const": {
+        "formal_k": "USER_APPROVAL_REQUIRED",
+        "formal_n_audit": "USER_APPROVAL_REQUIRED",
+        "formal_seed_count": "USER_APPROVAL_REQUIRED"
+      }
+    },
+    "other_not_approved": {
+      "const": {
+        "governance_dead_zone": "USER_APPROVAL_REQUIRED",
+        "huber_delta": "USER_APPROVAL_REQUIRED"
+      }
+    },
+    "implementation_blockers": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false
+}

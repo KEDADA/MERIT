@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "preflight_id": "runtime-preflight-20260719-attempt-001",
+  "status": "BLOCKED_RUNTIME_REFERENCE_UNAVAILABLE",
+  "target": {
+    "path": "environments/runtime-target.locked.20260719.json",
+    "sha256": "13a4d53159bf50d035c1c60058e89550ce27aff64f2bf42857ea504ce51e72cd"
+  },
+  "evidence": {
+    "path_alias": "repository://paper/02_experiments/environment/SYSTEM_PROFILE.json",
+    "sha256": "537e7f5bface0ca313ed59f9dfbd0dcf8830b7b38bbabc76f0b17bbbd65e3e25"
+  },
+  "checks": [
+    {
+      "check_id": "runtime-reference-resolution",
+      "status": "FAILED",
+      "reason": "The recorded isolated runtime reference did not resolve to an executable in the current session."
+    },
+    {"check_id": "python-version", "status": "NOT_RUN"},
+    {"check_id": "pytorch-version", "status": "NOT_RUN"},
+    {"check_id": "cuda-visibility", "status": "NOT_RUN"},
+    {"check_id": "gpu-inventory", "status": "NOT_RUN"},
+    {"check_id": "dependency-lock-capture", "status": "NOT_RUN"}
+  ],
+  "redaction": {
+    "private_runtime_path_recorded": false,
+    "hostname_recorded": false,
+    "username_recorded": false,
+    "gpu_identity_recorded": false,
+    "credentials_recorded": false
+  },
+  "prohibited_actions": {
+    "installation": false,
+    "download": false,
+    "benchmark": false,
+    "gpu_allocation_or_stress": false,
+    "formal_run": false
+  },
+  "readiness": {
+    "formal_r001_r002": "BLOCKED",
+    "next_required_fact": "A resolvable executable reference for the already approved runtime target."
+  }
+}

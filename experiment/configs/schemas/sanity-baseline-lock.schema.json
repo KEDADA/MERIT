@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/sanity-baseline-lock.schema.json",
+  "title": "MERIT R001 standardized-wrapper lock",
+  "type": "object",
+  "required": ["schema_version", "lock_id", "status", "approval_date", "base_commit", "scope", "implementation_mode", "reporting_label", "source_reference", "source_revision", "upstream_code_imported", "license_verification", "model_revision", "dataset_revision", "adapter_contract", "fidelity_claim", "gates"],
+  "properties": {
+    "status": {"const": "USER_APPROVED_LOCKED"},
+    "implementation_mode": {"const": "standardized_credit_variant_wrapper"},
+    "upstream_code_imported": {"const": false},
+    "fidelity_claim": {"const": "NO_EXACT_METHOD_FIDELITY_CLAIM"},
+    "gates": {
+      "type": "object",
+      "properties": {
+        "r010_reasoningbank_exact_name": {"const": "BLOCKED_PENDING_SOURCE_FAITHFUL_CHECKLIST"},
+        "r011_memrl_exact_name": {"const": "BLOCKED_PENDING_SOURCE_FAITHFUL_CHECKLIST"},
+        "m2_baseline_execution": {"const": "BLOCKED_PENDING_PILOT_BASELINE_SOURCE_DECISION"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

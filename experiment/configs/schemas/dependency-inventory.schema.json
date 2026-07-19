@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/dependency-inventory.schema.json",
+  "title": "MERIT redacted runtime dependency inventory",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "captured_at_utc",
+    "runtime_identifier",
+    "capture_method",
+    "scope",
+    "package_count",
+    "packages",
+    "excluded_metadata",
+    "redaction"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "inventory_id": {"const": "dependency-inventory-20260719-attempt-002"},
+    "captured_at_utc": {"type": "string"},
+    "runtime_identifier": {"const": "merit-r000-h20-py312-torch211-cu130"},
+    "capture_method": {"const": "python-importlib.metadata-name-version-only"},
+    "scope": {"type": "string"},
+    "package_count": {"type": "integer", "minimum": 1},
+    "packages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["name", "version"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "version": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9.!+_~-]*$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "excluded_metadata": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "redaction": {
+      "type": "object",
+      "required": [
+        "name_and_version_only",
+        "private_runtime_path_recorded",
+        "url_recorded",
+        "credential_recorded",
+        "machine_identity_recorded"
+      ],
+      "properties": {
+        "name_and_version_only": {"const": true},
+        "private_runtime_path_recorded": {"const": false},
+        "url_recorded": {"const": false},
+        "credential_recorded": {"const": false},
+        "machine_identity_recorded": {"const": false}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "r001-atomic-inputs-20260719-a001",
+  "run_id": "R001__sanity__paired-replay-real-toy__seed-pending__a001",
+  "status": "COMPLETE_STRUCTURAL_PROVENANCE_EXECUTION_BINDING_REQUIRED",
+  "references": [
+    {"kind": "atomic_config", "path": "configs/atomic-r001-sanity.planned.20260719.json", "sha256": "165f68e742c8f40112f331eb500360c5e168607d45caa3e212e4c29d5cf64296"},
+    {"kind": "environment_lock", "path": "environments/environment-lock.20260719.attempt-002.json", "sha256": "b9a42abaa2cafa6b26ebe60b8db02cf704f1c15465943f1e269291cc448c6893"},
+    {"kind": "real_toy_data_manifest", "path": "data/real-toy-split.20260719.manifest.json", "sha256": "1039112a2591a65f47c02a02ae7122a0d4b7333819a605ac35155c9f2bca0f55"},
+    {"kind": "model_adapter_contract", "path": "configs/model-adapter.contract.20260719.json", "sha256": "d5b207b4cc212ac80d5f93aba70f01af1bdc53f3aaa4eea3a5f5b604325821c8"},
+    {"kind": "pilot_protocol_lock", "path": "configs/pilot-protocol.locked.20260719.json", "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b"},
+    {"kind": "pilot_implementation_lock", "path": "configs/pilot-implementation.locked.20260719.json", "sha256": "cd48278c77c8cb4c7b32efb120c336507823ce22ebf797eb7ed60637cd641877"},
+    {"kind": "sanity_baseline_lock", "path": "configs/sanity-baseline.locked.20260719.json", "sha256": "33550255b917d21b05a47c43a5bce919545a01b7e868770aa984dcdeae92dfaf"},
+    {"kind": "implementation_source", "path": "src/merit_experiment/model_adapter.py", "sha256": "e7a9c33f47850cb0e4dc52d60dc8ea3ad5092f7adf61de022f55aef55c9fa076"},
+    {"kind": "implementation_source", "path": "src/merit_experiment/data_adapter.py", "sha256": "40e47f54af967782a49c6f76aeff6e5555312db59ceed7c3dadaeb0824696a09"},
+    {"kind": "implementation_source", "path": "src/merit_experiment/replay.py", "sha256": "1cacee6f18bed0a9581ae6a17b12140963aeebd66705016e3acd9f3a07b75f68"},
+    {"kind": "implementation_source", "path": "src/merit_experiment/neutral_pad.py", "sha256": "5579b7fd7bafa39dca538f89866b8e9ea05743aa7d45cabb4be595fe68c0c317"},
+    {"kind": "implementation_source", "path": "src/merit_experiment/provenance.py", "sha256": "d0996783bff2feb5f0d733d7d54c78d5114e32188ad535413d7ada7e490153e4"},
+    {"kind": "dirty_worktree_inventory", "path": "runs/provenance/dirty-worktree.20260719.json", "sha256": "6292d953a5a066b5c024fbe5fe65b000818fc4c50fe962e5a79fe202e3e66e50"}
+  ],
+  "resolved_reference_count": 13,
+  "unresolved_execution_bindings": [
+    "exact model revision",
+    "exact tokenizer revision",
+    "decoding configuration",
+    "integer run seed",
+    "read-only external source alias resolution"
+  ],
+  "readiness": {"atomic_manifest_and_input_provenance": "READY_STRUCTURAL_ONLY", "formal_execution_gate": "BLOCKED_NOT_EVALUATED"},
+  "execution_boundary": {"training_runs": 0, "model_inference_calls": 0, "benchmarks": 0, "gpu_stress_tests": 0, "collective_communication_tests": 0, "formal_r001_r002_runs": 0}
+}

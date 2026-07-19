@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "pilot-implementation-lock-20260719",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "approval_lock": {
+    "path": "configs/pilot-implementation.locked.20260719.json",
+    "sha256": "cd48278c77c8cb4c7b32efb120c336507823ce22ebf797eb7ed60637cd641877"
+  },
+  "protocol_document": {
+    "path_alias": "repository://paper/01_planning/PRE_RUN_PROTOCOL.md",
+    "sha256": "ac4c9b606972f777a101faded66f2ec132f1c84157d2b1282d33e282bcaef0f9"
+  },
+  "scope": "Stage 2D six implementation rules only",
+  "still_open": [
+    "formal K, n^audit, and seed count are computed post-pilot",
+    "governance dead-zone",
+    "Huber delta",
+    "runtime preflight and dependency lock evidence",
+    "source-faithful R010/R011 fidelity evidence"
+  ]
+}

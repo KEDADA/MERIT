@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "stage2c-pilot-lock-manifest-20260719",
+  "generated_at_utc": "2026-07-19T07:35:53Z",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "lock": {
+    "path": "experiment/configs/pilot-protocol.locked.20260719.json",
+    "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b",
+    "status": "USER_APPROVED_LOCKED"
+  },
+  "protocol": {
+    "path": "paper/01_planning/PRE_RUN_PROTOCOL.md",
+    "sha256": "cd2bed5cb93979efd91ab6039df5ffecbf461a17819f210ad5db1ceafc115185"
+  },
+  "schema": {
+    "path": "experiment/configs/schemas/pilot-protocol-lock.schema.json",
+    "sha256": "d09fb5d14f6c90c4771aeeab477dda82edfa39cec11cbf38484892fc65431e96"
+  },
+  "pending_template_preservation": {
+    "path": "experiment/configs/protocol.pending.json",
+    "sha256_before_stage2c": "92064a9b52b093fdc98011157af39ac9cf83be854c563273db632896bd619e9f",
+    "expected_sha256_after_stage2c": "92064a9b52b093fdc98011157af39ac9cf83be854c563273db632896bd619e9f",
+    "overwritten": false
+  },
+  "notes": [
+    "This manifest records protocol configuration, not experimental evidence.",
+    "Formal K, formal n_audit, and formal seed count remain post-pilot computed values.",
+    "Governance dead-zone and Huber delta remain USER_APPROVAL_REQUIRED."
+  ]
+}

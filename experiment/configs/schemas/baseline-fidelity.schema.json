@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/baseline-fidelity.schema.json",
+  "title": "MERIT pending representative-baseline fidelity contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "template_id",
+    "status",
+    "reporting_policy",
+    "baselines",
+    "gate"
+  ],
+  "properties": {
+    "status": {"const": "BLOCKED"},
+    "reporting_policy": {
+      "type": "object",
+      "required": ["exact_method_name_requires", "otherwise_label_as", "allowed_implementation_modes"],
+      "properties": {
+        "exact_method_name_requires": {"const": "source_faithful_checklist_pass"},
+        "otherwise_label_as": {"const": "standardized_credit_variant_wrapper"},
+        "allowed_implementation_modes": {
+          "const": ["source_faithful", "standardized_credit_variant_wrapper"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "baselines": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "baseline_id",
+          "approved_class_label",
+          "implementation_mode",
+          "source_reference",
+          "source_revision",
+          "license_verification",
+          "model_revision",
+          "dataset_revision",
+          "adapter_entrypoint",
+          "fidelity_checklist_path",
+          "deviations_manifest_path",
+          "shared_retrieval_and_budget_contract",
+          "affected_run_families"
+        ]
+      }
+    },
+    "gate": {
+      "type": "object",
+      "required": ["m0_r001", "m1_r010_r011", "reason"],
+      "properties": {
+        "m0_r001": {"const": "BLOCKED"},
+        "m1_r010_r011": {"const": "BLOCKED"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MERIT model adapter engineering contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "contract_id", "status", "base_commit", "environment_lock", "implementation", "binding", "invariants", "readiness", "execution_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "contract_id": {"const": "model-adapter-contract-20260719-v1"},
+    "status": {"const": "ENGINEERING_READY_BINDING_REQUIRED"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "environment_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "environments/environment-lock.20260719.attempt-002.json"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["adapter_revision", "entrypoint", "backend_entrypoint"],
+      "properties": {
+        "adapter_revision": {"const": "merit-token-model-adapter-v1"},
+        "entrypoint": {"const": "merit_experiment.model_adapter:TokenModelAdapter"},
+        "backend_entrypoint": {"const": "merit_experiment.model_adapter:TransformersCausalLMBackend"}
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_revision", "tokenizer_revision", "model_loading", "run_binding"],
+      "properties": {
+        "model_revision": {"const": "RUN_MANIFEST_REQUIRED"},
+        "tokenizer_revision": {"const": "RUN_MANIFEST_REQUIRED"},
+        "model_loading": {"const": "EXTERNAL_EXPLICIT_INJECTION_ONLY"},
+        "run_binding": {"const": "BLOCKED_PENDING_ATOMIC_RUN_MANIFEST"}
+      }
+    },
+    "invariants": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+    "readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_adapter", "data_adapter_and_real_toy_split", "atomic_run_manifest", "formal_r001_r002"],
+      "properties": {
+        "model_adapter": {"const": "READY_ENGINEERING_ONLY"},
+        "data_adapter_and_real_toy_split": {"const": "BLOCKED"},
+        "atomic_run_manifest": {"const": "BLOCKED"},
+        "formal_r001_r002": {"const": "BLOCKED"}
+      }
+    },
+    "execution_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["training_runs", "model_inference_calls", "benchmarks", "gpu_stress_tests", "collective_communication_tests", "dependencies_installed_or_downloaded"],
+      "properties": {
+        "training_runs": {"const": 0},
+        "model_inference_calls": {"const": 0},
+        "benchmarks": {"const": 0},
+        "gpu_stress_tests": {"const": 0},
+        "collective_communication_tests": {"const": 0},
+        "dependencies_installed_or_downloaded": {"const": 0}
+      }
+    }
+  }
+}

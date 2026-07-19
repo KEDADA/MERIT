@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MERIT R001/R002 real toy data manifest",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "status", "base_commit", "captured_at_utc", "adapter_revision", "sources", "selection", "partitions", "disjointness_checks", "readiness", "execution_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "manifest_id": {"const": "r001-r002-real-toy-split-20260719-v1"},
+    "status": {"const": "REAL_TOY_SPLIT_READY"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "adapter_revision": {"const": "merit-real-toy-data-adapter-v1"},
+    "sources": {"type": "array", "minItems": 3, "maxItems": 3},
+    "selection": {
+      "type": "object",
+      "required": ["selector_seed", "eligible_universe_count", "toy_tasks_per_stream", "outcomes_or_rewards_used_for_selection"],
+      "properties": {
+        "selector_seed": {"const": 20260719},
+        "eligible_universe_count": {"const": {"alfworld": 140, "hotpotqa": 100}},
+        "toy_tasks_per_stream": {"const": 10},
+        "outcomes_or_rewards_used_for_selection": {"const": false}
+      }
+    },
+    "partitions": {"type": "array", "minItems": 2, "maxItems": 2},
+    "disjointness_checks": {"type": "array", "minItems": 1, "maxItems": 1},
+    "readiness": {
+      "const": {
+        "model_adapter": "READY_ENGINEERING_ONLY",
+        "data_adapter": "READY_ENGINEERING_ONLY",
+        "real_toy_split": "READY",
+        "atomic_run_manifest_and_input_provenance": "BLOCKED",
+        "formal_r001_r002": "BLOCKED"
+      }
+    }
+  },
+  "additionalProperties": false
+}

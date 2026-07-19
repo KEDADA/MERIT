@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "runtime-target-20260719-user-delegated",
+  "status": "USER_APPROVED_TARGET_PENDING_PREFLIGHT",
+  "approval_date": "2026-07-19",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "target_alias": "runtime://merit-r000-h20-py312-torch211-cu130",
+  "evidence": {
+    "baseline_path": "environments/baseline.json",
+    "baseline_sha256": "54b789358dc3fbfd562ffc367116f50acfe77414eb8b2c49d27f06475e858ee1"
+  },
+  "target": {
+    "gpu_model": "NVIDIA H20",
+    "gpu_count": 8,
+    "python": "3.12.13",
+    "pytorch": "2.11.0+cu130",
+    "pytorch_cuda_available": true,
+    "cuda_driver_reported": "13.0",
+    "cudnn": "9.19.0",
+    "nccl": "2.28.9"
+  },
+  "dependency_policy": {
+    "installation": "existing-environment-only until a separately approved installation task",
+    "lock_format": "exact direct-and-transitive package versions plus source and content hash where available",
+    "lock_capture": "capture from the designated runtime after preflight; do not infer versions from imports or paper text",
+    "lock_path": "NOT_CAPTURED",
+    "lock_sha256": "NOT_CAPTURED"
+  },
+  "container_policy": {
+    "r001_r002_required": false,
+    "later_container_dependent_runs": "SEPARATELY_BLOCKED_UNTIL_DAEMON_AND_IMAGE_DIGEST_ARE_VERIFIED"
+  },
+  "preflight": {
+    "status": "NOT_RUN",
+    "required_checks": [
+      "python version exact match",
+      "PyTorch version exact match",
+      "CUDA availability",
+      "eight visible H20 devices",
+      "cuDNN and NCCL version match",
+      "dependency lock capture and hash"
+    ]
+  },
+  "readiness": {
+    "engineering_unit_tests": "READY_WITH_SYSTEM_PYTHON_STANDARD_LIBRARY_ONLY",
+    "formal_r001_r002": "BLOCKED_PENDING_PREFLIGHT_AND_DEPENDENCY_LOCK"
+  }
+}

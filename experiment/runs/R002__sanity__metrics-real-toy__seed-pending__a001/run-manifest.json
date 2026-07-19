@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "run_id": "R002__sanity__metrics-real-toy__seed-pending__a001",
+  "run_family_id": "R002",
+  "phase": "sanity",
+  "status": "BLOCKED",
+  "failure": {
+    "type": "USER_APPROVAL_REQUIRED",
+    "message": "Formal R001/R002 execution gate has not been evaluated; this atomic manifest is not executable."
+  },
+  "seed": "FORMAL_GATE_REQUIRED",
+  "git": {
+    "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+    "code_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+    "dirty_worktree": true,
+    "dirty_paths_manifest_sha256": "6292d953a5a066b5c024fbe5fe65b000818fc4c50fe962e5a79fe202e3e66e50"
+  },
+  "config_snapshot": {"path": "configs/atomic-r002-sanity.planned.20260719.json", "sha256": "2c8e8e41c9e0aa3852ded9dac81fda9286f11b329e83da861ee23314b7233995"},
+  "environment_snapshot": {"path": "environments/environment-lock.20260719.attempt-002.json", "sha256": "b9a42abaa2cafa6b26ebe60b8db02cf704f1c15465943f1e269291cc448c6893"},
+  "data_manifest": {"path": "data/real-toy-split.20260719.manifest.json", "sha256": "1039112a2591a65f47c02a02ae7122a0d4b7333819a605ac35155c9f2bca0f55"},
+  "input_manifest": {"path": "runs/R002__sanity__metrics-real-toy__seed-pending__a001/input-manifest.json", "sha256": "7c0869123ba1fb3444dda53827158b0e1066f49d12d78f661e8e28b06a9dcd04"},
+  "logs": [],
+  "raw_outputs": [],
+  "artifact_manifest": {"path": "runs/R002__sanity__metrics-real-toy__seed-pending__a001/artifact-manifest.json", "sha256": "9378e1db79a29f60b78c39f0aefa9aa245fbbff717d40ba71dbec42cf8827920"},
+  "timestamps": {"created_at": "2026-07-19T10:12:00Z", "started_at": null, "finished_at": null},
+  "execution_authorized": false,
+  "readiness": {"atomic_manifest_and_input_provenance": "READY_STRUCTURAL_ONLY", "formal_execution_gate": "BLOCKED_NOT_EVALUATED"},
+  "execution_gate": {"status": "NOT_EVALUATED", "next_step": "formal-r001-r002-execution-gate"}
+}

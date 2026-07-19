@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "config_id": "atomic-r002-sanity-metrics-20260719-v1",
+  "status": "BLOCKED_PENDING_FORMAL_EXECUTION_GATE",
+  "executable": false,
+  "run_family_id": "R002",
+  "phase": "sanity",
+  "objective": "metric direction and provenance validation over paired R001-compatible records",
+  "seed": "FORMAL_GATE_REQUIRED",
+  "upstream_binding": {
+    "required_run_family_id": "R001",
+    "required_atomic_run_id": "FORMAL_GATE_REQUIRED",
+    "required_output_sha256": "FORMAL_GATE_REQUIRED"
+  },
+  "data_binding": {
+    "manifest_path": "data/real-toy-split.20260719.manifest.json",
+    "manifest_sha256": "1039112a2591a65f47c02a02ae7122a0d4b7333819a605ac35155c9f2bca0f55",
+    "roles": ["pilot_train", "pilot_audit"],
+    "task_count": 20
+  },
+  "locked_parameters": {
+    "ccc": "tie-aware-spearman-v1",
+    "sr_at_k": "ci-decided-top-20-percent-v1",
+    "cti": "paired-domain-accuracy-difference-v1",
+    "model_calls_permitted_by_this_config": false
+  },
+  "protocol_references": [
+    {"path": "configs/pilot-protocol.locked.20260719.json", "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b"},
+    {"path": "configs/pilot-implementation.locked.20260719.json", "sha256": "cd48278c77c8cb4c7b32efb120c336507823ce22ebf797eb7ed60637cd641877"},
+    {"path": "configs/sanity-baseline.locked.20260719.json", "sha256": "33550255b917d21b05a47c43a5bce919545a01b7e868770aa984dcdeae92dfaf"}
+  ],
+  "formal_gate_requirements": [
+    "bind an exact successful R001 atomic output or approved content-addressed fixture",
+    "lock integer analysis seed",
+    "verify every upstream record resolves to the same input bundle",
+    "approve transition from BLOCKED to READY in a new manifest revision"
+  ]
+}

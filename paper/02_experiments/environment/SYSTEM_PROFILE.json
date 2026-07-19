@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "run_id": "R000",
+  "collected_at_utc": "2026-07-19T05:37:34Z",
+  "scope": "read-only environment inventory",
+  "repository": {
+    "commit": "4280484e035191b66f77618b7729dbd465d8b828",
+    "verified": true,
+    "remote_redacted": true
+  },
+  "redaction": {
+    "hostname": true,
+    "username": true,
+    "ip_addresses": true,
+    "gpu_uuids": true,
+    "credentials": true,
+    "ssh_configuration": true,
+    "private_absolute_paths": true
+  },
+  "gpu": {
+    "count": 8,
+    "model": "NVIDIA H20",
+    "memory_total_mib_per_device": 97871,
+    "memory_total_gib_per_device": 95.5771,
+    "memory_free_mib_per_device_at_capture": 97622,
+    "memory_used_mib_per_device_at_capture": 0,
+    "utilization_percent_per_device_at_capture": 0,
+    "temperature_c_range_at_capture": [29, 34],
+    "performance_state_at_capture": "P0",
+    "mig_mode": "Disabled",
+    "compute_process_count_at_capture": 0,
+    "topology": {
+      "all_gpu_pairs": "NV18",
+      "nvlink_links_per_gpu": 18,
+      "reported_rate_gb_s_per_link": 26.562,
+      "numa_partition": {
+        "gpu_0_to_3": 0,
+        "gpu_4_to_7": 1
+      },
+      "measured_bandwidth_benchmark_run": false
+    }
+  },
+  "nvidia": {
+    "driver_version": "580.126.20",
+    "driver_reported_cuda_version": "13.0"
+  },
+  "cpu": {
+    "architecture": "x86_64",
+    "model": "Intel(R) Xeon(R) Platinum 8457C",
+    "sockets": 2,
+    "cores_per_socket": 45,
+    "physical_cores": 90,
+    "threads_per_core": 2,
+    "logical_cpus": 180,
+    "numa_nodes": 2
+  },
+  "memory": {
+    "total": "1.9 TiB",
+    "used_at_capture": "71 GiB",
+    "free_at_capture": "882 GiB",
+    "buffer_cache_at_capture": "975 GiB",
+    "available_at_capture": "1.8 TiB",
+    "swap_total": "0 B"
+  },
+  "project_filesystem": {
+    "type": "nfs4",
+    "total": "14 TiB",
+    "used_at_capture": "12 TiB",
+    "available_at_capture": "2.2 TiB",
+    "utilization_percent": 85,
+    "path": "<PROJECT_ROOT>"
+  },
+  "operating_system": {
+    "distribution": "Ubuntu 22.04.1 LTS",
+    "kernel": "5.15.0-91-generic",
+    "architecture": "x86_64"
+  },
+  "python": {
+    "system": {
+      "python3_version": "3.10.12",
+      "python_alias_available": false,
+      "pip_version": "22.0.2",
+      "torch_installed": false
+    },
+    "existing_isolated_environment": {
+      "path": "<REDACTED_PRIVATE_ENV>",
+      "python_version": "3.12.13",
+      "pip_version": "26.1.2",
+      "torch_version": "2.11.0+cu130",
+      "torch_cuda_version": "13.0",
+      "cuda_available_outside_codex_sandbox": true,
+      "device_count_outside_codex_sandbox": 8,
+      "cudnn_available": true,
+      "cudnn_version": "9.19.0",
+      "nccl_available": true,
+      "nccl_version": "2.28.9"
+    },
+    "project_venv_present": false,
+    "merit_experiment_dependency_manifest_present": false
+  },
+  "environment_managers": {
+    "conda": {
+      "available_after_private_activation": true,
+      "version": "26.3.2"
+    },
+    "mamba_available": false,
+    "micromamba_available": false
+  },
+  "tools": {
+    "nvcc_available": false,
+    "docker_client": {
+      "available": true,
+      "version": "27.0.3"
+    },
+    "docker_daemon_accessible": false,
+    "docker_daemon_error": "permission denied on local daemon socket",
+    "slurm": {
+      "srun_available": false,
+      "sbatch_available": false,
+      "sinfo_available": false
+    }
+  },
+  "cli_configuration": {
+    "codex": {
+      "available": true,
+      "version": "0.144.6",
+      "authentication": "configured"
+    },
+    "claude": {
+      "available": false,
+      "authentication": "not_configured_or_unverified",
+      "required_base_url_present_in_session": false,
+      "api_credential_present_in_session": false
+    },
+    "codex_mcp_for_claude": {
+      "configured": false,
+      "reason": "Claude Code unavailable"
+    }
+  },
+  "aris": {
+    "vendored_upstream_commit": "c5f3d5bfc694a812012729841e9697223e4f2130",
+    "codex_dry_run_conflicts": 0,
+    "claude_dry_run_conflicts": 0,
+    "codex_project_install": "success",
+    "claude_project_install": "success",
+    "active_links_have_windows_targets": false,
+    "broken_links": 0,
+    "inactive_previous_manifest_contains_windows_paths": true,
+    "global_pointer_created": false
+  },
+  "readiness": {
+    "hardware_and_torch_minimum": true,
+    "sanity_checks_overall": "NO_GO",
+    "blocking_items": [
+      "Claude Code and its private configuration are unavailable",
+      "Codex MCP for Claude is not configured",
+      "No MERIT experiment implementation or R001/R002 executable entry point exists at this revision",
+      "No project-pinned MERIT experiment environment or dependency manifest exists"
+    ],
+    "risks": [
+      "Docker daemon is inaccessible to this session",
+      "nvcc is unavailable on PATH",
+      "Slurm CLI is unavailable on PATH",
+      "Project NFS filesystem is 85 percent utilized",
+      "Default Codex sandbox hides GPU/NVML devices",
+      "System has no swap",
+      "An inactive ARIS previous-manifest backup still records Windows paths"
+    ]
+  },
+  "prohibited_actions_confirmed_not_run": {
+    "training": true,
+    "benchmark": true,
+    "all_reduce_test": true,
+    "paper_experiment": true,
+    "model_download": true,
+    "data_download": true,
+    "software_install_upgrade_delete": true,
+    "tracker_modification": true,
+    "git_commit_or_push": true
+  }
+}
+

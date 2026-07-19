@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "pilot-implementation-20260719-user-delegated",
+  "status": "USER_APPROVED_LOCKED",
+  "approval_date": "2026-07-19",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "approval_basis": "User delegated approval of the recommended implementation rules.",
+  "protocol_lock": {
+    "path": "configs/pilot-protocol.locked.20260719.json",
+    "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b"
+  },
+  "rules": {
+    "fixed_heldout_audit_query_set": {
+      "eligibility": "canonical query_id is runnable for both representative baseline adapters at every locked snapshot; eligibility is computed before outcomes or rewards are read",
+      "selection": "within each stream, order eligible query_ids by SHA-256 of selector_seed, stream_id, and query_id; select the first n_audit",
+      "selector_seed": 20260719,
+      "n_audit": "for N>=2, min(N-1,max(1,floor(0.30*N+0.5))); N<2 is a hard data-integrity failure",
+      "reuse": "the selected query_id set is frozen once and reused at snapshots 100,200,300,400,500 and for both baseline classes",
+      "inclusion_probability": "n_audit/N within stream; every stream-by-snapshot audit record stores pi and design weight 1/pi",
+      "manifest": "record universe and selected sample-index SHA-256, selector seed, stream, query_id, snapshot grid, pi, and zero-overlap proof against TRAIN and confirmatory roles"
+    },
+    "train_priority_score_contract": {
+      "branch_draw": "seeded categorical draw with probabilities uniform=0.20, uncertainty=0.40, utility_usage=0.40",
+      "uncertainty_raw": "sample standard deviation of predictions from five deterministic task-bootstrap refits of the current ACA architecture",
+      "unfitted_uncertainty_behavior": "fall back to uniform sampling and record the fallback; do not use AUDIT observations",
+      "utility_usage_raw": "0.5 times within-pool percentile rank of current utility plus 0.5 times within-pool percentile rank of log1p(retrieval_count)",
+      "normalization": "midrank empirical percentile in the eligible TRAIN pool; non-finite values are ineligible; all-equal scores become uniform",
+      "sampling": "probability proportional to normalized score plus 1/N, without replacement, until exactly m=2 memories are selected",
+      "tie_breaking": "ascending SHA-256 of atomic run seed and memory_id",
+      "audit_priority_allowed": false
+    },
+    "neutral_pad_token_length_matching": {
+      "tokenizer_binding": "use the exact tokenizer revision recorded by the run model manifest with add_special_tokens=false",
+      "algorithm": "encode [EMPTY_MEMORY_SLOT] once; if target length is at least the marker length, repeat marker token IDs cyclically and slice to the exact target length; pass token IDs directly without decode/re-encode",
+      "short_target_behavior": "mark NEUTRAL_PAD_UNREPRESENTABLE, do not run that pair, fail/not-run the equivalence validation, and apply the approved pad-replacement wording downgrade",
+      "provenance": "record tokenizer revision, marker token IDs SHA-256, removed length, produced length, and algorithm revision"
+    },
+    "paired_bundle_budget_ceiling": {
+      "atomic_unit": "one shared-control plus all paired LOO conditions for the selected memories and their aligned rollout seeds",
+      "admission": "before starting, compute worst-case rollout-equivalent and token reservation; start only if both remaining hard ceilings cover the full reservation",
+      "ceiling_behavior": "do not start or partially execute the bundle; record BLOCKED_BUDGET_CEILING with RESOURCE failure type",
+      "accounting": "replace reservations with realized costs after bundle completion; unused reservation is released; neither ceiling may be exceeded"
+    },
+    "sr_slope_clustered_interval": {
+      "point_estimator": "ordinary least-squares slope of design-weighted SR@20% on numeric snapshot task index t in 100,200,300,400,500",
+      "ccc": "Spearman rank correlation with midranks at memory level",
+      "resampling": "10,000 deterministic task-clustered paired BCa bootstrap replicates; resample task IDs once per replicate and preserve all snapshots, systems, controls, and LOO pairs for that task",
+      "bootstrap_seed": "SHA-256-derived integer from atomic run family, baseline_id, metric_id, and locked analysis revision",
+      "multiplicity": "within each baseline separately, apply Holm step-down one-sided family-wise alpha=0.05 to the two G-C1 hypotheses: slope greater than 0 and CCC less than 0.5",
+      "invalid_behavior": "missing snapshots, fewer than two task clusters, constant ranks, non-finite estimates, or degenerate resamples make the affected gate fail rather than pass"
+    },
+    "shared_control_and_deployment_reuse": {
+      "shared_control_rollout_count": "K_ctrl equals the condition rollout count K; therefore K_ctrl=5 in the pilot",
+      "pairing": "control and every LOO condition use the same ordered rollout seeds",
+      "deployment_reuse": "reuse at most one deployment rollout as control seed index 0 only when query_id, task state, bank snapshot SHA-256, retrieval set and order, model and tokenizer revisions, decoding configuration, reward evaluator revision, and rollout seed all match exactly",
+      "otherwise": "r_reuse=0 and all K control rollouts are generated",
+      "provenance": "record source run ID and output SHA-256 for reuse; count a reused rollout once in realized cost and never duplicate it across bundles"
+    }
+  },
+  "invariants": {
+    "pilot_confirmatory_overlap_allowed": false,
+    "no_pad_main_arm_allowed": false,
+    "neutral_pad_failure_downgrade": "pad-replacement contribution",
+    "redundancy_axis": "EVIDENCE GAP",
+    "formal_k_n_audit_seed_count": "POST_PILOT_COMPUTED_THEN_USER_LOCKED",
+    "governance_dead_zone": "USER_APPROVAL_REQUIRED",
+    "huber_delta": "USER_APPROVAL_REQUIRED"
+  }
+}

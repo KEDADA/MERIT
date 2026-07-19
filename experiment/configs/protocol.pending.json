@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED_PENDING_USER_APPROVAL",
+  "marker": "USER_APPROVAL_REQUIRED",
+  "approved_invariants": {
+    "inferential_unit": "seed/deployment_run",
+    "confirmatory_roles": [
+      "fit",
+      "calibration",
+      "development",
+      "sealed_final_audit"
+    ],
+    "pilot_confirmatory_overlap_allowed": false,
+    "pilot_usage": "sizing_only",
+    "literal_removal_interpretation_requires_neutral_pad_equivalence": true,
+    "neutral_pad_failure_fallback": "pad-replacement contribution",
+    "no_pad_main_arm_allowed": false,
+    "redundancy_axis": "EVIDENCE GAP",
+    "individual_shapley_claim": false,
+    "g_c2_conjunctive": true,
+    "g_c4_conjunctive": true
+  },
+  "pre_pilot": {
+    "sr_practical_null_delta": "USER_APPROVAL_REQUIRED",
+    "avg_mei": "USER_APPROVAL_REQUIRED",
+    "target_power": "USER_APPROVAL_REQUIRED",
+    "target_ci_half_width": "USER_APPROVAL_REQUIRED",
+    "pilot_train_audit_split": "USER_APPROVAL_REQUIRED",
+    "audit_stratification": "USER_APPROVAL_REQUIRED",
+    "audit_population_and_window": "USER_APPROVAL_REQUIRED",
+    "audit_event_weighting": "USER_APPROVAL_REQUIRED",
+    "memory_subset_per_trial": "USER_APPROVAL_REQUIRED",
+    "fit_priority_rule": "USER_APPROVAL_REQUIRED",
+    "neutral_pad_content": "USER_APPROVAL_REQUIRED",
+    "neutral_pad_equivalence_band": "USER_APPROVAL_REQUIRED",
+    "neutral_pad_decision_rule": "USER_APPROVAL_REQUIRED",
+    "pilot_rollout_budget": "USER_APPROVAL_REQUIRED",
+    "pilot_token_budget": "USER_APPROVAL_REQUIRED",
+    "rit_affordability_epsilon": "USER_APPROVAL_REQUIRED",
+    "g_c1_interval_rule": "USER_APPROVAL_REQUIRED"
+  },
+  "post_pilot_computed": {
+    "formal_k": "USER_APPROVAL_REQUIRED",
+    "formal_n_audit": "USER_APPROVAL_REQUIRED",
+    "formal_seed_count": "USER_APPROVAL_REQUIRED",
+    "note": "These become computed-and-frozen values after the independent pilot; the marker means computation cannot start yet."
+  },
+  "pre_confirmatory": {
+    "s2_s4_stream_identities": "USER_APPROVAL_REQUIRED",
+    "heterogeneity_bins": "USER_APPROVAL_REQUIRED",
+    "cti_domain_pairs": "USER_APPROVAL_REQUIRED",
+    "four_role_fractions_and_label_budgets": "USER_APPROVAL_REQUIRED",
+    "warmup_w": "USER_APPROVAL_REQUIRED",
+    "max_baseline_statistic": "USER_APPROVAL_REQUIRED",
+    "holm_alpha": "USER_APPROVAL_REQUIRED",
+    "bh_fdr_q": "USER_APPROVAL_REQUIRED",
+    "multiplicity_family_membership": "USER_APPROVAL_REQUIRED",
+    "hierarchical_resampling": "USER_APPROVAL_REQUIRED",
+    "judge_agreement_rule": "USER_APPROVAL_REQUIRED",
+    "g_c2_rule": "USER_APPROVAL_REQUIRED",
+    "g_c3a_rule": "USER_APPROVAL_REQUIRED",
+    "g_c3b_rule": "USER_APPROVAL_REQUIRED",
+    "g_c3c_rule": "USER_APPROVAL_REQUIRED",
+    "g_c4_rule": "USER_APPROVAL_REQUIRED",
+    "g_h3_rule": "USER_APPROVAL_REQUIRED",
+    "g_h4_pareto_knee_rule": "USER_APPROVAL_REQUIRED",
+    "g_h5_non_redundancy_rules": "USER_APPROVAL_REQUIRED"
+  },
+  "governance_and_reproducibility": {
+    "governance_calibrated_bound": "USER_APPROVAL_REQUIRED",
+    "governance_repetition_rule": "USER_APPROVAL_REQUIRED",
+    "governance_dead_zone": "USER_APPROVAL_REQUIRED",
+    "huber_delta": "USER_APPROVAL_REQUIRED",
+    "dataset_and_model_revisions": "USER_APPROVAL_REQUIRED",
+    "baseline_adapters_and_fidelity": "USER_APPROVAL_REQUIRED",
+    "bank_schedule": "USER_APPROVAL_REQUIRED",
+    "project_runtime": "USER_APPROVAL_REQUIRED"
+  },
+  "implementation_parameters": {
+    "pilot_k": "USER_APPROVAL_REQUIRED",
+    "rit_sampling_probability": "USER_APPROVAL_REQUIRED",
+    "snapshot_grid": "USER_APPROVAL_REQUIRED",
+    "retrieval_top_k": "USER_APPROVAL_REQUIRED",
+    "aca_recalibration_interval": "USER_APPROVAL_REQUIRED",
+    "scope_score_weights": "USER_APPROVAL_REQUIRED",
+    "bootstrap_resample_count": "USER_APPROVAL_REQUIRED",
+    "judge_sample_size": "USER_APPROVAL_REQUIRED",
+    "efficiency_budget_sweep": "USER_APPROVAL_REQUIRED"
+  }
+}

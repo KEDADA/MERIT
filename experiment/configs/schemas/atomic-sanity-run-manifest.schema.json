@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MERIT blocked atomic R001/R002 sanity manifest",
+  "allOf": [{"$ref": "run-manifest.schema.json"}],
+  "type": "object",
+  "required": ["input_manifest", "execution_authorized", "readiness", "execution_gate"],
+  "properties": {
+    "run_id": {"enum": ["R001__sanity__paired-replay-real-toy__seed-pending__a001", "R002__sanity__metrics-real-toy__seed-pending__a001"]},
+    "status": {"const": "BLOCKED"},
+    "seed": {"const": "FORMAL_GATE_REQUIRED"},
+    "execution_authorized": {"const": false},
+    "readiness": {"const": {"atomic_manifest_and_input_provenance": "READY_STRUCTURAL_ONLY", "formal_execution_gate": "BLOCKED_NOT_EVALUATED"}},
+    "execution_gate": {"const": {"status": "NOT_EVALUATED", "next_step": "formal-r001-r002-execution-gate"}}
+  }
+}

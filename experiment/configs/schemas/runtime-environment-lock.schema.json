@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/runtime-environment-lock.schema.json",
+  "title": "MERIT empirical runtime environment lock",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "lock_id",
+    "status",
+    "captured_at_utc",
+    "base_commit",
+    "runtime_alias",
+    "sources",
+    "observed",
+    "dependency_inventory",
+    "capture",
+    "safety_boundary",
+    "readiness"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "lock_id": {"const": "environment-lock-20260719-attempt-002"},
+    "status": {"const": "RUNTIME_ENVIRONMENT_LOCKED"},
+    "captured_at_utc": {"type": "string"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "runtime_alias": {"const": "runtime://merit-r000-h20-py312-torch211-cu130"},
+    "sources": {
+      "type": "object",
+      "required": ["target", "r000_profile"],
+      "properties": {
+        "target": {"$ref": "#/$defs/reference"},
+        "r000_profile": {"$ref": "#/$defs/reference"}
+      },
+      "additionalProperties": false
+    },
+    "observed": {
+      "type": "object",
+      "required": ["python", "pytorch", "pytorch_cuda_runtime", "cuda_available", "gpu_count", "gpu_models", "cudnn", "nccl"],
+      "properties": {
+        "python": {"const": "3.12.13"},
+        "pytorch": {"const": "2.11.0+cu130"},
+        "pytorch_cuda_runtime": {"const": "13.0"},
+        "cuda_available": {"const": true},
+        "gpu_count": {"const": 8},
+        "gpu_models": {"const": ["NVIDIA H20"]},
+        "cudnn": {"const": "9.19.0"},
+        "nccl": {"const": "2.28.9"}
+      },
+      "additionalProperties": false
+    },
+    "dependency_inventory": {
+      "type": "object",
+      "required": ["path", "sha256", "package_count", "fields"],
+      "properties": {
+        "path": {"const": "environments/dependency-inventory.20260719.attempt-002.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "package_count": {"type": "integer", "minimum": 1},
+        "fields": {"const": ["normalized package name", "version"]}
+      },
+      "additionalProperties": false
+    },
+    "capture": {
+      "type": "object",
+      "properties": {
+        "probe_script": {"const": "scripts/preflight_runtime.py"},
+        "probe_script_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "resolution_source": {"const": "existing-runtime-registry"},
+        "metadata_only": {"const": true},
+        "private_executable_reference_recorded": {"const": false}
+      },
+      "required": ["probe_script", "probe_script_sha256", "resolution_source", "metadata_only", "private_executable_reference_recorded"],
+      "additionalProperties": false
+    },
+    "safety_boundary": {
+      "type": "object",
+      "minProperties": 7,
+      "additionalProperties": {"const": 0}
+    },
+    "readiness": {
+      "type": "object",
+      "properties": {
+        "metadata_runtime": {"const": "READY"},
+        "real_toy_adapter_engineering": {"const": "READY_ENVIRONMENT_ONLY"},
+        "formal_r001_r002": {"const": "BLOCKED_PENDING_MODEL_DATA_ADAPTER_AND_RUN_MANIFEST"}
+      },
+      "required": ["metadata_runtime", "real_toy_adapter_engineering", "formal_r001_r002"],
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

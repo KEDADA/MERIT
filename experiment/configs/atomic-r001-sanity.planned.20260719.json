@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "config_id": "atomic-r001-sanity-paired-replay-20260719-v1",
+  "status": "BLOCKED_PENDING_FORMAL_EXECUTION_GATE",
+  "executable": false,
+  "run_family_id": "R001",
+  "phase": "sanity",
+  "objective": "paired replay and neutral-pad pipeline validation on the real toy split",
+  "seed": "FORMAL_GATE_REQUIRED",
+  "model_binding": {
+    "planned_family": "Qwen3-32B",
+    "model_revision": "FORMAL_GATE_REQUIRED",
+    "tokenizer_revision": "FORMAL_GATE_REQUIRED",
+    "decoding_configuration": "FORMAL_GATE_REQUIRED",
+    "adapter_revision": "merit-token-model-adapter-v1"
+  },
+  "data_binding": {
+    "manifest_path": "data/real-toy-split.20260719.manifest.json",
+    "manifest_sha256": "1039112a2591a65f47c02a02ae7122a0d4b7333819a605ac35155c9f2bca0f55",
+    "roles": ["pilot_train", "pilot_audit"],
+    "task_count": 20
+  },
+  "locked_parameters": {
+    "pilot_k": 5,
+    "neutral_pad_literal": "[EMPTY_MEMORY_SLOT]",
+    "neutral_pad_algorithm": "cyclic-token-id-repeat-and-exact-slice-v1",
+    "paired_control_and_loo_share_ordered_seeds": true,
+    "model_calls_permitted_by_this_config": false
+  },
+  "protocol_references": [
+    {"path": "configs/pilot-protocol.locked.20260719.json", "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b"},
+    {"path": "configs/pilot-implementation.locked.20260719.json", "sha256": "cd48278c77c8cb4c7b32efb120c336507823ce22ebf797eb7ed60637cd641877"},
+    {"path": "configs/sanity-baseline.locked.20260719.json", "sha256": "33550255b917d21b05a47c43a5bce919545a01b7e868770aa984dcdeae92dfaf"}
+  ],
+  "formal_gate_requirements": [
+    "bind exact model and tokenizer revisions without private paths",
+    "lock deterministic decoding configuration and integer run seed",
+    "verify source aliases resolve read-only and hashes match",
+    "approve transition from BLOCKED to READY in a new manifest revision"
+  ]
+}

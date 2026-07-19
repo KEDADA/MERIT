@@ -1,0 +1,14 @@
+{
+  "adapter_revision": "merit-real-toy-data-adapter-v1",
+  "phase": "pilot",
+  "role": "pilot_audit",
+  "samples": [
+    {"query_id": "alfworld:3de2c1f06e75dc96313e847e35c8039971ce3077e44cb6086191ae96a80b6edf", "source_locator": "json_2.1.1/valid_seen/pick_and_place_simple-SoapBottle-None-Cabinet-414/trial_T20190908_110131_524518", "stream_id": "alfworld"},
+    {"query_id": "alfworld:ebba7d57b9edc2b03eea7532200983a30b194ba063f711c1d8c1333cac13b08a", "source_locator": "json_2.1.1/valid_seen/pick_and_place_simple-CellPhone-None-ArmChair-318/trial_T20190909_120047_968274", "stream_id": "alfworld"},
+    {"query_id": "alfworld:ebfdd4624b6d16f71625769840a71fd99fef434403df5b41b77e404a7139fe36", "source_locator": "json_2.1.1/valid_seen/pick_two_obj_and_place-Spatula-None-Drawer-13/trial_T20190908_183331_203888", "stream_id": "alfworld"},
+    {"query_id": "hotpotqa:32d5427d3c269e79c76f46ecdabe17eb581039b41bce2dec02df74d0d0ebab5b", "source_locator": "line:33", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:ed4dd507e2e739badefce319f3eaeee775665a71f04859379596fe02aff9387b", "source_locator": "line:24", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:ff2074da1645067f61c79525f0e331766614d7bb4f3f8f0cc7afbe7d78df610d", "source_locator": "line:98", "stream_id": "hotpotqa"}
+  ],
+  "schema_version": "1.0"
+}

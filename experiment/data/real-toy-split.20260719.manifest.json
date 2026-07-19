@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "r001-r002-real-toy-split-20260719-v1",
+  "status": "REAL_TOY_SPLIT_READY",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "captured_at_utc": "2026-07-19T09:58:43Z",
+  "adapter_revision": "merit-real-toy-data-adapter-v1",
+  "sources": [
+    {
+      "source_id": "alfworld_trajectory_archive",
+      "path_alias": "external-data://merit-real-toy/alfworld-0.4.0/json_2.1.1_json.zip",
+      "source_uri": "https://github.com/alfworld/alfworld/releases/download/0.2.2/json_2.1.1_json.zip",
+      "source_revision": "ALFWorld JSON release 0.2.2 / json_2.1.1",
+      "license": "MIT (ALFWorld official repository)",
+      "sha256": "25171f16e20ad7b048c47275c45b0babf3aa1cbab29cec97387922350a9844bc",
+      "size_bytes": 72018818
+    },
+    {
+      "source_id": "alfworld_game_archive",
+      "path_alias": "external-data://merit-real-toy/alfworld-0.4.0/json_2.1.2_tw-pddl.zip",
+      "source_uri": "https://github.com/alfworld/alfworld/releases/download/0.4.0/json_2.1.2_tw-pddl.zip",
+      "source_revision": "ALFWorld TextWorld release 0.4.0 / json_2.1.2",
+      "license": "MIT (ALFWorld official repository); bundled solver components retain upstream licenses",
+      "sha256": "eea90499df27b9cb3147d1d1927264146d38194b575e25f70a82875545742dcb",
+      "size_bytes": 36493542
+    },
+    {
+      "source_id": "hotpotqa_trace_jsonl",
+      "path_alias": "external-data://existing/sglang-react/hotpotqa_100.jsonl",
+      "source_uri": "https://github.com/Approaching-AI/sglang-taas/blob/70359bf31a4b86bb772cd0853cbf833faf159a7c/benchmark/react/hotpotqa_100.jsonl",
+      "source_revision": "sglang-taas commit 70359bf31a4b86bb772cd0853cbf833faf159a7c",
+      "license": "HotpotQA questions CC BY-SA 4.0; derived SGLang repository Apache-2.0",
+      "sha256": "41d0a75d73dd207a3fa3adb1440441d5a41442ed94eb19b2e38c3a00cc4519e9",
+      "size_bytes": 251318
+    }
+  ],
+  "selection": {
+    "selector_seed": 20260719,
+    "source_split": {"alfworld": "valid_seen JSON/TextWorld-game intersection", "hotpotqa": "100 replay traces"},
+    "eligible_universe_count": {"alfworld": 140, "hotpotqa": 100},
+    "toy_tasks_per_stream": 10,
+    "toy_selection": "ascending SHA-256 of selector_seed, stream_id, and query_id before task payloads are loaded",
+    "train_audit_split": "locked task-level stable 70:30 split per stream",
+    "outcomes_or_rewards_used_for_selection": false
+  },
+  "partitions": [
+    {
+      "partition_id": "real-toy-pilot-train-20260719-v1",
+      "phase": "pilot",
+      "role": "pilot_train",
+      "path_alias": "data/indexes/real-toy-pilot_train.20260719.index.json",
+      "sha256": "9998b990af2c47cab35df2958173751f34f5fe2109c51ba61c46ccf3b1dc971d",
+      "sample_index_sha256": "9998b990af2c47cab35df2958173751f34f5fe2109c51ba61c46ccf3b1dc971d",
+      "record_count": 14,
+      "stream_counts": {"alfworld": 7, "hotpotqa": 7}
+    },
+    {
+      "partition_id": "real-toy-pilot-audit-20260719-v1",
+      "phase": "pilot",
+      "role": "pilot_audit",
+      "path_alias": "data/indexes/real-toy-pilot_audit.20260719.index.json",
+      "sha256": "0bdecb776e2ad9e297e2a8c192ba2dcadcdcccab3f1407a76c858a670101ca4b",
+      "sample_index_sha256": "0bdecb776e2ad9e297e2a8c192ba2dcadcdcccab3f1407a76c858a670101ca4b",
+      "record_count": 6,
+      "stream_counts": {"alfworld": 3, "hotpotqa": 3}
+    }
+  ],
+  "disjointness_checks": [
+    {
+      "left_partition_id": "real-toy-pilot-train-20260719-v1",
+      "right_partition_id": "real-toy-pilot-audit-20260719-v1",
+      "overlap_count": 0,
+      "checked_by": "scripts/prepare_real_toy_split.py",
+      "checked_at": "2026-07-19T09:58:43Z"
+    }
+  ],
+  "readiness": {
+    "model_adapter": "READY_ENGINEERING_ONLY",
+    "data_adapter": "READY_ENGINEERING_ONLY",
+    "real_toy_split": "READY",
+    "atomic_run_manifest_and_input_provenance": "BLOCKED",
+    "formal_r001_r002": "BLOCKED"
+  },
+  "execution_boundary": {
+    "data_archives_downloaded": 2,
+    "real_task_payloads_committed_to_repo": 0,
+    "training_runs": 0,
+    "model_inference_calls": 0,
+    "benchmarks": 0,
+    "gpu_stress_tests": 0,
+    "collective_communication_tests": 0,
+    "formal_r001_r002_runs": 0
+  }
+}

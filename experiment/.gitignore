@@ -1,0 +1,101 @@
+# 凭据、环境变量与机器私有配置
+.env
+.env.*
+!.env.example
+*secret*
+*secrets*
+*token*
+*Token*
+*TOKEN*
+*credential*
+*.pem
+*.key
+.ssh/
+machine.local.*
+private.local.*
+*.local.yaml
+*.local.yml
+*.local.json
+
+# Python/测试临时文件
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 锁、PID、临时日志与编辑器文件
+*.lock
+*.pid
+*.tmp
+*.temp
+*.swp
+*.swo
+*.log
+logs/
+wandb/
+mlruns/
+ray_results/
+
+# 原始和处理中数据；仅允许 README、manifest 与小型 synthetic fixture
+data/raw/
+data/interim/
+data/processed/
+data/cache/
+data/downloads/
+data/**/shards/
+!data/README.md
+!data/**/*manifest*.json
+!data/fixtures/
+!data/fixtures/**
+
+# checkpoint、模型权重和模型缓存
+checkpoints/
+models/
+model-cache/
+**/.cache/huggingface/
+**/huggingface-cache/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# 运行时大文件；保留 README、manifest、配置快照和小型状态记录
+runs/**/logs/
+runs/**/raw/
+runs/**/checkpoints/
+!runs/README.md
+!runs/**/*manifest*.json
+!runs/**/*config*.json
+!runs/**/*status*.json
+
+# 大型 artifact；Git 只保存 manifest
+artifacts/blobs/
+artifacts/cache/
+artifacts/large/
+!artifacts/README.md
+!artifacts/**/*manifest*.json
+
+# results 只允许小型汇总、manifest 与说明；原始预测/轨迹留在外部存储
+results/raw/
+results/predictions/
+results/trajectories/
+!results/README.md
+!results/**/*.json
+!results/**/*.csv
+!results/**/*.md
+
+# 通用大型二进制/归档
+*.bin
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.parquet
+*.arrow
+*.npy
+*.npz

@@ -1,0 +1,22 @@
+{
+  "adapter_revision": "merit-real-toy-data-adapter-v1",
+  "phase": "pilot",
+  "role": "pilot_train",
+  "samples": [
+    {"query_id": "alfworld:3371a1dbe40225e8e9ac997b668a5f7493dec7b584a659f1400854e0d8836265", "source_locator": "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-Drawer-8/trial_T20190909_124425_112757", "stream_id": "alfworld"},
+    {"query_id": "alfworld:480d6aba66c4bc9c086583ca66c50f3778cf4410ea86f55fefa5e1b0ba356007", "source_locator": "json_2.1.1/valid_seen/pick_and_place_simple-Egg-None-Microwave-4/trial_T20190906_234406_356490", "stream_id": "alfworld"},
+    {"query_id": "alfworld:497a73d24fdba392a939caa128f4813e68f5401dfba7a3c06caa0b7f124f6d33", "source_locator": "json_2.1.1/valid_seen/look_at_obj_in_light-Laptop-None-DeskLamp-328/trial_T20190908_201550_622420", "stream_id": "alfworld"},
+    {"query_id": "alfworld:6afe3a85c14ed94a1f4026aad2982823b7310d2558a9c396649084b956d2b493", "source_locator": "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Cloth-None-Drawer-423/trial_T20190908_140701_251653", "stream_id": "alfworld"},
+    {"query_id": "alfworld:a4671433da5d5aeebfdc8443a8e7111904ccb306eab340378c881edcc10d97a7", "source_locator": "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-DiningTable-16/trial_T20190907_201243_698086", "stream_id": "alfworld"},
+    {"query_id": "alfworld:dd132770e2044d1ccb7588faa07c8f7b3937ada96688c99e61f1b4669c00a67d", "source_locator": "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-16/trial_T20190909_183724_205399", "stream_id": "alfworld"},
+    {"query_id": "alfworld:e678d0b9b38387234124f3cf82b540c9401bfa596ee803641258a0c98a780029", "source_locator": "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Plate-None-Cabinet-1/trial_T20190908_070946_578973", "stream_id": "alfworld"},
+    {"query_id": "hotpotqa:13c322630bf6e0c4cb62661d72c1c931df74e5cba130e7cfb4ab2135b3c76718", "source_locator": "line:5", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:1adb498f60150f983b43e730f7b1f6f8637ada70c39364ce4556ffb38c8c2689", "source_locator": "line:68", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:4bfadd1678002d5149eaeb21bd692d1649308468911034a3ca4bf7d44ffa5b6f", "source_locator": "line:38", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:576faac538153058a9509bef976dcdb4de05e35bc03438825ba975d71ce330ef", "source_locator": "line:16", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:6ab199a843756bfc41f7b7009e2e0a32a8f2b6f1fa950a918f96421bb8612e75", "source_locator": "line:41", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:9cf5d64a1d943d9415cbb81ffb9f10aea63f4b3789a0e4b34eb7052a13614c76", "source_locator": "line:65", "stream_id": "hotpotqa"},
+    {"query_id": "hotpotqa:f94d90e3a1a5b56f6979ea1f7f627a931a34e73d66334978094a7d318721a394", "source_locator": "line:42", "stream_id": "hotpotqa"}
+  ],
+  "schema_version": "1.0"
+}

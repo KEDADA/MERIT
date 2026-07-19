@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MERIT atomic input provenance manifest",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "run_id", "status", "references", "resolved_reference_count", "unresolved_execution_bindings", "readiness", "execution_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"pattern": "^R00[12]__sanity__[a-z0-9-]+__seed-pending__a001$"},
+    "status": {"const": "COMPLETE_STRUCTURAL_PROVENANCE_EXECUTION_BINDING_REQUIRED"},
+    "references": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "path", "sha256"],
+        "properties": {"sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+      }
+    },
+    "unresolved_execution_bindings": {"type": "array", "minItems": 2, "uniqueItems": true},
+    "readiness": {"const": {"atomic_manifest_and_input_provenance": "READY_STRUCTURAL_ONLY", "formal_execution_gate": "BLOCKED_NOT_EVALUATED"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "run_id": "R001__sanity__template__seed-pending__a000",
+  "artifacts": [],
+  "note": "Large artifacts stay outside Git; record path aliases, SHA-256, sizes, and producers here."
+}
+

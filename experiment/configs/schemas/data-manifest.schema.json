@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/data-manifest.schema.json",
+  "title": "MERIT data manifest",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "partitions", "disjointness_checks"],
+  "properties": {
+    "manifest_id": {"type": "string", "minLength": 1},
+    "partitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["partition_id", "phase", "role", "path_alias", "sha256", "sample_index_sha256"],
+        "properties": {
+          "phase": {"enum": ["pilot", "confirmatory"]},
+          "role": {"enum": ["pilot_train", "pilot_audit", "fit", "calibration", "development", "sealed_final_audit"]},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "sample_index_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "disjointness_checks": {"type": "array"}
+  },
+  "additionalProperties": true
+}
+

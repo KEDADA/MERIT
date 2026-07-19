@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "template_id": "stage2c-pilot-implementation-contract",
+  "status": "BLOCKED",
+  "protocol_lock": {
+    "path": "configs/pilot-protocol.locked.20260719.json",
+    "sha256": "f2ba31a89f4ea47168398a5fdee3a4765fca1af0691231a3bff6c97a77d2253b"
+  },
+  "rules": [
+    {
+      "rule_id": "fixed-heldout-audit-query-set",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "construction_algorithm": "USER_APPROVAL_REQUIRED",
+        "sample_size": "USER_APPROVAL_REQUIRED",
+        "sample_id_manifest_contract": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["M2 pilot data construction", "pilot AUDIT sampling"]
+    },
+    {
+      "rule_id": "train-priority-score-contract",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "uncertainty_score": "USER_APPROVAL_REQUIRED",
+        "utility_usage_score": "USER_APPROVAL_REQUIRED",
+        "normalization": "USER_APPROVAL_REQUIRED",
+        "tie_breaking": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["M2 pilot TRAIN sampling"]
+    },
+    {
+      "rule_id": "neutral-pad-token-length-matching",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "tokenizer_revision": "USER_APPROVAL_REQUIRED",
+        "exact_matching_algorithm": "USER_APPROVAL_REQUIRED",
+        "impossible_match_behavior": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["R001 paired replay", "neutral-pad validation", "M2 pilot RIT"]
+    },
+    {
+      "rule_id": "paired-bundle-budget-ceiling",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "bundle_admission_policy": "USER_APPROVAL_REQUIRED",
+        "worst_case_cost_estimator": "USER_APPROVAL_REQUIRED",
+        "ceiling_hit_status": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["M2 pilot scheduler", "pilot budget enforcement"]
+    },
+    {
+      "rule_id": "sr-slope-clustered-interval",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "slope_estimator": "USER_APPROVAL_REQUIRED",
+        "task_clustered_resampling": "USER_APPROVAL_REQUIRED",
+        "holm_interval_construction": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["R002 SR metric sanity", "G-C1 evaluation"]
+    },
+    {
+      "rule_id": "shared-control-and-deployment-reuse",
+      "status": "USER_APPROVAL_REQUIRED",
+      "required_resolution": {
+        "shared_control_rollout_count": "USER_APPROVAL_REQUIRED",
+        "deployment_rollout_reuse_eligibility": "USER_APPROVAL_REQUIRED",
+        "reuse_accounting_and_provenance": "USER_APPROVAL_REQUIRED"
+      },
+      "blocks": ["R001 paired replay", "M2 pilot RIT cost accounting"]
+    }
+  ],
+  "invariants": {
+    "no_pilot_confirmatory_overlap": true,
+    "no_no_pad_main_arm": true,
+    "redundancy_axis": "EVIDENCE GAP",
+    "formal_k_n_audit_seed_count": "POST_PILOT_COMPUTED_THEN_USER_LOCKED",
+    "governance_dead_zone": "USER_APPROVAL_REQUIRED",
+    "huber_delta": "USER_APPROVAL_REQUIRED"
+  }
+}

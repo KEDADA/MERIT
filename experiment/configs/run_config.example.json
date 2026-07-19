@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "run_family_id": "R001",
+  "phase": "sanity",
+  "seed": "USER_APPROVAL_REQUIRED",
+  "protocol_snapshot": "configs/protocol.pending.json",
+  "environment_snapshot": "environments/baseline.json",
+  "data_manifest": "USER_APPROVAL_REQUIRED",
+  "parameters": {
+    "metric_delta": "USER_APPROVAL_REQUIRED",
+    "neutral_pad": "USER_APPROVAL_REQUIRED",
+    "audit_population": "USER_APPROVAL_REQUIRED"
+  },
+  "executable": false
+}
+

@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "stage2c-pilot-20260719",
+  "status": "USER_APPROVED_LOCKED",
+  "approval_date": "2026-07-19",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "scope": [
+    "stage1_pilot",
+    "g_c1_pilot_gate",
+    "confirmatory_token_affordability_ceiling"
+  ],
+  "scientific_thresholds": {
+    "sr_practical_null_delta": {
+      "value": 0.05,
+      "unit": "normalized_memory_level_contribution_absolute"
+    },
+    "avg_mei": {
+      "value": 2.0,
+      "unit": "two_stage_macro_avg_percentage_points",
+      "unit_interval_equivalent": 0.02
+    },
+    "target_power": 0.8,
+    "target_ci_half_width": {
+      "value": 0.025,
+      "unit": "normalized_memory_level_contribution_absolute"
+    }
+  },
+  "pilot_data_design": {
+    "split_unit": "task",
+    "train_fraction": 0.7,
+    "audit_fraction": 0.3,
+    "audit_strata": [
+      "stream",
+      "snapshot"
+    ],
+    "snapshot_task_indices": [
+      100,
+      200,
+      300,
+      400,
+      500
+    ],
+    "audit_population": "frozen_snapshot_retrieval_conditioned_common_support",
+    "fixed_heldout_query_set_reused_across_snapshots": true,
+    "weighting": "inverse_recorded_inclusion_probability_design_weight",
+    "pilot_confirmatory_overlap_allowed": false
+  },
+  "rit_sampling": {
+    "memories_per_trial": 2,
+    "pilot_rollouts_per_loo": 5,
+    "task_sampling_probability": 0.05,
+    "train_selection_mixture": {
+      "uniform": 0.2,
+      "uncertainty_priority": 0.4,
+      "utility_usage_priority": 0.4
+    },
+    "audit_priority_sampling_allowed": false
+  },
+  "neutral_pad": {
+    "literal": "[EMPTY_MEMORY_SLOT]",
+    "token_length_must_match_removed_memory": true,
+    "equivalence_band_half_width": 0.025,
+    "equivalence_band_unit": "normalized_contribution_absolute",
+    "test": "task_clustered_paired_tost",
+    "confidence_interval_level": 0.9,
+    "pass_rule": "ci_entirely_within_symmetric_equivalence_band",
+    "failure_or_not_run_fallback": "pad-replacement contribution",
+    "no_pad_main_arm_allowed": false
+  },
+  "budgets": {
+    "pilot_rollout_equivalent_ceiling": 5000,
+    "pilot_input_output_token_ceiling": 100000000,
+    "confirmatory_incremental_token_overhead_ceiling": {
+      "value": 0.1,
+      "unit": "fraction_per_deployment_event_relative_to_matched_baseline",
+      "percent": 10.0,
+      "gate": "one_sided_upper_confidence_bound_at_most_ceiling",
+      "confidence_level": 0.95
+    }
+  },
+  "g_c1": {
+    "baselines": [
+      "ReasoningBank-style",
+      "MemRL-style"
+    ],
+    "test_separately": true,
+    "all_baselines_must_pass": true,
+    "multiplicity_correction": "Holm",
+    "alternative": "one_sided",
+    "familywise_alpha": 0.05,
+    "sr_slope_rule": "lower_confidence_bound_gt_0",
+    "memory_level_ccc_rule": "upper_confidence_bound_lt_0.5"
+  },
+  "approved_invariants": {
+    "pilot_data_use": "variance_and_sizing_only",
+    "pilot_data_may_enter_confirmatory_gates": false,
+    "confirmatory_roles": [
+      "fit",
+      "calibration",
+      "development",
+      "sealed_final_audit"
+    ],
+    "inferential_unit": "seed/deployment_run",
+    "stream_by_seed": "design_cell_and_stream_block_not_extra_iid_unit",
+    "literal_removal_interpretation_requires_neutral_pad_equivalence": true
+  },
+  "post_pilot_computed_not_approved": {
+    "formal_k": "USER_APPROVAL_REQUIRED",
+    "formal_n_audit": "USER_APPROVAL_REQUIRED",
+    "formal_seed_count": "USER_APPROVAL_REQUIRED"
+  },
+  "other_not_approved": {
+    "governance_dead_zone": "USER_APPROVAL_REQUIRED",
+    "huber_delta": "USER_APPROVAL_REQUIRED"
+  },
+  "implementation_blockers": [
+    "fixed_heldout_audit_query_set_construction_size_and_sample_id_manifest",
+    "uncertainty_and_utility_priority_scores_normalization_and_tie_breaking",
+    "tokenizer_level_neutral_pad_exact_length_matching_algorithm",
+    "paired_bundle_behavior_at_pilot_budget_ceiling_boundary",
+    "sr_slope_estimator_and_task_clustered_interval_implementation",
+    "shared_control_rollout_count_and_deployment_rollout_reuse_rule"
+  ]
+}

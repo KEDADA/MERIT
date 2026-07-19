@@ -1,0 +1,12 @@
+version	1
+repo_root	/mnt/qjh000/zys/src/MERIT/third_party/ARIS
+project_root	/mnt/qjh000/zys/src/MERIT
+generated	2026-07-19T05:33:05Z
+packages	skills-codex
+kind	name	source_rel	target_rel	mode
+skill	experiment-audit	skills/skills-codex/experiment-audit	.agents/skills/experiment-audit	symlink
+skill	experiment-plan	skills/skills-codex/experiment-plan	.agents/skills/experiment-plan	symlink
+skill	monitor-experiment	skills/skills-codex/monitor-experiment	.agents/skills/monitor-experiment	symlink
+skill	run-experiment	skills/skills-codex/run-experiment	.agents/skills/run-experiment	symlink
+support	shared-references	skills/skills-codex/shared-references	.agents/skills/shared-references	symlink
+skill	system-profile	skills/skills-codex/system-profile	.agents/skills/system-profile	symlink

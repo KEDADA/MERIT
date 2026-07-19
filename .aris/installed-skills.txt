@@ -1,21 +1,24 @@
 version	1
-repo_root	E:\Project\ARIS
-project_root	E:\Project\MERIT-AAAI
-platform	claude
-generated	2026-07-19T04:16:07Z
+repo_root	/mnt/qjh000/zys/src/MERIT/third_party/ARIS
+project_root	/mnt/qjh000/zys/src/MERIT
+generated	2026-07-19T05:32:26Z
 kind	name	source_rel	target_rel	mode
-skill	auto-paper-improvement-loop	skills/auto-paper-improvement-loop	.claude/skills/auto-paper-improvement-loop	junction
-skill	citation-audit	skills/citation-audit	.claude/skills/citation-audit	junction
-skill	experiment-plan	skills/experiment-plan	.claude/skills/experiment-plan	junction
-skill	figure-spec	skills/figure-spec	.claude/skills/figure-spec	junction
-skill	integrity-forensics	skills/integrity-forensics	.claude/skills/integrity-forensics	junction
-skill	kill-argument	skills/kill-argument	.claude/skills/kill-argument	junction
-skill	paper-claim-audit	skills/paper-claim-audit	.claude/skills/paper-claim-audit	junction
-skill	paper-compile	skills/paper-compile	.claude/skills/paper-compile	junction
-skill	paper-figure	skills/paper-figure	.claude/skills/paper-figure	junction
-skill	paper-plan	skills/paper-plan	.claude/skills/paper-plan	junction
-skill	paper-write	skills/paper-write	.claude/skills/paper-write	junction
-skill	paper-writing	skills/paper-writing	.claude/skills/paper-writing	junction
-skill	proof-checker	skills/proof-checker	.claude/skills/proof-checker	junction
-skill	render-html	skills/render-html	.claude/skills/render-html	junction
-support	shared-references	skills/shared-references	.claude/skills/shared-references	junction
+skill	auto-paper-improvement-loop	skills/auto-paper-improvement-loop	.claude/skills/auto-paper-improvement-loop	symlink
+skill	citation-audit	skills/citation-audit	.claude/skills/citation-audit	symlink
+skill	experiment-audit	skills/experiment-audit	.claude/skills/experiment-audit	symlink
+skill	experiment-plan	skills/experiment-plan	.claude/skills/experiment-plan	symlink
+skill	figure-spec	skills/figure-spec	.claude/skills/figure-spec	symlink
+skill	integrity-forensics	skills/integrity-forensics	.claude/skills/integrity-forensics	symlink
+skill	kill-argument	skills/kill-argument	.claude/skills/kill-argument	symlink
+skill	monitor-experiment	skills/monitor-experiment	.claude/skills/monitor-experiment	symlink
+skill	paper-claim-audit	skills/paper-claim-audit	.claude/skills/paper-claim-audit	symlink
+skill	paper-compile	skills/paper-compile	.claude/skills/paper-compile	symlink
+skill	paper-figure	skills/paper-figure	.claude/skills/paper-figure	symlink
+skill	paper-plan	skills/paper-plan	.claude/skills/paper-plan	symlink
+skill	paper-write	skills/paper-write	.claude/skills/paper-write	symlink
+skill	paper-writing	skills/paper-writing	.claude/skills/paper-writing	symlink
+skill	proof-checker	skills/proof-checker	.claude/skills/proof-checker	symlink
+skill	render-html	skills/render-html	.claude/skills/render-html	symlink
+skill	run-experiment	skills/run-experiment	.claude/skills/run-experiment	symlink
+skill	system-profile	skills/system-profile	.claude/skills/system-profile	symlink
+support	shared-references	skills/shared-references	.claude/skills/shared-references	symlink

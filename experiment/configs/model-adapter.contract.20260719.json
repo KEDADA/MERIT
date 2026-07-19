@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "model-adapter-contract-20260719-v1",
+  "status": "ENGINEERING_READY_BINDING_REQUIRED",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "environment_lock": {
+    "path": "environments/environment-lock.20260719.attempt-002.json",
+    "sha256": "b9a42abaa2cafa6b26ebe60b8db02cf704f1c15465943f1e269291cc448c6893"
+  },
+  "implementation": {
+    "adapter_revision": "merit-token-model-adapter-v1",
+    "entrypoint": "merit_experiment.model_adapter:TokenModelAdapter",
+    "backend_entrypoint": "merit_experiment.model_adapter:TransformersCausalLMBackend"
+  },
+  "binding": {
+    "model_revision": "RUN_MANIFEST_REQUIRED",
+    "tokenizer_revision": "RUN_MANIFEST_REQUIRED",
+    "model_loading": "EXTERNAL_EXPLICIT_INJECTION_ONLY",
+    "run_binding": "BLOCKED_PENDING_ATOMIC_RUN_MANIFEST"
+  },
+  "invariants": [
+    "tokenizer encode always uses add_special_tokens=false",
+    "neutral-pad token IDs may be passed directly without decode or re-encode",
+    "every generation request carries an integer rollout seed",
+    "every result records model tokenizer adapter and decoding identities",
+    "backend continuation length cannot exceed max_new_tokens",
+    "adapter import and construction never load download or invoke a model"
+  ],
+  "readiness": {
+    "model_adapter": "READY_ENGINEERING_ONLY",
+    "data_adapter_and_real_toy_split": "BLOCKED",
+    "atomic_run_manifest": "BLOCKED",
+    "formal_r001_r002": "BLOCKED"
+  },
+  "execution_boundary": {
+    "training_runs": 0,
+    "model_inference_calls": 0,
+    "benchmarks": 0,
+    "gpu_stress_tests": 0,
+    "collective_communication_tests": 0,
+    "dependencies_installed_or_downloaded": 0
+  }
+}

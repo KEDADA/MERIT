@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/runtime-preflight-result.schema.json",
+  "title": "MERIT metadata-only runtime preflight result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "preflight_id",
+    "status",
+    "captured_at_utc",
+    "target",
+    "evidence",
+    "environment_lock",
+    "dependency_inventory",
+    "resolution",
+    "checks",
+    "redaction",
+    "prohibited_actions",
+    "readiness"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "preflight_id": {"const": "runtime-preflight-20260719-attempt-002"},
+    "status": {"const": "PASS"},
+    "captured_at_utc": {"type": "string"},
+    "target": {"$ref": "#/$defs/reference"},
+    "evidence": {"$ref": "#/$defs/reference"},
+    "environment_lock": {"$ref": "#/$defs/reference"},
+    "dependency_inventory": {"$ref": "#/$defs/reference"},
+    "resolution": {
+      "type": "object",
+      "required": ["candidates_checked", "resolution_source", "private_path_emitted"],
+      "properties": {
+        "candidates_checked": {"type": "integer", "minimum": 1},
+        "resolution_source": {"const": "existing-runtime-registry"},
+        "private_path_emitted": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["check_id", "status", "observed", "expected"],
+        "properties": {
+          "check_id": {
+            "enum": [
+              "runtime-reference-resolution",
+              "python",
+              "pytorch",
+              "pytorch-cuda-runtime",
+              "cuda-available",
+              "gpu-count",
+              "gpu-models",
+              "cudnn",
+              "nccl",
+              "dependency-inventory"
+            ]
+          },
+          "status": {"const": "PASS"},
+          "observed": {},
+          "expected": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "redaction": {
+      "type": "object",
+      "additionalProperties": {"const": false}
+    },
+    "prohibited_actions": {
+      "type": "object",
+      "additionalProperties": {"const": false}
+    },
+    "readiness": {
+      "type": "object",
+      "properties": {
+        "metadata_runtime": {"const": "READY"},
+        "real_toy_adapter_engineering": {"const": "READY_ENVIRONMENT_ONLY"},
+        "formal_r001_r002": {"const": "BLOCKED_PENDING_MODEL_DATA_ADAPTER_AND_RUN_MANIFEST"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

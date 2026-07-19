@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "r000-observed-runtime",
+  "status": "BLOCKED",
+  "evidence": {
+    "baseline_path": "environments/baseline.json",
+    "baseline_sha256": "54b789358dc3fbfd562ffc367116f50acfe77414eb8b2c49d27f06475e858ee1"
+  },
+  "confirmed_facts": {
+    "gpu_model": "NVIDIA H20",
+    "gpu_count": 8,
+    "python": "3.12.13",
+    "pytorch": "2.11.0+cu130",
+    "pytorch_cuda_available_at_r000": true,
+    "cuda_driver_reported": "13.0",
+    "cudnn": "9.19.0",
+    "nccl": "2.28.9"
+  },
+  "designation": {
+    "project_runtime_alias": "USER_APPROVAL_REQUIRED",
+    "environment_snapshot_path": "USER_APPROVAL_REQUIRED",
+    "environment_snapshot_sha256": "USER_APPROVAL_REQUIRED",
+    "dependency_lockfile_path": "USER_APPROVAL_REQUIRED",
+    "dependency_lockfile_sha256": "USER_APPROVAL_REQUIRED",
+    "installation_source_policy": "USER_APPROVAL_REQUIRED",
+    "container_image_digest": "USER_APPROVAL_REQUIRED"
+  },
+  "required_preflight": [
+    {
+      "check_id": "python-version",
+      "expected_from": "confirmed_facts.python",
+      "status": "NOT_RUN"
+    },
+    {
+      "check_id": "pytorch-version",
+      "expected_from": "confirmed_facts.pytorch",
+      "status": "NOT_RUN"
+    },
+    {
+      "check_id": "cuda-visibility",
+      "expected_from": "confirmed_facts.pytorch_cuda_available_at_r000",
+      "status": "NOT_RUN"
+    },
+    {
+      "check_id": "gpu-inventory",
+      "expected_from": "confirmed_facts.gpu_model+confirmed_facts.gpu_count",
+      "status": "NOT_RUN"
+    },
+    {
+      "check_id": "dependency-lock-consistency",
+      "expected_from": "designation.dependency_lockfile_sha256",
+      "status": "NOT_RUN"
+    }
+  ],
+  "readiness": {
+    "r001_r002": "BLOCKED",
+    "reason": "Runtime and dependency lock are not designated; preflight has not run."
+  },
+  "non_claims": [
+    "This pending document is not an environment lock or an executable configuration.",
+    "R000 observations do not prove model, dataset, throughput, or multi-GPU compatibility.",
+    "No dependency may be installed from this document."
+  ]
+}

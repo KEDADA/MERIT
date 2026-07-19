@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "statuses": [
+    "PLANNED",
+    "READY",
+    "RUNNING",
+    "SUCCEEDED",
+    "FAILED",
+    "ABORTED",
+    "INVALID",
+    "BLOCKED"
+  ],
+  "failure_types": [
+    "NONE",
+    "CONFIGURATION",
+    "DATA_INTEGRITY",
+    "ROLE_LEAKAGE",
+    "ENVIRONMENT",
+    "IMPLEMENTATION",
+    "RESOURCE",
+    "METRIC",
+    "EXTERNAL",
+    "USER_APPROVAL_REQUIRED",
+    "UNKNOWN"
+  ],
+  "rules": {
+    "ready_requires_integer_seed": true,
+    "ready_forbids_unresolved_values": true,
+    "failed_requires_non_none_failure_type": true,
+    "succeeded_requires_none_failure_type": true
+  }
+}
+

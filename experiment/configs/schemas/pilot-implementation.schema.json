@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/pilot-implementation.schema.json",
+  "title": "MERIT pending pilot implementation contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "template_id",
+    "status",
+    "protocol_lock",
+    "rules",
+    "invariants"
+  ],
+  "properties": {
+    "status": {"const": "BLOCKED"},
+    "protocol_lock": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "configs/pilot-protocol.locked.20260719.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "status", "required_resolution", "blocks"],
+        "properties": {
+          "status": {"const": "USER_APPROVAL_REQUIRED"},
+          "required_resolution": {"type": "object", "minProperties": 1},
+          "blocks": {"type": "array", "minItems": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "invariants": {
+      "type": "object",
+      "required": [
+        "no_pilot_confirmatory_overlap",
+        "no_no_pad_main_arm",
+        "redundancy_axis",
+        "formal_k_n_audit_seed_count",
+        "governance_dead_zone",
+        "huber_delta"
+      ],
+      "properties": {
+        "no_pilot_confirmatory_overlap": {"const": true},
+        "no_no_pad_main_arm": {"const": true},
+        "redundancy_axis": {"const": "EVIDENCE GAP"},
+        "formal_k_n_audit_seed_count": {"const": "POST_PILOT_COMPUTED_THEN_USER_LOCKED"},
+        "governance_dead_zone": {"const": "USER_APPROVAL_REQUIRED"},
+        "huber_delta": {"const": "USER_APPROVAL_REQUIRED"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

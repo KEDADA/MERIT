@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "run_id": "R001__sanity__template__seed-pending__a000",
+  "run_family_id": "R001",
+  "phase": "sanity",
+  "status": "BLOCKED",
+  "failure": {
+    "type": "USER_APPROVAL_REQUIRED",
+    "message": "Protocol and project runtime are not locked; this template is not executable."
+  },
+  "seed": "USER_APPROVAL_REQUIRED",
+  "git": {
+    "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+    "code_commit": "NOT_COMPUTED_TEMPLATE",
+    "dirty_worktree": "NOT_COMPUTED_TEMPLATE",
+    "dirty_paths_manifest_sha256": "NOT_COMPUTED_TEMPLATE"
+  },
+  "config_snapshot": {"path": "NOT_COMPUTED_TEMPLATE", "sha256": "NOT_COMPUTED_TEMPLATE"},
+  "environment_snapshot": {"path": "environments/baseline.json", "sha256": "NOT_COMPUTED_TEMPLATE"},
+  "data_manifest": {"path": "NOT_COMPUTED_TEMPLATE", "sha256": "NOT_COMPUTED_TEMPLATE"},
+  "logs": [],
+  "raw_outputs": [],
+  "artifact_manifest": {"path": "NOT_COMPUTED_TEMPLATE", "sha256": "NOT_COMPUTED_TEMPLATE"},
+  "timestamps": {"created_at": "NOT_COMPUTED_TEMPLATE", "started_at": null, "finished_at": null}
+}
+

@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "manifest_id": "template-data-manifest",
+  "partitions": [],
+  "disjointness_checks": [],
+  "note": "Real partitions require path aliases, SHA-256, sample-index SHA-256, roles, and pairwise zero-overlap checks."
+}
+

@@ -1,0 +1,121 @@
+{
+  "captured_at_utc": "2026-07-19T08:43:41Z",
+  "checks": [
+    {
+      "check_id": "runtime-reference-resolution",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check_id": "python",
+      "expected": "3.12.13",
+      "observed": "3.12.13",
+      "status": "PASS"
+    },
+    {
+      "check_id": "pytorch",
+      "expected": "2.11.0+cu130",
+      "observed": "2.11.0+cu130",
+      "status": "PASS"
+    },
+    {
+      "check_id": "pytorch-cuda-runtime",
+      "expected": "13.0",
+      "observed": "13.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "cuda-available",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "check_id": "gpu-count",
+      "expected": 8,
+      "observed": 8,
+      "status": "PASS"
+    },
+    {
+      "check_id": "gpu-models",
+      "expected": [
+        "NVIDIA H20"
+      ],
+      "observed": [
+        "NVIDIA H20"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "cudnn",
+      "expected": "9.19.0",
+      "observed": "9.19.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "nccl",
+      "expected": "2.28.9",
+      "observed": "2.28.9",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependency-inventory",
+      "expected": "safe name/version inventory with SHA-256",
+      "observed": {
+        "package_count": 193,
+        "path": "environments/dependency-inventory.20260719.attempt-002.json",
+        "sha256": "e8cda7378e3a23fa4ca9065a14679f46666959bd1ed9698f6a32983c9ed78ecd"
+      },
+      "status": "PASS"
+    }
+  ],
+  "dependency_inventory": {
+    "path": "environments/dependency-inventory.20260719.attempt-002.json",
+    "sha256": "e8cda7378e3a23fa4ca9065a14679f46666959bd1ed9698f6a32983c9ed78ecd"
+  },
+  "environment_lock": {
+    "path": "environments/environment-lock.20260719.attempt-002.json",
+    "sha256": "b9a42abaa2cafa6b26ebe60b8db02cf704f1c15465943f1e269291cc448c6893"
+  },
+  "evidence": {
+    "path": "repository://paper/02_experiments/environment/SYSTEM_PROFILE.json",
+    "sha256": "537e7f5bface0ca313ed59f9dfbd0dcf8830b7b38bbabc76f0b17bbbd65e3e25"
+  },
+  "preflight_id": "runtime-preflight-20260719-attempt-002",
+  "prohibited_actions": {
+    "all_reduce_or_collective": false,
+    "benchmark": false,
+    "download": false,
+    "formal_run": false,
+    "gpu_stress": false,
+    "installation": false,
+    "model_inference": false,
+    "training": false
+  },
+  "readiness": {
+    "formal_r001_r002": "BLOCKED_PENDING_MODEL_DATA_ADAPTER_AND_RUN_MANIFEST",
+    "metadata_runtime": "READY",
+    "real_toy_adapter_engineering": "READY_ENVIRONMENT_ONLY"
+  },
+  "redaction": {
+    "credential_recorded": false,
+    "gpu_uuid_recorded": false,
+    "hostname_recorded": false,
+    "ip_address_recorded": false,
+    "private_runtime_path_recorded": false,
+    "url_recorded": false,
+    "username_recorded": false
+  },
+  "resolution": {
+    "candidates_checked": 7,
+    "private_path_emitted": false,
+    "resolution_source": "existing-runtime-registry"
+  },
+  "schema_version": "1.0",
+  "status": "PASS",
+  "target": {
+    "path": "environments/runtime-target.locked.20260719.json",
+    "sha256": "13a4d53159bf50d035c1c60058e89550ce27aff64f2bf42857ea504ce51e72cd"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/runtime-designation.schema.json",
+  "title": "MERIT pending runtime designation",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "status",
+    "evidence",
+    "confirmed_facts",
+    "designation",
+    "required_preflight",
+    "readiness",
+    "non_claims"
+  ],
+  "properties": {
+    "status": {"const": "BLOCKED"},
+    "evidence": {
+      "type": "object",
+      "required": ["baseline_path", "baseline_sha256"],
+      "properties": {
+        "baseline_path": {"const": "environments/baseline.json"},
+        "baseline_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "designation": {
+      "type": "object",
+      "required": [
+        "project_runtime_alias",
+        "environment_snapshot_path",
+        "environment_snapshot_sha256",
+        "dependency_lockfile_path",
+        "dependency_lockfile_sha256",
+        "installation_source_policy",
+        "container_image_digest"
+      ],
+      "additionalProperties": {"const": "USER_APPROVAL_REQUIRED"}
+    },
+    "required_preflight": {
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["check_id", "expected_from", "status"],
+        "properties": {"status": {"const": "NOT_RUN"}},
+        "additionalProperties": true
+      }
+    },
+    "readiness": {
+      "type": "object",
+      "required": ["r001_r002", "reason"],
+      "properties": {"r001_r002": {"const": "BLOCKED"}},
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

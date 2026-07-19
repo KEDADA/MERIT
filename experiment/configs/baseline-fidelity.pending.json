@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "template_id": "pilot-representative-baseline-fidelity",
+  "status": "BLOCKED",
+  "reporting_policy": {
+    "exact_method_name_requires": "source_faithful_checklist_pass",
+    "otherwise_label_as": "standardized_credit_variant_wrapper",
+    "allowed_implementation_modes": [
+      "source_faithful",
+      "standardized_credit_variant_wrapper"
+    ]
+  },
+  "baselines": [
+    {
+      "baseline_id": "reasoningbank-style",
+      "approved_class_label": "ReasoningBank-style",
+      "implementation_mode": "USER_APPROVAL_REQUIRED",
+      "source_reference": "USER_APPROVAL_REQUIRED",
+      "source_revision": "USER_APPROVAL_REQUIRED",
+      "license_verification": "USER_APPROVAL_REQUIRED",
+      "model_revision": "USER_APPROVAL_REQUIRED",
+      "dataset_revision": "USER_APPROVAL_REQUIRED",
+      "adapter_entrypoint": "USER_APPROVAL_REQUIRED",
+      "fidelity_checklist_path": "USER_APPROVAL_REQUIRED",
+      "deviations_manifest_path": "USER_APPROVAL_REQUIRED",
+      "shared_retrieval_and_budget_contract": "USER_APPROVAL_REQUIRED",
+      "affected_run_families": ["R001", "R010"]
+    },
+    {
+      "baseline_id": "memrl-style",
+      "approved_class_label": "MemRL-style",
+      "implementation_mode": "USER_APPROVAL_REQUIRED",
+      "source_reference": "USER_APPROVAL_REQUIRED",
+      "source_revision": "USER_APPROVAL_REQUIRED",
+      "license_verification": "USER_APPROVAL_REQUIRED",
+      "model_revision": "USER_APPROVAL_REQUIRED",
+      "dataset_revision": "USER_APPROVAL_REQUIRED",
+      "adapter_entrypoint": "USER_APPROVAL_REQUIRED",
+      "fidelity_checklist_path": "USER_APPROVAL_REQUIRED",
+      "deviations_manifest_path": "USER_APPROVAL_REQUIRED",
+      "shared_retrieval_and_budget_contract": "USER_APPROVAL_REQUIRED",
+      "affected_run_families": ["R011"]
+    }
+  ],
+  "gate": {
+    "m0_r001": "BLOCKED",
+    "m1_r010_r011": "BLOCKED",
+    "reason": "Source identity, revisions, implementation mode, adapters, and fidelity evidence are unresolved."
+  }
+}

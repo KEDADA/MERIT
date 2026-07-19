@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "run_id": "R001__sanity__paired-replay-real-toy__seed-pending__a001",
+  "status": "NOT_STARTED",
+  "artifacts": [],
+  "execution_boundary": {"outputs_created": 0, "logs_created": 0, "model_calls": 0, "formal_runs": 0}
+}

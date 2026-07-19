@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MERIT blocked atomic sanity planning config",
+  "type": "object",
+  "required": ["schema_version", "config_id", "status", "executable", "run_family_id", "phase", "objective", "seed", "data_binding", "locked_parameters", "protocol_references", "formal_gate_requirements"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "status": {"const": "BLOCKED_PENDING_FORMAL_EXECUTION_GATE"},
+    "executable": {"const": false},
+    "run_family_id": {"enum": ["R001", "R002"]},
+    "phase": {"const": "sanity"},
+    "seed": {"const": "FORMAL_GATE_REQUIRED"},
+    "data_binding": {
+      "type": "object",
+      "required": ["manifest_path", "manifest_sha256", "roles", "task_count"],
+      "properties": {
+        "manifest_path": {"const": "data/real-toy-split.20260719.manifest.json"},
+        "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "roles": {"const": ["pilot_train", "pilot_audit"]},
+        "task_count": {"const": 20}
+      }
+    },
+    "formal_gate_requirements": {"type": "array", "minItems": 4, "uniqueItems": true}
+  },
+  "additionalProperties": true
+}

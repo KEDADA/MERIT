@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "r001-standardized-wrapper-20260719-user-delegated",
+  "status": "USER_APPROVED_LOCKED",
+  "approval_date": "2026-07-19",
+  "base_commit": "4280484e035191b66f77618b7729dbd465d8b828",
+  "scope": ["R001 engineering implementation", "R002 metric sanity"],
+  "implementation_mode": "standardized_credit_variant_wrapper",
+  "reporting_label": "ReasoningBank-style standardized credit-variant wrapper",
+  "source_reference": "src/merit_experiment/baselines.py",
+  "source_revision": "base commit plus recorded dirty-path manifest SHA-256",
+  "upstream_code_imported": false,
+  "license_verification": "NOT_APPLICABLE_NO_UPSTREAM_CODE_IMPORTED",
+  "model_revision": "synthetic deterministic evaluator only",
+  "dataset_revision": "tests/fixtures/synthetic_events.jsonl",
+  "adapter_contract": "deterministic write, retrieve, credit update, snapshot, and replay interfaces",
+  "fidelity_claim": "NO_EXACT_METHOD_FIDELITY_CLAIM",
+  "gates": {
+    "r001_engineering": "ALLOWED_AFTER_COMPONENT_TESTS_PASS",
+    "r010_reasoningbank_exact_name": "BLOCKED_PENDING_SOURCE_FAITHFUL_CHECKLIST",
+    "r011_memrl_exact_name": "BLOCKED_PENDING_SOURCE_FAITHFUL_CHECKLIST",
+    "m2_baseline_execution": "BLOCKED_PENDING_PILOT_BASELINE_SOURCE_DECISION"
+  }
+}

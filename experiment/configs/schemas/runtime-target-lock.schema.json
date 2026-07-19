@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/runtime-target-lock.schema.json",
+  "title": "MERIT approved runtime target pending empirical preflight",
+  "type": "object",
+  "required": ["schema_version", "lock_id", "status", "approval_date", "base_commit", "target_alias", "evidence", "target", "dependency_policy", "container_policy", "preflight", "readiness"],
+  "properties": {
+    "status": {"const": "USER_APPROVED_TARGET_PENDING_PREFLIGHT"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "target_alias": {"const": "runtime://merit-r000-h20-py312-torch211-cu130"},
+    "dependency_policy": {
+      "type": "object",
+      "properties": {
+        "lock_path": {"const": "NOT_CAPTURED"},
+        "lock_sha256": {"const": "NOT_CAPTURED"}
+      },
+      "additionalProperties": true
+    },
+    "preflight": {
+      "type": "object",
+      "properties": {"status": {"const": "NOT_RUN"}},
+      "required": ["status", "required_checks"]
+    }
+  },
+  "additionalProperties": false
+}

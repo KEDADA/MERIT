@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "evidence_source": "paper/02_experiments/environment/R000_REPORT.md",
+  "capture_status": "CONFIRMED_BY_R000",
+  "hardware": {
+    "gpu_model": "NVIDIA H20",
+    "gpu_count": 8,
+    "memory_mib_per_gpu": 97871,
+    "gpu_interconnect_observation": "NV18 reported for every GPU pair",
+    "mig_enabled": false
+  },
+  "software": {
+    "os": "Ubuntu 22.04.1 LTS",
+    "architecture": "x86_64",
+    "python": "3.12.13",
+    "pytorch": "2.11.0+cu130",
+    "cuda_available_in_pytorch": true,
+    "cuda_driver_reported": "13.0",
+    "nvidia_driver": "580.126.20",
+    "cudnn": "9.19.0",
+    "nccl": "2.28.9"
+  },
+  "capability_gaps": {
+    "nvcc": "NOT_AVAILABLE_AT_R000",
+    "scheduler": "NOT_AVAILABLE_AT_R000",
+    "container_daemon_access": "NOT_CONFIRMED_AVAILABLE"
+  },
+  "lock_state": {
+    "project_runtime": "USER_APPROVAL_REQUIRED",
+    "dependency_set": "USER_APPROVAL_REQUIRED",
+    "dependency_lockfile": "USER_APPROVAL_REQUIRED",
+    "container_image_digest": "USER_APPROVAL_REQUIRED"
+  },
+  "non_claims": [
+    "The baseline does not assert that R001 or R002 can run.",
+    "The driver-reported CUDA version is not an nvcc/toolkit claim.",
+    "No model capacity, throughput, parallelism, or runtime is inferred."
+  ]
+}
+

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "merit/pilot-implementation-lock.schema.json",
+  "title": "MERIT user-approved pilot implementation lock",
+  "type": "object",
+  "required": ["schema_version", "lock_id", "status", "approval_date", "base_commit", "approval_basis", "protocol_lock", "rules", "invariants"],
+  "properties": {
+    "status": {"const": "USER_APPROVED_LOCKED"},
+    "base_commit": {"const": "4280484e035191b66f77618b7729dbd465d8b828"},
+    "rules": {
+      "type": "object",
+      "required": ["fixed_heldout_audit_query_set", "train_priority_score_contract", "neutral_pad_token_length_matching", "paired_bundle_budget_ceiling", "sr_slope_clustered_interval", "shared_control_and_deployment_reuse"],
+      "additionalProperties": false
+    },
+    "invariants": {
+      "type": "object",
+      "properties": {
+        "pilot_confirmatory_overlap_allowed": {"const": false},
+        "no_pad_main_arm_allowed": {"const": false},
+        "neutral_pad_failure_downgrade": {"const": "pad-replacement contribution"},
+        "redundancy_axis": {"const": "EVIDENCE GAP"},
+        "formal_k_n_audit_seed_count": {"const": "POST_PILOT_COMPUTED_THEN_USER_LOCKED"},
+        "governance_dead_zone": {"const": "USER_APPROVAL_REQUIRED"},
+        "huber_delta": {"const": "USER_APPROVAL_REQUIRED"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
