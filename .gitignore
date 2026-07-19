@@ -1,8 +1,14 @@
-# Machine-local Claude configuration
+# Machine-local agent and API configuration
 .claude/settings.local.json
+.claude/settings.json
+.codex/config.toml
+.env
+.env.*
+!.env.example
 
-# Project-local ARIS junctions (targets live outside this repository)
+# Project-local ARIS links regenerated on each machine
 .claude/skills/
+.agents/skills/
 .aris/tools/
 
 # OS metadata
